@@ -1,4 +1,4 @@
-import 'package:ezisolutions/UI/Authorization/mainloginpage.dart';
+import 'package:ezisolutions/UI/Authorization/Login/mainloginpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
