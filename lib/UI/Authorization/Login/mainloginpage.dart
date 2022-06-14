@@ -1,8 +1,11 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
+import 'package:country_picker/country_picker.dart';
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
+import 'package:ezisolutions/UI/Authorization/Forgotpassword/forgotpassword.dart';
 import 'package:ezisolutions/UI/Authorization/Login/mainloginpage2.dart';
+import 'package:ezisolutions/UI/Authorization/Registration/members.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
 class MainLoginPage extends StatefulWidget {
@@ -106,15 +109,49 @@ class _MainLoginPageState extends State<MainLoginPage> {
                 padding: const EdgeInsets.only(left: 56,right: 51),
                 child: Row(
                   children: [
-                    Container(
-                      width: width*0.15,
-                      height: height*0.06,
-                      decoration: BoxDecoration(
-                      border: Border.all(color: Appcolors.greenlight),
-                        borderRadius: BorderRadius.circular(10),
+                    GestureDetector(
+                      child: Container(
+                        width: width*0.15,
+                        height: height*0.06,
+                        decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(child: Text('61+',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 26,color: Colors.grey),)),
                       ),
-                      child: Center(child: Text('+61',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 26,color: Colors.grey),)),
+                      onTap: (){
+                        showCountryPicker(
+                          context: context,
+                          //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
+                          exclude: <String>['KN', 'MF'],
+                          favorite: <String>['SE'],
+                          //Optional. Shows phone code before the country name.
+                          showPhoneCode: true,
+                          onSelect: (Country country) {
+                            print('Select country: ${country.displayName}');
+                          },
+                          // Optional. Sets the theme for the country list picker.
+                          countryListTheme: CountryListThemeData(
+                            // Optional. Sets the border radius for the bottomsheet.
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40.0),
+                              topRight: Radius.circular(40.0),
+                            ),
+                            // Optional. Styles the search field.
+                            inputDecoration: InputDecoration(
+                              labelText: 'Search',
+                              hintText: 'Start typing to search',
+                              prefixIcon: const Icon(Icons.search),
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: const Color(0xFF8C98A8).withOpacity(0.2),
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                     ),
 
                     SizedBox(width: 10,),
@@ -210,7 +247,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
                       child: Text('Forgot  Password?',style: Textstyle2Light18.appbartextstyle.copyWith(
                           fontSize: 10,fontWeight: FontWeight.w400,decoration: TextDecoration.underline,color: Appcolors.greenlight
                       ),),
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+                      },
 
                     ),
 
@@ -257,38 +296,6 @@ class _MainLoginPageState extends State<MainLoginPage> {
                   ),
                 ),
               ),
-
-              /*Padding(
-                padding: const EdgeInsets.only(left: 56,right: 51),
-                child: Container(
-                  width: width*0.78,
-                  height: height*0.06,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Appcolors.greenlight),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Container(
-                          width: width*0.14,
-                          height: height*0.05,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Appcolors.greenlight),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Icon(Icons.arrow_forward,size: 35,),
-                        ),
-                      ),
-                      SizedBox(width: 20,),
-                      Text('Slide To Login',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 20,fontWeight: FontWeight.w600,
-                      ),),
-                    ],
-                  ),
-                ),
-              ),*/
 
               SizedBox(
                 height: 30,
@@ -361,104 +368,52 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   mainAxisSize: MainAxisSize.min,
                                   children: <Widget>[
-                                    Row(
-                                      children: [
-                                        Text('Registration',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 20,fontWeight: FontWeight.w600
-                                        ),),
+                                    GestureDetector(
 
-                                        Expanded(child: SizedBox()),
+                                      onTap: (){
+                                        Navigator.pop(context);
+                                      },
 
-                                        Container(
-                                          width: 20,
-                                          height: 20,
-                                          decoration: BoxDecoration(
-                                            color: Appcolors.red,
-                                            borderRadius: BorderRadius.circular(50),
+                                      child: Row(
+                                        children: [
+                                          Text('Registration',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 20,fontWeight: FontWeight.w600
+                                          ),),
+
+                                          Expanded(child: SizedBox()),
+
+                                          Container(
+                                            width: 20,
+                                            height: 20,
+                                            decoration: BoxDecoration(
+                                              color: Appcolors.red,
+                                              borderRadius: BorderRadius.circular(50),
+                                            ),
+                                            child: Icon(Icons.clear,color: Colors.white,size: 13,),
                                           ),
-                                          child: Icon(Icons.clear,color: Colors.white,size: 13,),
-                                        ),
-                                        TextButton(
-                                          child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                          Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
                                               fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
                                           ),),
-                                          onPressed: (){
-                                            Navigator.pop(context);
-                                          },
-
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                     Text('Register with us today and get all the services at your fingertips!',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 15,fontWeight: FontWeight.w400
                                     ),),
 
-                                    GestureDetector(
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20,bottom: 20),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          GestureDetector(
 
-                                      onTap: (){
-                                        showModalBottomSheet<void>(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(20),
-                                              topRight: Radius.circular(20),
-                                            ),
-                                          ),
-
-                                          context: context,
-                                          builder: (BuildContext context) {
-                                            return SingleChildScrollView(
-
-                                              child: Padding(
-                                                padding: const EdgeInsets.only(left: 20,right: 20),
-                                                child: Column(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: <Widget>[
-                                                    Row(
-                                                      children: [
-                                                        Text('Let’s Get You An Account!',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                            fontSize: 20,fontWeight: FontWeight.w600
-                                                        ),),
-
-                                                        Expanded(child: SizedBox()),
-
-                                                        Container(
-                                                          width: 20,
-                                                          height: 20,
-                                                          decoration: BoxDecoration(
-                                                            color: Appcolors.red,
-                                                            borderRadius: BorderRadius.circular(50),
-                                                          ),
-                                                          child: Icon(Icons.clear,color: Colors.white,size: 13,),
-                                                        ),
-                                                        TextButton(
-                                                          child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                              fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                                          ),),
-                                                          onPressed: (){
-                                                            Navigator.pop(context);
-                                                          },
-
-                                                        ),
-                                                      ],
-                                                    ),
+                                            onTap: (){
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => Members()));
+                                            },
 
 
-
-                                                  ],
-                                                ),
-                                              ),
-                                            );
-                                          },
-                                        );
-                                      },
-
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(top: 20,bottom: 20),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                            Column(
+                                            child: Column(
                                               children: [
                                                 Container(
                                                   decoration: BoxDecoration(
@@ -475,28 +430,28 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                 ),),
                                               ],
                                             ),
+                                          ),
 
-                                            SizedBox(width: 80,),
+                                          SizedBox(width: 80,),
 
-                                            Column(
-                                              children: [
-                                                Container(
-                                                  decoration: BoxDecoration(
-                                                    border: Border.all(color: Appcolors.greenlight),
-                                                  ),
-                                                  child: Padding(
-                                                    padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
-                                                    child: Image.asset('assest/Iocns/partnericon.png',scale: 5,),
-                                                  ),
+                                          Column(
+                                            children: [
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(color: Appcolors.greenlight),
                                                 ),
-                                                SizedBox(height: 10,),
-                                                Text('Partners',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 20,fontWeight: FontWeight.w600
-                                                ),),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
+                                                child: Padding(
+                                                  padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
+                                                  child: Image.asset('assest/Iocns/partnericon.png',scale: 5,),
+                                                ),
+                                              ),
+                                              SizedBox(height: 10,),
+                                              Text('Partners',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 20,fontWeight: FontWeight.w600
+                                              ),),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
 

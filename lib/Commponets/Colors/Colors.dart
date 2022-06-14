@@ -22,7 +22,7 @@ class Inputdec1 {
 
 
     hintStyle: Textstyle2Light18.appbartextstyle.copyWith(
-        fontSize: 26,color: Colors.grey),
+        fontSize: 20,color: Colors.grey),
     /* prefixIcon: Padding(
       padding: EdgeInsets.all(14.0),
       child: Image.asset("assets/Image/Search Icon.png", width: 10, height: 10,color: Colors.grey,),
@@ -57,7 +57,7 @@ class Inputdec2 {
     //   focusColor: AppColor.white,
     /*hintText: 'Email address',*/
     hintStyle: Textstyle2Light18.appbartextstyle.copyWith(
-        fontSize: 26,color: Colors.grey),
+        fontSize: 20,color: Colors.grey),
     border: InputBorder.none,
     /*prefixIcon: Padding(
       padding: EdgeInsets.all(14.0),

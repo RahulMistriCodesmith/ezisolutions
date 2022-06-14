@@ -1,9 +1,19 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
+import 'dart:async';
+import 'dart:io';
+
+import 'package:country_picker/country_picker.dart';
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
+import 'package:ezisolutions/UI/Authorization/Forgotpassword/forgotpassword.dart';
+import 'package:ezisolutions/UI/Authorization/Registration/members.dart';
+import 'package:ezisolutions/UI/Home/homepage.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:slider_button/slider_button.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
+
 class MainLoginPage2 extends StatefulWidget {
   const MainLoginPage2({Key key}) : super(key: key);
 
@@ -13,12 +23,50 @@ class MainLoginPage2 extends StatefulWidget {
 
 class _MainLoginPage2State extends State<MainLoginPage2> {
 
+  var onTapRecognizer;
+
+  TextEditingController textEditingController = TextEditingController();
+  // ..text = "123456";
+
+  StreamController<ErrorAnimationType> errorController;
+
+  bool hasError = false;
+  String currentText = "";
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+  final formKey = GlobalKey<FormState>();
+
+
+
+  void initState() {
+    onTapRecognizer = TapGestureRecognizer()
+      ..onTap = () {
+        Navigator.pop(context);
+      };
+    errorController = StreamController<ErrorAnimationType>();
+    super.initState();
+  }
+
+
+  void dispose() {
+    errorController.close();
+
+    super.dispose();
+  }
+
+  File imageFile;
+
+
   bool isSwitched = false;
   bool _isObscure = false;
   final _formKey = GlobalKey<FormState>();
   var selectedval = "student";
+
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
+  TextEditingController name = TextEditingController();
+  TextEditingController pass = TextEditingController();
+  TextEditingController address = TextEditingController();
+  TextEditingController pincode = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -110,15 +158,49 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                   padding: const EdgeInsets.only(left: 56,right: 51),
                   child: Row(
                     children: [
-                      Container(
-                        width: width*0.15,
-                        height: height*0.06,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Appcolors.greenlight),
-                          borderRadius: BorderRadius.circular(10),
+                      GestureDetector(
+                        child: Container(
+                          width: width*0.15,
+                          height: height*0.06,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(child: Text('61+',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontSize: 26,color: Colors.grey),)),
                         ),
-                        child: Center(child: Text('+61',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontSize: 26,color: Colors.grey),)),
+                        onTap: (){
+                          showCountryPicker(
+                            context: context,
+                            //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
+                            exclude: <String>['KN', 'MF'],
+                            favorite: <String>['SE'],
+                            //Optional. Shows phone code before the country name.
+                            showPhoneCode: true,
+                            onSelect: (Country country) {
+                              print('Select country: ${country.displayName}');
+                            },
+                            // Optional. Sets the theme for the country list picker.
+                            countryListTheme: CountryListThemeData(
+                              // Optional. Sets the border radius for the bottomsheet.
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(40.0),
+                                topRight: Radius.circular(40.0),
+                              ),
+                              // Optional. Styles the search field.
+                              inputDecoration: InputDecoration(
+                                labelText: 'Search',
+                                hintText: 'Start typing to search',
+                                prefixIcon: const Icon(Icons.search),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: const Color(0xFF8C98A8).withOpacity(0.2),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        },
                       ),
 
                       SizedBox(width: 10,),
@@ -164,10 +246,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                     child: TextFormField(
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          if(email.text == "10-8822016" && password.text == "Test"){
-                            // Navigator.push(context, MaterialPageRoute(builder: (context) => StudentDashboard()));
 
-                          }
                         }
                         return null;
                       },
@@ -229,7 +308,11 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                         child: Text('Forgot  Password?',style: Textstyle2Light18.appbartextstyle.copyWith(
                             fontSize: 10,fontWeight: FontWeight.w400,decoration: TextDecoration.underline,color: Appcolors.greenlight
                         ),),
-                        onPressed: (){},
+                        onPressed: (){
+
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+
+                        },
 
                       ),
 
@@ -253,9 +336,9 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
 
                         onTap: (){
                           setState(() {
-                            if (_formKey.currentState.validate()) {
 
-                            }
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+
 
                           });
                         },
@@ -382,22 +465,31 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                                         child: Row(
                                           mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
-                                            Column(
-                                              children: [
-                                                Container(
-                                                  decoration: BoxDecoration(
-                                                    border: Border.all(color: Appcolors.greenlight),
+                                            GestureDetector(
+
+                                              onTap: (){
+                                                Navigator.push(context, MaterialPageRoute(builder: (context) => Members()));
+
+                                              },
+
+
+                                              child: Column(
+                                                children: [
+                                                  Container(
+                                                    decoration: BoxDecoration(
+                                                      border: Border.all(color: Appcolors.greenlight),
+                                                    ),
+                                                    child: Padding(
+                                                      padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
+                                                      child: Image.asset('assest/Iocns/membericon.png',scale: 5,),
+                                                    ),
                                                   ),
-                                                  child: Padding(
-                                                    padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
-                                                    child: Image.asset('assest/Iocns/membericon.png',scale: 5,),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 10,),
-                                                Text('Members',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 20,fontWeight: FontWeight.w600
-                                                ),),
-                                              ],
+                                                  SizedBox(height: 10,),
+                                                  Text('Members',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      fontSize: 20,fontWeight: FontWeight.w600
+                                                  ),),
+                                                ],
+                                              ),
                                             ),
 
                                             SizedBox(width: 80,),
@@ -440,4 +532,23 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
       ),
     );
   }
+
+  _getFromGallery() async {
+    PickedFile pickedFile = await ImagePicker().getImage(
+
+      source: ImageSource.gallery,
+      maxWidth: 1800,
+      maxHeight: 1800,
+
+    );
+    if (pickedFile != null) {
+      setState(() {
+
+        imageFile = File(pickedFile.path);
+
+
+      });
+    }
+  }
+
 }
