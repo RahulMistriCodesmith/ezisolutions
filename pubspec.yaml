@@ -90,6 +90,8 @@ flutter:
     - assest/Image/4star.png
     - assest/Image/5star.png
     - assest/Image/barberimage.png
+    - assest/Image/locationimage.png
+    - assest/Image/tolderimage.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
