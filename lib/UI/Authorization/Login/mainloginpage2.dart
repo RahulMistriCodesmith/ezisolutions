@@ -8,6 +8,7 @@ import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Authorization/Forgotpassword/forgotpassword.dart';
 import 'package:ezisolutions/UI/Authorization/Registration/members.dart';
+import 'package:ezisolutions/UI/Home/bottomnavigation.dart';
 import 'package:ezisolutions/UI/Home/homepage.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -337,7 +338,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                         onTap: (){
                           setState(() {
 
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigationBarPage()));
 
 
                           });
