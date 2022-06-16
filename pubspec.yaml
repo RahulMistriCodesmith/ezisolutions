@@ -68,32 +68,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assest/Iocns/
-    - assest/Image/aircondrepair.png
-    - assest/Image/barbershop.png
-    - assest/Image/carwash.png
-    - assest/Image/clean.png
-    - assest/Image/electricalrepair.png
-    - assest/Image/hairsaloon.png
-    - assest/Image/messageimage.png
-    - assest/Image/moreservices.png
-    - assest/Image/passwordimage.png
-    - assest/Image/plumbing.png
-    - assest/Image/profileimage.png
-    - assest/Image/saveimage.png
-    - assest/Image/infoimage.png
-    - assest/Image/eziansimage.png
-    - assest/Image/tipimage.png
-    - assest/Image/tipimage1.png
-    - assest/Image/voiceimage.png
-    - assest/Image/serviceimage.png
-    - assest/Image/shopimage.png
-    - assest/Image/2star.png
-    - assest/Image/3star.png
-    - assest/Image/4star.png
-    - assest/Image/5star.png
-    - assest/Image/barberimage.png
-    - assest/Image/locationimage.png
-    - assest/Image/tolderimage.png
+    - assest/Image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -114,6 +89,10 @@ flutter:
     - family: OpenSans-VariableFont
       fonts:
        - asset: assest/Fonts/OpenSans-VariableFont_wdth,wght.ttf
+
+    - family: IBMPlexSans-Regular
+      fonts:
+        - asset: assest/Fonts/IBMPlexSans-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

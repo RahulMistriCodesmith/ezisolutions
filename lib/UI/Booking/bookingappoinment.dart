@@ -16,7 +16,10 @@ class BookingAppoinment extends StatefulWidget {
 
 class _BookingAppoinmentState extends State<BookingAppoinment> {
 
-  final int _activeCurrentStep = 0;
+  int _activeCurrentStep = 0;
+  static var dropdownValue = 'Home';
+  static var dropdownValue2 = 'Anyone(Default)';
+  bool jobtype = true;
 
   CalendarController _controller;
   Map<DateTime, List<dynamic>> _events;
@@ -179,22 +182,674 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Morning',style: Textstyle2Light18.appbartextstyle.copyWith(
                     fontSize: 15,fontWeight: FontWeight.w600,
                 ),),
+
+                SizedBox(height: 10,),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.green2),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('7:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.green2),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('8:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.green2),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('9:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(7),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('10:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 8,),
+
+                    Container(
+                      padding: EdgeInsets.all(7),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child:  Text('11:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,
+                      ),),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
+
+          SizedBox(height: 15),
+
+          Container(
+            padding: EdgeInsets.only(left: 15,right: 15,top: 15,bottom: 15),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Afternoon',style: Textstyle2Light18.appbartextstyle.copyWith(
+                  fontSize: 15,fontWeight: FontWeight.w600,
+                ),),
+
+                SizedBox(height: 10,),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('12:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('1:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.greenlight
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('2:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(7),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('3:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 8,),
+
+                    Container(
+                      padding: EdgeInsets.all(7),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child:  Text('4:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,
+                      ),),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          SizedBox(height: 15),
+
+          Container(
+            padding: EdgeInsets.only(left: 15,right: 15,top: 15,bottom: 15),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Evening',style: Textstyle2Light18.appbartextstyle.copyWith(
+                  fontSize: 15,fontWeight: FontWeight.w600,
+                ),),
+
+                SizedBox(height: 10,),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('5:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('6:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('7:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+
+                        SizedBox(width: 8,),
+
+                        Container(
+                          padding: EdgeInsets.all(7),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child:  Text('8:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w400,
+                          ),),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 8,),
+
+                    Container(
+                      padding: EdgeInsets.all(7),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child:  Text('9:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,
+                      ),),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          SizedBox(height: 15),
+
+          Container(
+            padding: EdgeInsets.only(left: 15,right: 15,top: 15,bottom: 15),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('NIGHT',style: Textstyle2Light18.appbartextstyle.copyWith(
+                  fontSize: 15,fontWeight: FontWeight.w600,
+                ),),
+
+                SizedBox(height: 10,),
+
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child:  Text('10:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,
+                      ),),
+                    ),
+
+                    SizedBox(width: 5,),
+
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.green2),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child:  Text('10:30 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                      ),),
+                    ),
+
+                    SizedBox(width: 5,),
+
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.green2),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child:  Text('11:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                      ),),
+                    ),
+
+                    SizedBox(width: 5,),
+
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.green2),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child:  Text('11:30 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                      ),),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 8,),
+              ],
+            ),
+          ),
+
+          SizedBox(height: 15),
+
+          Text('Customize Your Experience',style: Textstyle2Light18.appbartextstyle.copyWith(
+              fontSize: 20,fontWeight: FontWeight.w600,decoration: TextDecoration.underline
+          ),),
+
+          SizedBox(height: 10,),
+
+          Container(
+
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Booking Type',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontSize: 15,fontWeight: FontWeight.w600,
+                ),),
+
+                SizedBox(height: 3,),
+
+                Container(
+                  width: 300,
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      border: Border.all(color: Appcolors.greenlight)
+                  ),
+
+                  child: DropdownButtonFormField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      filled: true,
+                    ),
+                    value: dropdownValue,
+                    icon: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            border: Border.all(color: Appcolors.greenlight)
+                        ),
+                        child: const Icon(Icons.keyboard_arrow_down_outlined,color: Appcolors.greenlight,)),
+                    elevation: 16,
+                    style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 15,color: Colors.black
+                    ),
+                    onChanged: (String newValue) {
+                      dropdownValue = newValue;
+                    },
+
+                    items: <String>['Home']
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+
+                  ),
+                ),
+
+                SizedBox(height: 10,),
+
+                Text('Choose EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
+                  fontSize: 15,fontWeight: FontWeight.w600,
+                ),),
+
+                SizedBox(height: 2,),
+
+                Container(
+                  width: 300,
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      border: Border.all(color: Appcolors.greenlight)
+                  ),
+
+                  child: DropdownButtonFormField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      filled: true,
+                    ),
+                    value: dropdownValue2,
+                    icon: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            border: Border.all(color: Appcolors.greenlight)
+                        ),
+                        child: const Icon(Icons.keyboard_arrow_down_outlined,color: Appcolors.greenlight,)),
+                    elevation: 16,
+                    style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontWeight: FontWeight.w400,fontSize: 15,color: Colors.black
+                    ),
+                    onChanged: (String newValue) {
+                      dropdownValue2 = newValue;
+                    },
+
+                    items: <String>['Anyone(Default)']
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+
+                  ),
+                ),
+
+                SizedBox(height: 10,),
+
+                Text('Discount Code',style: Textstyle2Light18.appbartextstyle.copyWith(
+                  fontSize: 15,fontWeight: FontWeight.w600,
+                ),),
+
+                SizedBox(height: 2,),
+
+                Container(
+                  width: 300,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Appcolors.greenlight)
+                  ),
+                  child: TextFormField(
+                    decoration: Inputdec3.inputDecoration.copyWith(
+                      suffixIcon: Icon(Icons.edit_outlined,color: Appcolors.greenlight,size: 30,),
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: 10,),
+
+                Text('Services Chosen',style: Textstyle2Light18.appbartextstyle.copyWith(
+                  fontSize: 15,fontWeight: FontWeight.w600,
+                ),),
+
+                SizedBox(height: 5),
+
+                Container(
+                  padding: EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Appcolors.greenlight)
+                  ),
+                  child: Row(
+                    children: [
+                      Text('Kids Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontSize: 18,fontWeight: FontWeight.w600,
+                      ),),
+                      
+                      Expanded(child: SizedBox()),
+
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w600,
+                          ),),
+                          Text('20 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 10,fontWeight: FontWeight.w400,
+                          ),),
+                        ],
+                      ),
+
+                      SizedBox(width: 20,),
+
+                      Image.asset('assest/Iocns/minusicon.png',scale: 4,),
+
+                      SizedBox(width: 5),
+
+                      Container(
+                        padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Appcolors.greenlight)
+                        ),
+                        child:  Text('2',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontSize: 15,fontWeight: FontWeight.w700,
+                        ),),
+                      ),
+
+                      SizedBox(width: 5),
+
+                      Image.asset('assest/Iocns/addicon1.png',scale: 4,),
+
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 20),
+
+                Container(
+                  padding: EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Appcolors.greenlight)
+                  ),
+                  child: Row(
+                    children: [
+                      Text('Kids Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontSize: 18,fontWeight: FontWeight.w600,
+                      ),),
+
+                      Expanded(child: SizedBox()),
+
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w600,
+                          ),),
+                          Text('20 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 10,fontWeight: FontWeight.w400,
+                          ),),
+                        ],
+                      ),
+
+                      SizedBox(width: 20,),
+
+                      Image.asset('assest/Iocns/minusicon.png',scale: 4,),
+
+                      SizedBox(width: 5),
+
+                      Container(
+                        padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Appcolors.greenlight)
+                        ),
+                        child: Text('2',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontSize: 15,fontWeight: FontWeight.w700,
+                        ),),
+                      ),
+
+                      SizedBox(width: 5),
+
+                      Image.asset('assest/Iocns/addicon1.png',scale: 4,),
+
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 20,),
+
+                Row(
+                  children: [
+                    GestureDetector(
+
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+
+                      child: Container(
+                        padding: EdgeInsets.only(bottom: 3,right: 15,left: 15),
+                        decoration: BoxDecoration(
+                            color: Appcolors.green1,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Appcolors.greenlight)
+                        ),
+                        child: Column(
+                          children: [
+                            Icon(Icons.clear,size: 45,color: Colors.red,),
+
+                            Text('Cancel',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontSize: 15,fontWeight: FontWeight.w400,
+                            ),),
+                          ],
+                        ),
+                      ),
+                    ),
+                    
+                    Expanded(child: SizedBox()),
+                    
+                    GestureDetector(
+
+                      onTap: (){
+                        setState(() {
+                          _activeCurrentStep += 1;
+                        });
+                        // Navigator.push(context, MaterialPageRoute(builder: (context) => ));
+                      },
+
+                      child: Container(
+                        width: 250,
+                        padding: EdgeInsets.only(top: 15,bottom: 15),
+                        decoration: BoxDecoration(
+                            color: Appcolors.green1,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Appcolors.greenlight)
+                        ),
+                        child: Center(
+                          child: Text('Proceed',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 30,fontWeight: FontWeight.w600,
+                          ),),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+              ],
+            ),
+          ),
+
+          SizedBox(height: 20,),
 
         ],
       ),
     ),
 
     Step(
-        state:
-        _activeCurrentStep <= 1 ? StepState.editing : StepState.complete,
+
+        state: _activeCurrentStep <= 1 ? StepState.editing : _activeCurrentStep <= 2 ? StepState.complete : StepState.complete,
         isActive: _activeCurrentStep >= 1,
+
+       /* _activeCurrentStep <= 1 ? StepState.editing : StepState.complete,
+        isActive: _activeCurrentStep >= 1,*/
         title: Column(
           children: [
             Container(
@@ -216,8 +871,443 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
           ],
         ),
         content: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text('Services Selected',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+            ),),
 
+            SizedBox(height: 10,),
+
+            Container(
+              padding: EdgeInsets.only(bottom: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 20,right: 20,top: 7,bottom: 7),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Appcolors.greenlight),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Text('Services',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+                        
+                        Expanded(child: SizedBox()),
+
+                        Text('Pax',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+
+                        Expanded(child: SizedBox()),
+
+                        Text('Amount',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+
+                        Expanded(child: SizedBox()),
+
+                        Text('EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Men hair cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            Text('Estimate 20 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w300,fontSize: 10,
+                            ),),
+
+                          ],
+                        ),
+
+                        SizedBox(width: 30,),
+                        
+                        Text('2',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+
+                        Expanded(child: SizedBox()),
+
+                        Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+                        Expanded(child: SizedBox()),
+                        Center(
+                          child: Text('Anyone',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontWeight: FontWeight.w400,fontSize: 15,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Men hair cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            Text('Estimate 20 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w300,fontSize: 10,
+                            ),),
+
+                          ],
+                        ),
+
+                        SizedBox(width: 30,),
+
+                        Text('1',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+
+                        Expanded(child: SizedBox()),
+
+                        Text('RM 9',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+                        Expanded(child: SizedBox()),
+                        Center(
+                          child: Text('Anyone',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontWeight: FontWeight.w400,fontSize: 15,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15,),
+
+            Text('Booking Summary',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+            ),),
+
+            SizedBox(height: 15,),
+
+            Container(
+
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15,right: 15),
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 10),
+                            Text('Subtotal',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Chosen Date',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Chosen Slot',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Duration',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Booking Fees',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Penalty Fees',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                          ],
+                        ),
+
+                        Expanded(child: SizedBox()),
+
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 10),
+                            Text('RM 35.00',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('08 May 2021',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('1:00 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('1:00 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('RM 1.00',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('RM 5.00',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 15,right: 35,top: 10,bottom: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Appcolors.greenlight),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Text('Total Paid',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w700,fontSize: 15,color: Appcolors.grey1
+                        ),),
+                        Expanded(child: SizedBox()),
+                        Text('RM 36.00',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15,),
+
+            Text('Booking Summary',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+            ),),
+
+            SizedBox(height: 15,),
+
+            Container(
+              padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: (){
+                  setState(() {
+                    jobtype = !jobtype;
+                  });
+
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Credit/Debit Card',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        color: Appcolors.grey1,fontSize: 18,fontWeight: FontWeight.w600
+                    ),),
+                    Expanded(child: SizedBox()),
+                    Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: Appcolors.greenlight),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Icon(Icons.arrow_drop_down,color: Appcolors.greenlight,)),
+                  ],
+                ),
+              ),
+            ),
+
+            jobtype == true
+
+                ?
+            Container(
+              padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: [
+                  Image.asset('assest/Iocns/addicon1.png',scale: 4.5,),
+
+                  Expanded(child: SizedBox()),
+
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Add new Credit/Debit card.',style: Textstyle1Light18.appbartextstyle.copyWith(
+                          fontSize: 12,fontWeight: FontWeight.w400
+                      ),),
+
+                      Row(
+                        children: [
+                          Text('Note:',style: Textstyle1Light18.appbartextstyle.copyWith(
+                              fontSize: 10,fontWeight: FontWeight.w700
+                          ),),
+                          Text(' By adding credit/debit card you agree on EZi to save your card',style: Textstyle1Light18.appbartextstyle.copyWith(
+                              fontSize: 10,fontWeight: FontWeight.w400
+                          ),),
+                        ],
+                      ),
+                      Text('information securely and display for future payments.',style: Textstyle1Light18.appbartextstyle.copyWith(
+                          fontSize: 10,fontWeight: FontWeight.w400
+                      ),),
+                    ],
+                  ),
+
+                ],
+              ),
+            )
+                :
+            SizedBox(),
+
+            SizedBox(height: 15,),
+
+            Container(
+              padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text('Online Banking',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      color: Appcolors.grey1,fontSize: 18,fontWeight: FontWeight.w600
+                  ),),
+                  Expanded(child: SizedBox()),
+                  Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Icon(Icons.arrow_drop_up,color: Appcolors.greenlight,)),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15,),
+
+            Container(
+              padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text('Online Banking',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      color: Appcolors.grey1,fontSize: 18,fontWeight: FontWeight.w600
+                  ),),
+                  Expanded(child: SizedBox()),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 20,),
+
+            Row(
+              children: [
+                GestureDetector(
+
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+
+                  child: Container(
+                    padding: EdgeInsets.only(bottom: 3,right: 15,left: 15),
+                    decoration: BoxDecoration(
+                        color: Appcolors.green1,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Appcolors.greenlight)
+                    ),
+                    child: Column(
+                      children: [
+                        Icon(Icons.clear,size: 45,color: Colors.red,),
+
+                        Text('Cancel',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontSize: 15,fontWeight: FontWeight.w400,
+                        ),),
+                      ],
+                    ),
+                  ),
+                ),
+
+                Expanded(child: SizedBox()),
+
+                GestureDetector(
+
+                  onTap: (){
+                    setState(() {
+                      _activeCurrentStep += 1;
+                    });
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) => ));
+                  },
+
+                  child: Container(
+                    width: 250,
+                    padding: EdgeInsets.only(top: 15,bottom: 15),
+                    decoration: BoxDecoration(
+                        color: Appcolors.green1,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Appcolors.greenlight)
+                    ),
+                    child: Center(
+                      child: Text('Make Payment',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontSize: 30,fontWeight: FontWeight.w600,
+                      ),),
+                    ),
+                  ),
+                ),
+              ],
+            ),
 
           ],
         )),
@@ -247,8 +1337,183 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
           ],
         ),
         content: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Center(
+              child: Container(
+                width: 200,
+                height: 250,
+                color: Colors.white,
+              ),
+            ),
 
+            Center(
+              child: Text('Payment Successful',style: Textstyle2Light18.appbartextstyle.copyWith(
+                  fontWeight: FontWeight.w600,fontSize: 20
+              ),),
+            ),
+
+            SizedBox(height: 20,),
+
+            Text('Your appointment have been successfully scheduled. You will receive a reminder 1 hour before your appointment starts. Thank you for using EZi!',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w400,fontSize: 15
+            ),),
+            SizedBox(height: 20,),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15,right: 15),
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 10),
+                            Text('Partner Name',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Booking No',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Transaction No  ',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Chosen Date',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Chosen Slot',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Payment Method',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('EZi Class',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Booking Type',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Transaction Date',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Transaction Time',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                          ],
+                        ),
+
+                        Expanded(child: SizedBox()),
+
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 10),
+                            Text('EZi Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('160521001',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('001',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('08 May 2021',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('RM 1.00',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Online Banking',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('EZi Booking',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('Home Based',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('06 May 2021',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                            Text('11:00 AM',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+                            SizedBox(height: 10),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 15,right: 35,top: 10,bottom: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Appcolors.greenlight),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Text('Total Paid',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontWeight: FontWeight.w700,fontSize: 15,color: Appcolors.grey1
+                        ),),
+                        Expanded(child: SizedBox()),
+                        Text('RM 32.00',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontWeight: FontWeight.w600,fontSize: 15,
+                        ),),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 15,),
+
+            Center(
+              child: Container(
+                width: 280,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Appcolors.greenlight),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Text('Done',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w600,fontSize: 30,
+                  ),),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20,),
 
           ],
         ))
