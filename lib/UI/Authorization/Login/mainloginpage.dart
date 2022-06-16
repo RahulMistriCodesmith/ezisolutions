@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use, prefer_const_constructors
+// ignore_for_file: deprecated_member_use, prefer_const_constructors, unused_element
 
 import 'dart:async';
 import 'dart:io';
@@ -124,7 +124,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
           InkWell(
               onTap: (){
-                // _getFromGallery();
+                _getFromGallery();
               },
               child: Text('Tap to insert image')),
 
