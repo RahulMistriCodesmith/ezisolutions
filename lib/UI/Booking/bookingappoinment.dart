@@ -19,7 +19,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
   int _activeCurrentStep = 0;
   static var dropdownValue = 'Home';
   static var dropdownValue2 = 'Anyone(Default)';
-  bool jobtype = true;
+  bool jobtype = false;
 
   CalendarController _controller;
   Map<DateTime, List<dynamic>> _events;

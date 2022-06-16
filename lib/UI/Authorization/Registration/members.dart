@@ -67,13 +67,8 @@ class _MembersState extends State<Members> {
 
   int _activeCurrentStep = 0;
 
-
-
-  // Here we have created list of steps
-  // that are required to complete the form
   List<Step> stepList() => [
-    // This is step1 which is called Account.
-    // Here we will fill our personal details
+
     Step(
       state: _activeCurrentStep <= 0 ? StepState.editing : StepState.complete,
       isActive: _activeCurrentStep >= 0,
@@ -343,7 +338,7 @@ class _MembersState extends State<Members> {
         ],
       ),
     ),
-    // This is Step2 here we will enter our address
+
     Step(
         state:
         _activeCurrentStep <= 1 ? StepState.editing : StepState.complete,

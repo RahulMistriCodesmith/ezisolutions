@@ -1,8 +1,13 @@
+// ignore_for_file: void_checks
+
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Booking/bookingappoinment.dart';
 import 'package:ezisolutions/UI/Booking/custompackagepage.dart';
+import 'package:ezisolutions/UI/Booking/tipping.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_share/flutter_share.dart';
 class PartnerProfilePage extends StatefulWidget {
   const PartnerProfilePage({Key key}) : super(key: key);
 
@@ -13,6 +18,27 @@ class PartnerProfilePage extends StatefulWidget {
 class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
   var selectedval = "services";
+  bool jobtype = false;
+
+  Future<void> share() async {
+    await FlutterShare.share(
+        title: 'Example share',
+        text: 'Example share text',
+        linkUrl: 'https://flutter.dev/',
+        chooserTitle: 'Example Chooser Title');
+  }
+
+  Future<void> shareFile() async {
+    final result = await FilePicker.platform.pickFiles();
+    if (result == null || result.files.isEmpty) return null;
+
+    await FlutterShare.shareFile(
+      title: 'Example share',
+      text: 'Example share text',
+      filePath: result.files[0] as String,
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -931,28 +957,997 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                 selectedval == "gallery"
                 ?
-                    Container(
-                      child: Column(
-                        children: [
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20,top: 20,bottom: 20),
+                          child: Row(
+                            children: [
+                              Text('All Images',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                fontSize: 20,fontWeight: FontWeight.w600,
+                              ),),
+                              Text('(1500)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                fontSize: 12,fontWeight: FontWeight.w600,color: Appcolors.greenlight
+                              ),),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 3,right: 3,),
+                          child: Container(
+                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Appcolors.greenlight),
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Row(
+                              children: [
 
-                        ],
-                      ),
+                                GestureDetector(
+                                    onTap: (){
+                                      return showDialog(
+                                        context: context,
+                                        builder: (ctx) => Dialog(
+                                           child: Image.asset('assest/Image/quote1.png',scale: 1,),
+                                        ),
+                                      );
+                                    },
+                                    child: Image.asset('assest/Image/quote1.png',scale: 5)),
+
+                                Expanded(child: SizedBox()),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                    ),),
+                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('adipisci lli. consectetur, adisci elit.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text(' dipisci veli consectetur, ',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    InkWell(
+
+                                      onTap: (){
+                                        share();
+                                      },
+
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 180),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(color: Appcolors.greenlight),
+                                            borderRadius: BorderRadius.circular(10),
+                                            color: Appcolors.green1,
+                                          ),
+                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 3,right: 3,),
+                          child: Container(
+                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Appcolors.greenlight),
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Row(
+                              children: [
+
+                                GestureDetector(
+                                    onTap: (){
+                                      return showDialog(
+                                        context: context,
+                                        builder: (ctx) => Dialog(
+                                          child: Image.asset('assest/Image/quote2.png',scale: 1,),
+                                        ),
+                                      );
+                                    },
+                                    child: Image.asset('assest/Image/quote2.png',scale: 5)),
+
+                                Expanded(child: SizedBox()),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                    ),),
+                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+
+                                    InkWell(
+
+                                      onTap: (){
+                                        share();
+                                      },
+
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 185),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(color: Appcolors.greenlight),
+                                            borderRadius: BorderRadius.circular(10),
+                                            color: Appcolors.green1,
+                                          ),
+                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 3,right: 3,),
+                          child: Container(
+                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Appcolors.greenlight),
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Row(
+                              children: [
+
+                                GestureDetector(
+                                    onTap: (){
+                                      return showDialog(
+                                        context: context,
+                                        builder: (ctx) => Dialog(
+                                          child: Image.asset('assest/Image/quote1.png',scale: 1,),
+                                        ),
+                                      );
+                                    },
+                                    child: Image.asset('assest/Image/quote1.png',scale: 5)),
+
+                                Expanded(child: SizedBox()),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                    ),),
+                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('adipisci lli. consectetur, adisci elit.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text(' dipisci veli consectetur, ',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    InkWell(
+
+                                      onTap: (){
+                                        share();
+                                      },
+
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 180),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(color: Appcolors.greenlight),
+                                            borderRadius: BorderRadius.circular(10),
+                                            color: Appcolors.green1,
+                                          ),
+                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 3,right: 3,),
+                          child: Container(
+                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Appcolors.greenlight),
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Row(
+                              children: [
+
+                                GestureDetector(
+                                    onTap: (){
+                                      return showDialog(
+                                        context: context,
+                                        builder: (ctx) => Dialog(
+                                          child: Image.asset('assest/Image/quote2.png',scale: 1,),
+                                        ),
+                                      );
+                                    },
+                                    child: Image.asset('assest/Image/quote2.png',scale: 5)),
+
+                                Expanded(child: SizedBox()),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                    ),),
+                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+
+                                    InkWell(
+
+                                      onTap: (){
+                                        share();
+                                      },
+
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 185),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(color: Appcolors.greenlight),
+                                            borderRadius: BorderRadius.circular(10),
+                                            color: Appcolors.green1,
+                                          ),
+                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 3,right: 3,),
+                          child: Container(
+                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Appcolors.greenlight),
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Row(
+                              children: [
+
+                                GestureDetector(
+                                    onTap: (){
+                                      return showDialog(
+                                        context: context,
+                                        builder: (ctx) => Dialog(
+                                          child: Image.asset('assest/Image/quote2.png',scale: 1,),
+                                        ),
+                                      );
+                                    },
+                                    child: Image.asset('assest/Image/quote2.png',scale: 5)),
+
+                                Expanded(child: SizedBox()),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                    ),),
+                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+                                    Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                    ),),
+
+                                    InkWell(
+
+                                      onTap: (){
+                                        share();
+                                      },
+
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 185),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(color: Appcolors.greenlight),
+                                            borderRadius: BorderRadius.circular(10),
+                                            color: Appcolors.green1,
+                                          ),
+                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                      ],
                     )
                     :
                     SizedBox(),
 
                 selectedval == "review"
                     ?
-                Container(
-                  child: Text('1323'),
+                Column(
+                  children: [
+                    
+                    SizedBox(height: 20),
+                    
+                    Container(
+                      padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: InkWell(
+                        onTap: (){
+                          setState(() {
+                            jobtype = !jobtype;
+                          });
+
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Rating',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                color: Appcolors.grey1,fontSize: 18,fontWeight: FontWeight.w600
+                            ),),
+                            Expanded(child: SizedBox()),
+                            Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Appcolors.greenlight),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Icon(Icons.arrow_drop_down,color: Appcolors.greenlight,)),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    jobtype == true
+
+                        ?
+                    Container(
+                      padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8,right: 8,top: 20),
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.only(top: 15,bottom: 15,left: 42,right: 42),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Appcolors.greenlight),
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Appcolors.green1,
+                                  ),
+                                  child: Text('All',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 18,fontWeight: FontWeight.w600
+                                  ),),
+                                ),
+
+                                Expanded(child: SizedBox()),
+
+                                Container(
+                                  padding: EdgeInsets.only(top: 21,bottom: 21,left: 42,right: 42),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Appcolors.greenlight),
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.white,
+                                  ),
+                                  child: Image.asset('assest/Iocns/staricon.png',scale: 2.5,),
+                                ),
+
+                                Expanded(child: SizedBox()),
+
+                                Container(
+                                  padding: EdgeInsets.only(top: 21,bottom: 21,left: 35,right: 35),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Appcolors.greenlight),
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.white,
+                                  ),
+                                  child: Image.asset('assest/Image/2star.png',scale: 5,),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          Padding(
+                            padding: const EdgeInsets.only(left: 9,right: 9,top: 15),
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.only(top: 20,bottom: 20,left: 28,right: 28),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Appcolors.greenlight),
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.white,
+                                  ),
+                                  child: Image.asset('assest/Image/3star.png',scale: 5,),
+                                ),
+
+                                Expanded(child: SizedBox()),
+
+                                Container(
+                                  padding: EdgeInsets.only(top: 13,bottom: 13,left: 30,right: 30),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Appcolors.greenlight),
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.white,
+                                  ),
+                                  child: Image.asset('assest/Image/4star.png',scale: 4,),
+                                ),
+
+                                Expanded(child: SizedBox()),
+
+                                Container(
+                                  padding: EdgeInsets.only(top: 15,bottom: 15,left: 28,right: 28),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Appcolors.greenlight),
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.white,
+                                  ),
+                                  child: Image.asset('assest/Image/5star.png',scale: 5,),
+                                ),
+                              ],
+                            ),
+                          ),
+                          
+
+                        ],
+                      ),
+                    )
+                        :
+                    SizedBox(height: 20),
+
+                    Container(
+                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 18,fontWeight: FontWeight.w600
+                                    ),),
+                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
+                                    ),),
+                                    
+                                    SizedBox(width: width*0.2),
+                                    
+                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400
+                                    ),),
+                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
+                                  ],
+                                ),
+                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+                    Container(
+                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 18,fontWeight: FontWeight.w600
+                                    ),),
+                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
+                                    ),),
+
+                                    SizedBox(width: width*0.2),
+
+                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400
+                                    ),),
+                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
+                                  ],
+                                ),
+                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+                    Container(
+                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 18,fontWeight: FontWeight.w600
+                                    ),),
+                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
+                                    ),),
+
+                                    SizedBox(width: width*0.2),
+
+                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400
+                                    ),),
+                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
+                                  ],
+                                ),
+                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+                    Container(
+                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 18,fontWeight: FontWeight.w600
+                                    ),),
+                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
+                                    ),),
+
+                                    SizedBox(width: width*0.2),
+
+                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400
+                                    ),),
+                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
+                                  ],
+                                ),
+                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+                    Container(
+                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 18,fontWeight: FontWeight.w600
+                                    ),),
+                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
+                                    ),),
+
+                                    SizedBox(width: width*0.2),
+
+                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400
+                                    ),),
+                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
+                                  ],
+                                ),
+                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+
+                  ],
                 )
                     :
                 SizedBox(),
 
                 selectedval == "ezians"
                     ?
-                Container(
-                  child: Text('dsfh'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15,bottom: 15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Appcolors.greenlight),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                        ),
+                        child: Text('Get to know more about EZi Barber employees. Well at the same time if you’re feeling generous you can always tip them. Just saying! It is always good to spare some for those who work for it.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 10,fontWeight: FontWeight.w400
+                        ),),
+                      ),
+                      
+                      SizedBox(height: 15),
+                      
+                      Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Appcolors.greenlight),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+
+                                Stack(
+                                  children: [
+                                    Image.asset('assest/Image/tipimage.png',scale: 4,),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 30,top: 10,),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
+                                        ),
+                                        child: Text('Vacinated',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 10,fontWeight: FontWeight.w600
+                                        ),),
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+
+                                Text('John Martin',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w600
+                                ),),
+
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10,right: 10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Experience',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w600
+                                          ),),
+                                          
+                                          SizedBox(height: 10),
+                                          
+                                          Text('5 Years 10 Months',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 12,fontWeight: FontWeight.w400
+                                          ),),
+                                        ],
+                                      ),
+                                      SizedBox(width: width*0.22,),
+                                      Image.asset('assest/Image/saveimage.png',scale: 4),
+                                    ],
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text('About John',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w600
+                                  ),),
+                                  Text('It is a long established fact that a reader',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Text('will be distracted by the readable',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Text('content of a page when looking at its',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Text('layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Row(
+                                    children: [
+                                      SizedBox(width: width*0.33),
+                                      InkWell(
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context) => Tipping()));
+                                        },
+
+                                        child: Container(
+                                          padding: EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                            border: Border.all(color: Appcolors.greenlight),
+                                            borderRadius: BorderRadius.circular(10),
+                                            color: Appcolors.green1,
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Image.asset('assest/Image/tipimage1.png',scale: 4.5),
+                                              Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 15,fontWeight: FontWeight.w400
+                                              ),),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 20,),
+
+                      Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Appcolors.greenlight),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+
+                                Image.asset('assest/Image/tipimage.png',scale: 4,),
+
+                                Text('John Martin',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 12,fontWeight: FontWeight.w600
+                                ),),
+
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10,right: 10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Experience',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w600
+                                          ),),
+
+                                          SizedBox(height: 10),
+
+                                          Text('5 Years 10 Months',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 12,fontWeight: FontWeight.w400
+                                          ),),
+                                        ],
+                                      ),
+                                      SizedBox(width: width*0.22,),
+                                      Image.asset('assest/Image/saveimage.png',scale: 4),
+                                    ],
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text('About Christ',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 15,fontWeight: FontWeight.w600
+                                  ),),
+                                  Text('It is a long established fact that a reader',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Text('will be distracted by the readable',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Text('content of a page when looking at its',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Text('layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 12,fontWeight: FontWeight.w400
+                                  ),),
+                                  Row(
+                                    children: [
+                                      SizedBox(width: width*0.33),
+                                      Container(
+                                        padding: EdgeInsets.all(5),
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Appcolors.green1),
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Image.asset('assest/Image/tipimage1.png',scale: 4.5),
+                                            Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                fontSize: 15,fontWeight: FontWeight.w400
+                                            ),),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 20,),
+                    ],
+                  ),
                 )
                     :
                 SizedBox(),

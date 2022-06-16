@@ -1,7 +1,6 @@
 // ignore_for_file: unused_field
 
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
-import 'package:ezisolutions/UI/Booking/booking.dart';
 import 'package:ezisolutions/UI/Home/homepage.dart';
 import 'package:flutter/material.dart';
 class BottomNavigationBarPage extends StatefulWidget {
