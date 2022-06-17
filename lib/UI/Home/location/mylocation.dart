@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Home/location/locationpage.dart';
@@ -34,15 +36,15 @@ class _MyLocationState extends State<MyLocation> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 32,right: 32,),
-                child: Text('EZi will need to use your location  to find',style: Textstyle3Light18.appbartextstyle.copyWith(
-                  fontSize: 18,fontWeight: FontWeight.w400,
+                child: Text('EZi will need to use your location to find',style: Textstyle3Light18.appbartextstyle.copyWith(
+                  fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black
                 ),),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(left: 32,right: 32),
                 child: Text('and display the nearest partners to you!',style: Textstyle3Light18.appbartextstyle.copyWith(
-                  fontSize: 18,fontWeight: FontWeight.w400,
+                  fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black
                 ),),
               ),
 

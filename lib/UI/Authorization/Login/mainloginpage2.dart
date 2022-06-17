@@ -6,7 +6,6 @@ import 'dart:io';
 import 'package:country_picker/country_picker.dart';
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
-import 'package:ezisolutions/UI/Home/bottomnavigation.dart';
 import 'package:ezisolutions/UI/Home/location/mylocation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -632,7 +631,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                       SizedBox(width: 10,),
 
                       Container(
-                        // padding: EdgeInsets.only(left: 5),
+                        padding: EdgeInsets.only(left: 10),
                         width: width*0.55,
                         height: height*0.06,
                         decoration: BoxDecoration(
@@ -648,7 +647,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                             }
                             return null;
                           },
-                          textAlign: TextAlign.center,
+
                           decoration: Inputdec2.inputDecoration.copyWith(
                             hintText: 'Contact no',
                           ),

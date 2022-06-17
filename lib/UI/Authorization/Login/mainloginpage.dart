@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use, prefer_const_constructors, unused_element
+// ignore_for_file: deprecated_member_use, prefer_const_constructors, unused_element, prefer_typing_uninitialized_variables, avoid_print, missing_required_param, sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'dart:async';
 import 'dart:io';
@@ -50,7 +50,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
   }
 
   bool isSwitched = false;
-  bool _isObscure = false;
+  bool _isObscure = true;
   var selectedval = 'slide1';
 
 
@@ -180,14 +180,14 @@ class _MainLoginPageState extends State<MainLoginPage> {
                           onSelect: (Country country) {
                             print('Select country: ${country.displayName}');
                           },
-                          // Optional. Sets the theme for the country list picker.
+
                           countryListTheme: CountryListThemeData(
-                            // Optional. Sets the border radius for the bottomsheet.
+
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(40.0),
                               topRight: Radius.circular(40.0),
                             ),
-                            // Optional. Styles the search field.
+
                             inputDecoration: InputDecoration(
                               labelText: 'Search',
                               hintText: 'Start typing to search',
@@ -203,10 +203,10 @@ class _MainLoginPageState extends State<MainLoginPage> {
                       },
                     ),
 
-                    SizedBox(width: 10,),
+                    SizedBox(width: 10),
 
                     Container(
-                      // padding: EdgeInsets.only(left: 5),
+                      padding: EdgeInsets.only(left: 10),
                       width: width*0.55,
                       height: height*0.06,
                       decoration: BoxDecoration(
@@ -215,7 +215,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                           color: Colors.white
                       ),
                       child: TextFormField(
-                        textAlign: TextAlign.center,
+
                         decoration: Inputdec2.inputDecoration.copyWith(
                           hintText: 'Contact no',
                         ),
@@ -796,7 +796,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                                                   child: InkWell(
 
                                                                                                                     onTap: (){
-                                                                                                                      Navigator.push(context, MaterialPageRoute(builder: (context)=> MainLoginPage2()));
+                                                                                                                      Navigator.push(context, MaterialPageRoute(builder: (context)=> MainLoginPage()));
                                                                                                                     },
 
                                                                                                                     child: Container(
@@ -924,7 +924,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                   height: height*0.06,
                   decoration: BoxDecoration(
                     border: Border.all(color: Appcolors.greenlight),
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   child: SliderButton(
                     backgroundColor: Colors.white,

@@ -2,6 +2,7 @@
 
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/UI/Alerts/alerts.dart';
+import 'package:ezisolutions/UI/Booking/booking1.dart';
 import 'package:ezisolutions/UI/Booking/bookingdetails.dart';
 import 'package:ezisolutions/UI/Home/homepage.dart';
 import 'package:ezisolutions/UI/My%20Profile/myprofile.dart';
@@ -20,7 +21,7 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
   int _pState = 0;
   var pages = [
     HomePage(),
-    BookingDetails(),
+    Booking1(),
     QRCodes(),
     Alerts(),
     MyProfile(),

@@ -21,7 +21,7 @@ class Textstyle2Light18 {
 
 class Textstyle3Light18 {
   static const TextStyle appbartextstyle = TextStyle(
-    fontSize: 13,
+
     fontFamily: 'Montserrat',
     //color: Appcolors.greylight
   );
@@ -29,7 +29,7 @@ class Textstyle3Light18 {
 
 class Textstyle4Light18 {
   static const TextStyle appbartextstyle = TextStyle(
-    fontSize: 13,
+
     fontFamily: 'IBMPlexSans-Regular',
     //color: Appcolors.greylight
   );
