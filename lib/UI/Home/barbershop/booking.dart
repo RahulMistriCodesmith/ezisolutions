@@ -1,7 +1,7 @@
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
-import 'package:ezisolutions/UI/Booking/filter.dart';
-import 'package:ezisolutions/UI/Booking/partnerprofilepage.dart';
+import 'package:ezisolutions/UI/Home/barbershop/filter.dart';
+import 'package:ezisolutions/UI/Home/barbershop/partnerprofilepage.dart';
 import 'package:flutter/material.dart';
 class BookingPage extends StatefulWidget {
   const BookingPage({Key key}) : super(key: key);

@@ -2,9 +2,9 @@
 
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
-import 'package:ezisolutions/UI/Booking/bookingappoinment.dart';
-import 'package:ezisolutions/UI/Booking/custompackagepage.dart';
-import 'package:ezisolutions/UI/Booking/tipping.dart';
+import 'package:ezisolutions/UI/Home/barbershop/bookingappoinment.dart';
+import 'package:ezisolutions/UI/Home/barbershop/custompackagepage.dart';
+import 'package:ezisolutions/UI/Home/barbershop/tipping.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_share/flutter_share.dart';
@@ -195,9 +195,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   });
                                 },
 
-                                child: Text('Services',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 20,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                ),),
+                                child: Text('Services',style: selectedval == "services" ? Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 20,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight)
+                                    :
+                                Textstyle2Light18.appbartextstyle.copyWith(
+                                  fontSize: 20,fontWeight: FontWeight.w400,
+                                ),
+                                ),
                               ),
 
                               Expanded(child: SizedBox()),
@@ -210,9 +214,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   });
                                 },
 
-                                child: Text('Gallery',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                child: Text('Gallery',style: selectedval == "gallery" ? Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 20,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight)
+                                    :
+                                Textstyle2Light18.appbartextstyle.copyWith(
                                   fontSize: 20,fontWeight: FontWeight.w400,
-                                ),),
+                                ),
+                                ),
                               ),
 
                               Expanded(child: SizedBox()),
@@ -225,9 +233,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   });
                                 },
 
-                                child: Text('Review',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                child: Text('Review',style: selectedval == "review" ? Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 20,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight)
+                                    :
+                                Textstyle2Light18.appbartextstyle.copyWith(
                                   fontSize: 20,fontWeight: FontWeight.w400,
-                                ),),
+                                ),
+                                ),
                               ),
 
                               Expanded(child: SizedBox()),
@@ -240,9 +252,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   });
                                 },
 
-                                child: Text('EZians',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                child: Text('EZians',style: selectedval == "ezians" ? Textstyle2Light18.appbartextstyle.copyWith(
+                                    fontSize: 20,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight)
+                                    :
+                                Textstyle2Light18.appbartextstyle.copyWith(
                                   fontSize: 20,fontWeight: FontWeight.w400,
-                                ),),
+                                ),
+                                ),
                               ),
                             ],
                           ),

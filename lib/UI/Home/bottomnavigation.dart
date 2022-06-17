@@ -1,7 +1,11 @@
 // ignore_for_file: unused_field
 
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
+import 'package:ezisolutions/UI/Alerts/alerts.dart';
+import 'package:ezisolutions/UI/Booking/bookingdetails.dart';
 import 'package:ezisolutions/UI/Home/homepage.dart';
+import 'package:ezisolutions/UI/My%20Profile/myprofile.dart';
+import 'package:ezisolutions/UI/QRCodes/qrcodes.dart';
 import 'package:flutter/material.dart';
 class BottomNavigationBarPage extends StatefulWidget {
   const BottomNavigationBarPage({Key key}) : super(key: key);
@@ -16,7 +20,10 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
   int _pState = 0;
   var pages = [
     HomePage(),
-
+    BookingDetails(),
+    QRCodes(),
+    Alerts(),
+    MyProfile(),
   ];
 
   void _onItemTapped(int index) {
@@ -29,7 +36,7 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
 
         body:  pages[_currentindex],

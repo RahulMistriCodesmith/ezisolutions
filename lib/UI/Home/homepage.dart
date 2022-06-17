@@ -1,6 +1,6 @@
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
-import 'package:ezisolutions/UI/Booking/booking.dart';
+import 'package:ezisolutions/UI/Home/barbershop/booking.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);

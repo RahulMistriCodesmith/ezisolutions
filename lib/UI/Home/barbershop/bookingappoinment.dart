@@ -539,7 +539,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Booking Type',style: Textstyle2Light18.appbartextstyle.copyWith(
+                Text('barbershop Type',style: Textstyle2Light18.appbartextstyle.copyWith(
                     fontSize: 15,fontWeight: FontWeight.w600,
                 ),),
 
@@ -1007,7 +1007,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
 
             SizedBox(height: 15,),
 
-            Text('Booking Summary',style: Textstyle2Light18.appbartextstyle.copyWith(
+            Text('barbershop Summary',style: Textstyle2Light18.appbartextstyle.copyWith(
                 fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
             ),),
 
@@ -1046,7 +1046,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                               fontWeight: FontWeight.w600,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
-                            Text('Booking Fees',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            Text('barbershop Fees',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w600,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
@@ -1120,7 +1120,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
 
             SizedBox(height: 15,),
 
-            Text('Booking Summary',style: Textstyle2Light18.appbartextstyle.copyWith(
+            Text('barbershop Summary',style: Textstyle2Light18.appbartextstyle.copyWith(
                 fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
             ),),
 
@@ -1379,7 +1379,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                               fontWeight: FontWeight.w600,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
-                            Text('Booking No',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            Text('barbershop No',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w600,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
@@ -1403,7 +1403,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                               fontWeight: FontWeight.w600,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
-                            Text('Booking Type',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            Text('barbershop Type',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w600,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
@@ -1448,7 +1448,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                               fontWeight: FontWeight.w400,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
-                            Text('EZi Booking',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            Text('EZi barbershop',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w400,fontSize: 15,
                             ),),
                             SizedBox(height: 10),
@@ -1554,7 +1554,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                       width: width*0.25,
                     ),
 
-                    Text('Schedule Booking',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    Text('Schedule barbershop',style: Textstyle2Light18.appbartextstyle.copyWith(
                         fontWeight: FontWeight.w400,fontSize: 18
                     ),),
 
@@ -1566,8 +1566,10 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
             SizedBox(height: 10,),
 
             Container(
+              decoration: BoxDecoration(
+                color: Appcolors.background,
+              ),
 
-              width: width*2,
               height: height,
               child: Stepper(
                 elevation: 0,
