@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use, prefer_const_constructors
+// ignore_for_file: deprecated_member_use, prefer_const_constructors, prefer_typing_uninitialized_variables, avoid_print, missing_required_param, sized_box_for_whitespace
 
 import 'dart:async';
 import 'dart:io';
@@ -7,6 +7,7 @@ import 'package:country_picker/country_picker.dart';
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Home/bottomnavigation.dart';
+import 'package:ezisolutions/UI/Home/location/mylocation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -1372,7 +1373,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                           setState(() {
 
                             if (contact.text == "123" && password.text == "123") {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigationBarPage()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => MyLocation()));
 
                             }
                           });

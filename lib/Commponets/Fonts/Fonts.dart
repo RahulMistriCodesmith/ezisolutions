@@ -22,7 +22,7 @@ class Textstyle2Light18 {
 class Textstyle3Light18 {
   static const TextStyle appbartextstyle = TextStyle(
     fontSize: 13,
-    fontFamily: 'AvenirLTStd-Black',
+    fontFamily: 'Montserrat',
     //color: Appcolors.greylight
   );
 }

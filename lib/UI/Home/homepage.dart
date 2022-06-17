@@ -27,14 +27,196 @@ class _HomePageState extends State<HomePage> {
           children: [
 
             Container(
+              padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Appcolors.greenlight),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-
+                      Text('No5. Jalan semarak off jalan nilai Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontSize: 15,fontWeight: FontWeight.w400,
+                      ),),
+                      Text('Current Location',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontSize: 12,fontWeight: FontWeight.w600,color: Appcolors.greenlight
+                      ),),
                     ],
                   ),
+
+                  Expanded(child: SizedBox()),
+
+                  GestureDetector(
+
+                      onTap: (){
+                        showModalBottomSheet(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              topRight: Radius.circular(20),
+                            ),
+                          ),
+                          barrierColor: Appcolors.grey,
+                          context: context,
+                          isScrollControlled: true,
+                          builder: (BuildContext context) {
+                            return StatefulBuilder(
+                                builder: (context, setState) {
+                                  return Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 20),
+                                          child: Text('Good Morning,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 20,fontWeight: FontWeight.w600,
+                                          ),),
+                                        ),
+
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 20),
+                                          child: Text('Please select your location?',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 15,fontWeight: FontWeight.w400,
+                                          ),),
+                                        ),
+
+                                        SizedBox(height: 10),
+
+                                        Container(
+                                          padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(10),
+                                            border: Border.all(color: Appcolors.greenlight)
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Icon(Icons.location_on_outlined,size: 35,color: Appcolors.greenlight,),
+
+                                              SizedBox(width: 10,),
+
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+
+                                                  Text('Home',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 18,fontWeight: FontWeight.w600,
+                                                  ),),
+
+                                                  Text('No5. Jalan semarak off jalan nilai',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w400,
+                                                  ),),
+
+                                                  Text('Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w400,
+                                                  ),),
+
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+
+                                        SizedBox(height: 10),
+
+                                        Container(
+                                          padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
+                                          decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius: BorderRadius.circular(10),
+                                              border: Border.all(color: Appcolors.greenlight)
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Icon(Icons.location_on_outlined,size: 35,color: Appcolors.greenlight,),
+
+                                              SizedBox(width: 10,),
+
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+
+                                                  Text('Home',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 18,fontWeight: FontWeight.w600,
+                                                  ),),
+
+                                                  Text('No5. Jalan semarak off jalan nilai',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w400,
+                                                  ),),
+
+                                                  Text('Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w400,
+                                                  ),),
+
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+
+                                        SizedBox(height: 20),
+
+                                        Row(
+                                          children: [
+
+                                            SizedBox(width: 20),
+
+                                            Image.asset('assest/Iocns/addicon1.png',scale: 3,),
+
+                                            SizedBox(width: 5,),
+
+                                            Text('Add new Address',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 18,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                            ),),
+
+                                          ],
+                                        ),
+
+                                        SizedBox(height: 20),
+
+                                        GestureDetector(
+
+                                          onTap: (){
+                                            Navigator.pop(context);
+                                          },
+
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(left: 32,right: 32),
+                                            child: Container(
+                                              width: width*0.8,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                color: Appcolors.green1,
+                                                border: Border.all(color: Appcolors.greenlight),
+                                                borderRadius: BorderRadius.circular(10),
+                                              ),
+                                              child: Center(
+                                                child: Text('Use This Location',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 20,fontWeight: FontWeight.w600,
+                                                ),),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+
+                                        SizedBox(height: 5),
+
+                                      ],
+                                    ),
+                                  );
+                                }
+                            );
+                          },
+                        );
+                      },
+
+                      child: Image.asset('assest/Image/pen.png',scale: 4)),
                 ],
               ),
             ),
