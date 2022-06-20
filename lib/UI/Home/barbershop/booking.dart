@@ -70,7 +70,7 @@ class _BookingPageState extends State<BookingPage> {
                     ),
                   ),
 
-                  SizedBox(width: 10),
+                  Expanded(child: SizedBox()),
 
                   Container(
                     decoration: BoxDecoration(
@@ -131,7 +131,7 @@ class _BookingPageState extends State<BookingPage> {
                   children: [
                     Image.asset('assest/Image/shopimage.png',scale: 5,),
 
-                    SizedBox(width: 20,),
+                    SizedBox(width: 10,),
 
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,19 +139,16 @@ class _BookingPageState extends State<BookingPage> {
                         Row(
                           children: [
                             Text('EZi Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 18
+                                fontWeight: FontWeight.w600,fontSize: 18
                             ),),
                             Text('(4.5KM)',style: Textstyle2Light18.appbartextstyle.copyWith(
                                 fontWeight: FontWeight.w300,fontSize: 10
                             ),),
 
-                            SizedBox(
-                              width: width*0.17,
-                            ),
+                            SizedBox(width: 10,),
 
                             Container(
-                              width: 10,
-                              height: 10,
+                              padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                 color: Appcolors.greenlight,
                                 borderRadius: BorderRadius.circular(50),
@@ -185,7 +182,7 @@ class _BookingPageState extends State<BookingPage> {
 
                             Image.asset('assest/Iocns/staricon.png',scale: 3,),
 
-                            SizedBox(width: width*0.25),
+                            SizedBox(width: 10,),
 
                             Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
                                 fontWeight: FontWeight.w600,fontSize: 15
@@ -226,7 +223,7 @@ class _BookingPageState extends State<BookingPage> {
                 children: [
                   Image.asset('assest/Image/shopimage.png',scale: 5,),
 
-                  SizedBox(width: 20,),
+                  SizedBox(width: 10,),
 
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -240,13 +237,10 @@ class _BookingPageState extends State<BookingPage> {
                               fontWeight: FontWeight.w300,fontSize: 10
                           ),),
 
-                          SizedBox(
-                            width: width*0.17,
-                          ),
+                          SizedBox(width: 10,),
 
                           Container(
-                            width: 10,
-                            height: 10,
+                            padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: Appcolors.greenlight,
                               borderRadius: BorderRadius.circular(50),
@@ -280,7 +274,7 @@ class _BookingPageState extends State<BookingPage> {
 
                           Image.asset('assest/Iocns/staricon.png',scale: 3,),
 
-                          SizedBox(width: width*0.25),
+                          SizedBox(width: 10,),
 
                           Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w600,fontSize: 15
@@ -320,7 +314,7 @@ class _BookingPageState extends State<BookingPage> {
                 children: [
                   Image.asset('assest/Image/shopimage.png',scale: 5,),
 
-                  SizedBox(width: 20,),
+                  SizedBox(width: 10,),
 
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -334,13 +328,10 @@ class _BookingPageState extends State<BookingPage> {
                               fontWeight: FontWeight.w300,fontSize: 10
                           ),),
 
-                          SizedBox(
-                            width: width*0.17,
-                          ),
+                          SizedBox(width: 10,),
 
                           Container(
-                            width: 10,
-                            height: 10,
+                            padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: Appcolors.greenlight,
                               borderRadius: BorderRadius.circular(50),
@@ -374,7 +365,7 @@ class _BookingPageState extends State<BookingPage> {
 
                           Image.asset('assest/Iocns/staricon.png',scale: 3,),
 
-                          SizedBox(width: width*0.25),
+                          SizedBox(width: 10,),
 
                           Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w600,fontSize: 15
@@ -414,7 +405,7 @@ class _BookingPageState extends State<BookingPage> {
                 children: [
                   Image.asset('assest/Image/shopimage.png',scale: 5,),
 
-                  SizedBox(width: 20,),
+                  SizedBox(width: 10,),
 
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -428,13 +419,10 @@ class _BookingPageState extends State<BookingPage> {
                               fontWeight: FontWeight.w300,fontSize: 10
                           ),),
 
-                          SizedBox(
-                            width: width*0.17,
-                          ),
+                          SizedBox(width: 10,),
 
                           Container(
-                            width: 10,
-                            height: 10,
+                            padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: Appcolors.greenlight,
                               borderRadius: BorderRadius.circular(50),
@@ -468,7 +456,7 @@ class _BookingPageState extends State<BookingPage> {
 
                           Image.asset('assest/Iocns/staricon.png',scale: 3,),
 
-                          SizedBox(width: width*0.25),
+                          SizedBox(width: 10,),
 
                           Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w600,fontSize: 15
@@ -508,7 +496,7 @@ class _BookingPageState extends State<BookingPage> {
                 children: [
                   Image.asset('assest/Image/shopimage.png',scale: 5,),
 
-                  SizedBox(width: 20,),
+                  SizedBox(width: 10,),
 
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -522,13 +510,10 @@ class _BookingPageState extends State<BookingPage> {
                               fontWeight: FontWeight.w300,fontSize: 10
                           ),),
 
-                          SizedBox(
-                            width: width*0.17,
-                          ),
+                          SizedBox(width: 10,),
 
                           Container(
-                            width: 10,
-                            height: 10,
+                            padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: Appcolors.greenlight,
                               borderRadius: BorderRadius.circular(50),
@@ -562,7 +547,7 @@ class _BookingPageState extends State<BookingPage> {
 
                           Image.asset('assest/Iocns/staricon.png',scale: 3,),
 
-                          SizedBox(width: width*0.25),
+                          SizedBox(width: 10),
 
                           Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w600,fontSize: 15

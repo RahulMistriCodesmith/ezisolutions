@@ -1,7 +1,8 @@
-// ignore_for_file: sort_child_properties_last
+// ignore_for_file: sort_child_properties_last, prefer_const_constructors
 
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
+import 'package:ezisolutions/UI/Booking/bookingcancelled.dart';
 import 'package:ezisolutions/UI/Home/barbershop/booking.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
@@ -35,14 +36,17 @@ class _HomePageState extends State<HomePage> {
                 border: Border.all(color: Appcolors.greenlight),
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('No5. Jalan semarak off jalan nilai Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,
-                      ),),
+                      SizedBox(
+                       width: width*0.85,
+                        child: Text('No5. Jalan semarak off jalan nilai Tampin, 71000',maxLines: 1,style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontSize: 13,fontWeight: FontWeight.w400,overflow: TextOverflow.ellipsis,
+                        ),),
+                      ),
                       Text('Current Location',style: Textstyle2Light18.appbartextstyle.copyWith(
                         fontSize: 12,fontWeight: FontWeight.w600,color: Appcolors.greenlight
                       ),),
@@ -581,7 +585,9 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 20,fontWeight: FontWeight.w600
                     ),
                   ),
+
                   SizedBox(height: 10),
+
                   GridView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       gridDelegate:
@@ -598,32 +604,43 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             // mainAxisSize:MainAxisSize.min,
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                        color: Appcolors.greenlight,
-                                        width: 2)),
-                                height: 50,
-                                // width: 120,
-                                margin: EdgeInsets.symmetric(vertical: 2),
-                                // padding: EdgeInsets.symmetric(horizontal: 1,vertical: 5),
-                                child: Row(
-                                  children: [
-                                    preferredServiceList[index]['image'],
-                                    SizedBox(width: 8),
-                                    Flexible(
-                                        child: Text(
-                                          preferredServiceList[index]
-                                          ['servicetext'],
-                                          style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w400
-                                          ),
-                                          overflow: TextOverflow.ellipsis,
-                                          maxLines: 2,
-                                        )),
-                                  ],
+                              InkWell(
+
+                                onTap: (){
+                                  if (preferredServiceList[index]["servicetext"] == "Barber Shop"){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookingPage()));
+                                  }
+                                },
+
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Appcolors.green1,
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                          color: Appcolors.greenlight,
+                                          width: 2)),
+                                  height: 50,
+                                  // width: 120,
+                                  margin: EdgeInsets.symmetric(vertical: 2),
+                                  // padding: EdgeInsets.symmetric(horizontal: 1,vertical: 5),
+                                  child: Row(
+                                    children: [
+                                      preferredServiceList[index]['image'],
+
+                                      SizedBox(width: 8),
+
+                                      Flexible(
+                                          child: Text(
+                                            preferredServiceList[index]
+                                            ['servicetext'],
+                                            style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                fontSize: 15,fontWeight: FontWeight.w400
+                                            ),
+                                            overflow: TextOverflow.ellipsis,
+                                            maxLines: 2,
+                                          )),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Flexible(
@@ -1306,6 +1323,7 @@ class _HomePageState extends State<HomePage> {
       Image.asset("assest/Image/barbershop.png", height: 30, width: 35),
       'servicetext': 'Barber Shop',
       'text': '(500 Partners available)',
+
     },
     {
       'image':
@@ -1353,4 +1371,7 @@ class _HomePageState extends State<HomePage> {
       'text': '(500 Partners available)',
     }
   ];
+
+
+
 }

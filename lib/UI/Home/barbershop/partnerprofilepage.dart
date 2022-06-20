@@ -99,7 +99,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                     children: [
                       Container(
-                        width: width*0.75,
+                        width: width*0.7,
                         height: 50,
                         decoration: BoxDecoration(
                           border: Border.all(color: Appcolors.greenlight),
@@ -163,6 +163,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               ),
 
                               Expanded(child: SizedBox()),
+
                               Container(
                                   padding: EdgeInsets.all(7),
                                   decoration: BoxDecoration(
@@ -688,7 +689,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                             ),
                                           ),
 
-                                          SizedBox(width: width*0.15,),
+                                          Expanded(child: SizedBox()),
 
                                           Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -764,10 +765,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                                             Image.asset('assest/Image/tolderimage.png',scale: 4),
 
-                                            SizedBox(height: 5),
-
-
-                                            SizedBox(height: 10),
+                                            SizedBox(height: 15),
 
                                             Row(
                                               children: [
@@ -800,7 +798,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         ),
                                       ),
 
-                                      SizedBox(width: 20),
+                                      Expanded(child: SizedBox()),
 
                                       Container(
                                         padding: EdgeInsets.all(15),
@@ -818,10 +816,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                             SizedBox(height: 10),
 
                                             Image.asset('assest/Image/tipimage.png',scale: 4),
-                                            SizedBox(height: 5),
-
-
-                                            SizedBox(height: 10),
+                                            SizedBox(height: 15),
 
                                             Row(
                                               children: [
@@ -848,7 +843,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         ),
                                       ),
 
-                                      SizedBox(width: 20),
+                                      Expanded(child: SizedBox()),
 
 
                                     ],
@@ -876,10 +871,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                             SizedBox(height: 10),
 
                                             Image.asset('assest/Image/tolderimage.png',scale: 4),
-                                            SizedBox(height: 5),
-
-
-                                            SizedBox(height: 10),
+                                            SizedBox(height: 15),
 
                                             Row(
                                               children: [
@@ -906,7 +898,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         ),
                                       ),
 
-                                      SizedBox(width: 20),
+                                      Expanded(child: SizedBox()),
 
                                       Container(
                                         padding: EdgeInsets.all(15),
@@ -924,10 +916,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                             SizedBox(height: 10),
 
                                             Image.asset('assest/Image/tipimage.png',scale: 4),
-                                            SizedBox(height: 5),
-
-
-                                            SizedBox(height: 10),
+                                            SizedBox(height: 15),
 
                                             Row(
                                               children: [
@@ -954,7 +943,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         ),
                                       ),
 
-                                      SizedBox(width: 20),
+                                      Expanded(child: SizedBox()),
 
 
                                     ],
@@ -1017,22 +1006,22 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                      fontSize: 18,fontWeight: FontWeight.w600,overflow: TextOverflow.ellipsis
                                     ),),
                                     Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('adipisci lli. consectetur, adisci elit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text(' dipisci veli consectetur, ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     InkWell(
 
@@ -1040,20 +1029,18 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         share();
                                       },
 
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(left: 180),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border.all(color: Appcolors.greenlight),
-                                            borderRadius: BorderRadius.circular(10),
-                                            color: Appcolors.green1,
-                                          ),
-                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Appcolors.greenlight),
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
                                         ),
+                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
                                       ),
                                     ),
                                   ],
                                 ),
+                                Expanded(child: SizedBox()),
                               ],
                             ),
                           ),
@@ -1088,19 +1075,19 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                      fontSize: 18,fontWeight: FontWeight.w600,
                                     ),),
                                     Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
 
                                     InkWell(
@@ -1109,20 +1096,18 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         share();
                                       },
 
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(left: 185),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border.all(color: Appcolors.greenlight),
-                                            borderRadius: BorderRadius.circular(10),
-                                            color: Appcolors.green1,
-                                          ),
-                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Appcolors.greenlight),
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
                                         ),
+                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
                                       ),
                                     ),
                                   ],
                                 ),
+                                Expanded(child: SizedBox()),
                               ],
                             ),
                           ),
@@ -1157,22 +1142,22 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                      fontSize: 18,fontWeight: FontWeight.w600,
                                     ),),
                                     Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('adipisci lli. consectetur, adisci elit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text(' dipisci veli consectetur, ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     InkWell(
 
@@ -1180,20 +1165,18 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         share();
                                       },
 
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(left: 180),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border.all(color: Appcolors.greenlight),
-                                            borderRadius: BorderRadius.circular(10),
-                                            color: Appcolors.green1,
-                                          ),
-                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Appcolors.greenlight),
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
                                         ),
+                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
                                       ),
                                     ),
                                   ],
                                 ),
+                                Expanded(child: SizedBox()),
                               ],
                             ),
                           ),
@@ -1228,19 +1211,19 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                      fontSize: 18,fontWeight: FontWeight.w600,
                                     ),),
                                     Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
 
                                     InkWell(
@@ -1249,20 +1232,18 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         share();
                                       },
 
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(left: 185),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border.all(color: Appcolors.greenlight),
-                                            borderRadius: BorderRadius.circular(10),
-                                            color: Appcolors.green1,
-                                          ),
-                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Appcolors.greenlight),
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
                                         ),
+                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
                                       ),
                                     ),
                                   ],
                                 ),
+                                Expanded(child: SizedBox()),
                               ],
                             ),
                           ),
@@ -1297,19 +1278,19 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 20,fontWeight: FontWeight.w600,
+                                      fontSize: 18,fontWeight: FontWeight.w600,
                                     ),),
                                     Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
                                     Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w400,
+                                      fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
 
                                     InkWell(
@@ -1318,20 +1299,18 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         share();
                                       },
 
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(left: 185),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            border: Border.all(color: Appcolors.greenlight),
-                                            borderRadius: BorderRadius.circular(10),
-                                            color: Appcolors.green1,
-                                          ),
-                                          child: Icon(Icons.share_outlined,size: 40,color: Appcolors.greenlight,),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Appcolors.greenlight),
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
                                         ),
+                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
                                       ),
                                     ),
                                   ],
                                 ),
+                                Expanded(child: SizedBox()),
                               ],
                             ),
                           ),
@@ -1406,14 +1385,14 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                     color: Appcolors.green1,
                                   ),
                                   child: Text('All',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 18,fontWeight: FontWeight.w600
+                                      fontSize: 15,fontWeight: FontWeight.w600
                                   ),),
                                 ),
 
                                 Expanded(child: SizedBox()),
 
                                 Container(
-                                  padding: EdgeInsets.only(top: 21,bottom: 21,left: 42,right: 42),
+                                  padding: EdgeInsets.only(top: 21,bottom: 21,left: 32,right: 32),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Appcolors.greenlight),
                                     borderRadius: BorderRadius.circular(10),

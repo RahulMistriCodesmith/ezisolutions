@@ -143,7 +143,7 @@ class _LocationPageState extends State<LocationPage> {
   placesAutoCompleteTextField() {
     return GooglePlaceAutoCompleteTextField(
         textEditingController: map,
-        googleAPIKey: "AIzaSyDNmQ3sok_q3O9JZ66cFJgzFfiJiDWESmY",
+        googleAPIKey: "AIzaSyCaNIRkKEd5QzJ0qkNhRW3O7EqeV4Nv_HA",
         inputDecoration: InputDecoration(
           border: InputBorder.none,
             hintText: "Search your location",
