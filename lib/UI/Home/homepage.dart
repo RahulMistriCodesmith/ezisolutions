@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Home/barbershop/booking.dart';
@@ -65,150 +67,147 @@ class _HomePageState extends State<HomePage> {
                           builder: (BuildContext context) {
                             return StatefulBuilder(
                                 builder: (context, setState) {
-                                  return Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 5),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[
+                                  return Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
 
-                                        Padding(
-                                          padding: const EdgeInsets.only(left: 20),
-                                          child: Text('Good Morning,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 20,fontWeight: FontWeight.w600,
-                                          ),),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 20),
+                                        child: Text('Good Morning,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                          fontSize: 20,fontWeight: FontWeight.w600,
+                                        ),),
+                                      ),
+
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 20),
+                                        child: Text('Please select your location?',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                          fontSize: 15,fontWeight: FontWeight.w400,
+                                        ),),
+                                      ),
+
+                                      SizedBox(height: 10),
+
+                                      Container(
+                                        padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(10),
+                                          border: Border.all(color: Appcolors.greenlight)
                                         ),
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.location_on_outlined,size: 35,color: Appcolors.greenlight,),
 
-                                        Padding(
-                                          padding: const EdgeInsets.only(left: 20),
-                                          child: Text('Please select your location?',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w400,
-                                          ),),
+                                            SizedBox(),
+
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+
+                                                Text('Home',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 18,fontWeight: FontWeight.w600,
+                                                ),),
+
+                                                Text('No5. Jalan semarak off jalan nilai',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 15,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                                Text('Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 15,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                              ],
+                                            ),
+                                          ],
                                         ),
+                                      ),
 
-                                        SizedBox(height: 10),
+                                      SizedBox(height: 10),
 
-                                        Container(
-                                          padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
-                                          decoration: BoxDecoration(
+                                      Container(
+                                        padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
+                                        decoration: BoxDecoration(
                                             color: Colors.white,
                                             borderRadius: BorderRadius.circular(10),
                                             border: Border.all(color: Appcolors.greenlight)
-                                          ),
-                                          child: Row(
-                                            children: [
-                                              Icon(Icons.location_on_outlined,size: 35,color: Appcolors.greenlight,),
-
-                                              SizedBox(width: 10,),
-
-                                              Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-
-                                                  Text('Home',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 18,fontWeight: FontWeight.w600,
-                                                  ),),
-
-                                                  Text('No5. Jalan semarak off jalan nilai',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 15,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                  Text('Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 15,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                ],
-                                              ),
-                                            ],
-                                          ),
                                         ),
-
-                                        SizedBox(height: 10),
-
-                                        Container(
-                                          padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.circular(10),
-                                              border: Border.all(color: Appcolors.greenlight)
-                                          ),
-                                          child: Row(
-                                            children: [
-                                              Icon(Icons.location_on_outlined,size: 35,color: Appcolors.greenlight,),
-
-                                              SizedBox(width: 10,),
-
-                                              Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-
-                                                  Text('Home',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 18,fontWeight: FontWeight.w600,
-                                                  ),),
-
-                                                  Text('No5. Jalan semarak off jalan nilai',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 15,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                  Text('Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 15,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-
-                                        SizedBox(height: 20),
-
-                                        Row(
+                                        child: Row(
                                           children: [
+                                            Icon(Icons.location_on_outlined,size: 35,color: Appcolors.greenlight,),
 
-                                            SizedBox(width: 20),
+                                            SizedBox(width: 10,),
 
-                                            Image.asset('assest/Iocns/addicon1.png',scale: 3,),
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
 
-                                            SizedBox(width: 5,),
+                                                Text('Home',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 18,fontWeight: FontWeight.w600,
+                                                ),),
 
-                                            Text('Add new Address',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 18,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                            ),),
+                                                Text('No5. Jalan semarak off jalan nilai',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 15,fontWeight: FontWeight.w400,
+                                                ),),
 
+                                                Text('Tampin, 71000',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 15,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                              ],
+                                            ),
                                           ],
                                         ),
+                                      ),
 
-                                        SizedBox(height: 20),
+                                      SizedBox(height: 20),
 
-                                        GestureDetector(
+                                      Row(
+                                        children: [
 
-                                          onTap: (){
-                                            Navigator.pop(context);
-                                          },
+                                          SizedBox(),
 
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(left: 32,right: 32),
-                                            child: Container(
-                                              width: width*0.8,
-                                              height: 50,
-                                              decoration: BoxDecoration(
-                                                color: Appcolors.green1,
-                                                border: Border.all(color: Appcolors.greenlight),
-                                                borderRadius: BorderRadius.circular(10),
-                                              ),
-                                              child: Center(
-                                                child: Text('Use This Location',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 20,fontWeight: FontWeight.w600,
-                                                ),),
-                                              ),
+                                          Image.asset('assest/Iocns/addicon1.png',scale: 3,),
+
+                                          SizedBox(width: 5,),
+
+                                          Text('Add new Address',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 18,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                          ),),
+
+                                        ],
+                                      ),
+
+                                      SizedBox(height: 20),
+
+                                      GestureDetector(
+
+                                        onTap: (){
+                                          Navigator.pop(context);
+                                        },
+
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 32,right: 32),
+                                          child: Container(
+                                            width: width*0.8,
+                                            height: 50,
+                                            decoration: BoxDecoration(
+                                              color: Appcolors.green1,
+                                              border: Border.all(color: Appcolors.greenlight),
+                                              borderRadius: BorderRadius.circular(10),
+                                            ),
+                                            child: Center(
+                                              child: Text('Use This Location',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                fontSize: 20,fontWeight: FontWeight.w600,
+                                              ),),
                                             ),
                                           ),
                                         ),
+                                      ),
 
-                                        SizedBox(height: 5),
+                                      SizedBox(height: 5),
 
-                                      ],
-                                    ),
+                                    ],
                                   );
                                 }
                             );
@@ -223,7 +222,7 @@ class _HomePageState extends State<HomePage> {
 
             SizedBox(height: height*0.25,),
 
-            Container(
+            /*Container(
               padding: EdgeInsets.only(top: 15,bottom: 15),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -254,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                                   },
 
                                   child: Container(
-                                    padding: EdgeInsets.only(left: 10,right: 15,top: 2,bottom: 2),
+                                    padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
                                     decoration: BoxDecoration(
                                       color: Appcolors.green1,
                                       border: Border.all(color: Appcolors.greenlight),
@@ -289,7 +288,7 @@ class _HomePageState extends State<HomePage> {
                             Column(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.only(left: 10,right: 15,top: 2,bottom: 2),
+                                  padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
                                   decoration: BoxDecoration(
                                     color: Appcolors.green1,
                                     border: Border.all(color: Appcolors.greenlight),
@@ -323,7 +322,7 @@ class _HomePageState extends State<HomePage> {
                             Column(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.only(left: 10,right: 25,top: 2,bottom: 2),
+                                  padding: EdgeInsets.only(left: 10,right: 20,top: 2,bottom: 2),
                                   decoration: BoxDecoration(
                                     color: Appcolors.green1,
                                     border: Border.all(color: Appcolors.greenlight),
@@ -461,7 +460,7 @@ class _HomePageState extends State<HomePage> {
                             Column(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.only(left: 10,right: 15,top: 2,bottom: 2),
+                                  padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
                                   decoration: BoxDecoration(
                                     color: Appcolors.green1,
                                     border: Border.all(color: Appcolors.greenlight),
@@ -567,6 +566,85 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
+            ),*/
+
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              // height: 260,
+              width: width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Choose your preferred service",
+                    style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontSize: 20,fontWeight: FontWeight.w600
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  GridView.builder(
+                      physics: NeverScrollableScrollPhysics(),
+                      gridDelegate:
+                      const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 3,
+                          childAspectRatio: 1 / 0.60,
+                          crossAxisSpacing: 10,
+                          mainAxisSpacing: 10),
+                      shrinkWrap: true,
+                      itemCount: preferredServiceList.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: EdgeInsets.zero,
+                          child: Column(
+                            // mainAxisSize:MainAxisSize.min,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Appcolors.green1,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(
+                                        color: Appcolors.greenlight,
+                                        width: 2)),
+                                height: 50,
+                                // width: 120,
+                                margin: EdgeInsets.symmetric(vertical: 2),
+                                // padding: EdgeInsets.symmetric(horizontal: 1,vertical: 5),
+                                child: Row(
+                                  children: [
+                                    preferredServiceList[index]['image'],
+                                    SizedBox(width: 8),
+                                    Flexible(
+                                        child: Text(
+                                          preferredServiceList[index]
+                                          ['servicetext'],
+                                          style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 2,
+                                        )),
+                                  ],
+                                ),
+                              ),
+                              Flexible(
+                                child: Text(preferredServiceList[index]['text'],
+                                    style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 10,fontWeight: FontWeight.w400
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2),
+                              ),
+                            ],
+                          ),
+                        );
+                      }),
+                ],
+              ),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(
+                      color: Colors.white, width: 2)),
             ),
 
             SizedBox(height: 20),
@@ -609,7 +687,7 @@ class _HomePageState extends State<HomePage> {
                            padding: EdgeInsets.all(10),
                            decoration: BoxDecoration(
                              borderRadius: BorderRadius.circular(15),
-                             border: Border.all(color: Appcolors.greenlight),
+                             border: Border.all(color: Appcolors.greenlight,width: 2),
                            ),
                            child: Column(
                              crossAxisAlignment: CrossAxisAlignment.start,
@@ -663,13 +741,13 @@ class _HomePageState extends State<HomePage> {
                            ),
                          ),
 
-                         SizedBox(width: 20),
+                         SizedBox(width: 15),
 
                          Container(
                            padding: EdgeInsets.all(10),
                            decoration: BoxDecoration(
                              borderRadius: BorderRadius.circular(15),
-                             border: Border.all(color: Appcolors.greenlight),
+                             border: Border.all(color: Appcolors.greenlight,width: 2),
                            ),
                            child: Column(
                              crossAxisAlignment: CrossAxisAlignment.start,
@@ -723,13 +801,13 @@ class _HomePageState extends State<HomePage> {
                            ),
                          ),
 
-                         SizedBox(width: 20),
+                         SizedBox(width: 15),
 
                          Container(
                            padding: EdgeInsets.all(10),
                            decoration: BoxDecoration(
                              borderRadius: BorderRadius.circular(15),
-                             border: Border.all(color: Appcolors.greenlight),
+                             border: Border.all(color: Appcolors.greenlight,width: 2),
                            ),
                            child: Column(
                              crossAxisAlignment: CrossAxisAlignment.start,
@@ -832,7 +910,7 @@ class _HomePageState extends State<HomePage> {
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(color: Appcolors.greenlight),
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -885,13 +963,13 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
 
-                          SizedBox(width: 20),
+                          SizedBox(width: 15),
 
                           Container(
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(color: Appcolors.greenlight),
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -944,13 +1022,13 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
 
-                          SizedBox(width: 20),
+                          SizedBox(width: 15),
 
                           Container(
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(color: Appcolors.greenlight),
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1055,7 +1133,7 @@ class _HomePageState extends State<HomePage> {
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(color: Appcolors.greenlight),
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                             ),
                             child: Row(
                               children: [
@@ -1102,13 +1180,13 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
 
-                          SizedBox(width: 20),
+                          SizedBox(width: 15),
 
                           Container(
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(color: Appcolors.greenlight),
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                             ),
                             child: Row(
                               children: [
@@ -1155,13 +1233,13 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
 
-                          SizedBox(width: 20),
+                          SizedBox(width: 15),
 
                           Container(
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(color: Appcolors.greenlight),
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                             ),
                             child: Row(
                               children: [
@@ -1221,4 +1299,58 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  List preferredServiceList = [
+    {
+      'image':
+      Image.asset("assest/Image/barbershop.png", height: 30, width: 35),
+      'servicetext': 'Barber Shop',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image':
+      Image.asset("assest/Image/hairsaloon.png", height: 30, width: 35),
+      'servicetext': 'Hair Saloon',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image': Image.asset("assest/Image/carwash.png", height: 30, width: 35),
+      'servicetext': 'Car Wash',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image': Image.asset("assest/Image/messageimage.png", height: 30, width: 35),
+      'servicetext': 'Massage',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image': Image.asset("assest/Image/clean.png",
+          height: 30, width: 35),
+      'servicetext': 'Cleaning Service',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image': Image.asset("assest/Image/plumbing.png",
+          height: 30, width: 35),
+      'servicetext': 'Plumbing Service',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image':
+      Image.asset("assest/Image/aircondrepair.png", height: 30, width: 35),
+      'servicetext': 'Aircond Repair',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image': Image.asset("assest/Image/electricalrepair.png",height: 30, width: 35),
+      'servicetext': 'Electrical Repair',
+      'text': '(500 Partners available)',
+    },
+    {
+      'image':
+      Image.asset("assest/Image/moreservices.png", height: 30, width: 35),
+      'servicetext': 'More Services',
+      'text': '(500 Partners available)',
+    }
+  ];
 }

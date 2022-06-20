@@ -109,7 +109,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                           onPressed: (){}),
                     ),
 
-                    SizedBox(width: width*0.51,),
+                    Expanded(child: SizedBox()),
 
                     Container(
                       width: width*0.18,
@@ -203,7 +203,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                       },
                     ),
 
-                    SizedBox(width: 10),
+                    Expanded(child: SizedBox()),
 
                     Container(
                       padding: EdgeInsets.only(left: 10),
@@ -268,7 +268,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                       height: 21.61,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        border: Border.all(color: Appcolors.greenlight),
+                        border: Border.all(color: Appcolors.blue),
                         borderRadius: BorderRadius.circular(10.806),
                       ),
                       child: Switch(
@@ -278,11 +278,10 @@ class _MainLoginPageState extends State<MainLoginPage> {
                             isSwitched = value;
                           });
                         },
-
                         activeTrackColor: Colors.white,
                         inactiveTrackColor: Colors.white,
-                        activeColor: Appcolors.green1,
-                        inactiveThumbColor: Appcolors.green1,
+                        activeColor: Appcolors.blue1,
+                        inactiveThumbColor: Appcolors.blue1,
                       ),
                     ),
 

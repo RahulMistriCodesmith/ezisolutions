@@ -763,6 +763,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                             SizedBox(height: 10),
 
                                             Image.asset('assest/Image/tolderimage.png',scale: 4),
+
                                             SizedBox(height: 5),
 
 

@@ -55,8 +55,8 @@ class _BookingPageState extends State<BookingPage> {
               child: Row(
                 children: [
                   Container(
-                    width: width*0.55,
-                    height: 60,
+                    width: width*0.6,
+                    height: 50,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(color: Appcolors.greenlight),
@@ -70,7 +70,7 @@ class _BookingPageState extends State<BookingPage> {
                     ),
                   ),
 
-                  SizedBox(width: 10,),
+                  SizedBox(width: 10),
 
                   Container(
                     decoration: BoxDecoration(
@@ -78,7 +78,7 @@ class _BookingPageState extends State<BookingPage> {
                       border: Border.all(color: Appcolors.greenlight),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Icon(Icons.search,size: 60,color: Appcolors.greenlight,),
+                    child: Icon(Icons.search,size: 50,color: Appcolors.greenlight,),
                   ),
 
                   Expanded(child: SizedBox()),
@@ -95,7 +95,7 @@ class _BookingPageState extends State<BookingPage> {
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(Icons.filter_alt_outlined,size: 60,color: Appcolors.greenlight,),
+                      child: Icon(Icons.filter_alt_outlined,size: 50,color: Appcolors.greenlight,),
                     ),
                   ),
                 ],

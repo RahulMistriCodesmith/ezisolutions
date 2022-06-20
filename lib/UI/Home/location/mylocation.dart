@@ -32,19 +32,19 @@ class _MyLocationState extends State<MyLocation> {
 
               Image.asset('assest/Image/locationimage1.png',scale: 5),
 
-              SizedBox(height: height*0.15,),
+              SizedBox(height: height*0.1),
 
               Padding(
-                padding: const EdgeInsets.only(left: 32,right: 32,),
+                padding: const EdgeInsets.only(left: 25,right: 25,),
                 child: Text('EZi will need to use your location to find',style: Textstyle3Light18.appbartextstyle.copyWith(
-                  fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black
+                  fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black
                 ),),
               ),
 
               Padding(
-                padding: const EdgeInsets.only(left: 32,right: 32),
+                padding: const EdgeInsets.only(left: 25,right: 25),
                 child: Text('and display the nearest partners to you!',style: Textstyle3Light18.appbartextstyle.copyWith(
-                  fontSize: 18,fontWeight: FontWeight.w600,color: Colors.black
+                  fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black
                 ),),
               ),
 
@@ -57,7 +57,7 @@ class _MyLocationState extends State<MyLocation> {
                 },
 
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 32,right: 32),
+                  padding: const EdgeInsets.only(left: 25,right: 25),
                   child: Container(
                     width: width*0.8,
                     height: 50,
@@ -75,7 +75,7 @@ class _MyLocationState extends State<MyLocation> {
                 ),
               ),
 
-              SizedBox(height: height*0.1),
+              SizedBox(height: height*0.07),
 
               Text('Choose my preferred location',style: Textstyle3Light18.appbartextstyle.copyWith(
                 fontSize: 12,fontWeight: FontWeight.w600,color: Appcolors.greenlight,decoration: TextDecoration.underline

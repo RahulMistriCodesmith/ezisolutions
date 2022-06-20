@@ -534,7 +534,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                             onPressed: (){}),
                       ),
 
-                      SizedBox(width: width*0.51,),
+                      Expanded(child: SizedBox()),
 
                       Container(
                         width: width*0.18,
@@ -628,7 +628,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                         },
                       ),
 
-                      SizedBox(width: 10,),
+                      Expanded(child: SizedBox()),
 
                       Container(
                         padding: EdgeInsets.only(left: 10),
@@ -643,7 +643,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                           controller: contact,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-
+                              return 'Please enter correct phone number';
                             }
                             return null;
                           },
@@ -675,7 +675,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                       controller: password,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-
+                          return 'Please enter correct password';
                         }
                         return null;
                       },
@@ -707,7 +707,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                         height: 21.61,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          border: Border.all(color: Appcolors.greenlight),
+                          border: Border.all(color: Appcolors.blue),
                           borderRadius: BorderRadius.circular(10.806),
                         ),
                         child: Switch(
@@ -720,8 +720,8 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
 
                           activeTrackColor: Colors.white,
                           inactiveTrackColor: Colors.white,
-                          activeColor: Appcolors.green1,
-                          inactiveThumbColor: Appcolors.green1,
+                          activeColor: Appcolors.blue1,
+                          inactiveThumbColor: Appcolors.blue1,
                         ),
                       ),
 
@@ -1372,8 +1372,11 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                           setState(() {
 
                             if (contact.text == "123" && password.text == "123") {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => MyLocation()));
 
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Processing Data')),
+                              );
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => MyLocation()));
                             }
                           });
                         },
