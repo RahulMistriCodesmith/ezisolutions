@@ -66,21 +66,25 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
       title: Column(
         children: [
           Container(
+            padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
             decoration: BoxDecoration(
               color: Appcolors.green1,
               border: Border.all(color: Appcolors.greenlight),
               borderRadius: BorderRadius.circular(50),
             ),
-            width: 40,
-            height: 40,
             child: Center(
               child: Text('1',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 20
+                  color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 15
               ),),
             ),
           ),
-          Text('Select'),
-          Text('Date & Slot'),
+
+          Text('Select',style: Textstyle2Light18.appbartextstyle.copyWith(
+              fontWeight: FontWeight.w300,fontSize: 12
+          ),),
+          Text('Date & Slot',style: Textstyle2Light18.appbartextstyle.copyWith(
+              fontWeight: FontWeight.w300,fontSize: 12
+          ),),
         ],
       ),
       content: Column(
@@ -202,11 +206,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('7:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                            fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                            fontSize: 13,fontWeight: FontWeight.w400,color: Appcolors.green2
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(8),
@@ -215,11 +219,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('8:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                              fontSize: 13,fontWeight: FontWeight.w400,color: Appcolors.green2
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(8),
@@ -228,11 +232,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('9:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                              fontSize: 13,fontWeight: FontWeight.w400,color: Appcolors.green2
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(7),
@@ -241,7 +245,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('10:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,
+                              fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
                       ],
@@ -255,7 +259,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child:  Text('11:00 AM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,
+                        fontSize: 13,fontWeight: FontWeight.w400,
                       ),),
                     ),
                   ],
@@ -276,7 +280,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Afternoon',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  fontSize: 15,fontWeight: FontWeight.w600,
+                  fontSize: 13,fontWeight: FontWeight.w600,
                 ),),
 
                 SizedBox(height: 10,),
@@ -293,11 +297,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('12:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,
+                              fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(8),
@@ -306,11 +310,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('1:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.greenlight
+                              fontSize: 13,fontWeight: FontWeight.w400,color: Appcolors.greenlight
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(8),
@@ -319,11 +323,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('2:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,
+                              fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(7),
@@ -332,7 +336,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('3:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                            fontSize: 15,fontWeight: FontWeight.w400,
+                            fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
                       ],
@@ -346,7 +350,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child:  Text('4:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,
+                        fontSize: 13,fontWeight: FontWeight.w400,
                       ),),
                     ),
                   ],
@@ -384,11 +388,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('5:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                            fontSize: 15,fontWeight: FontWeight.w400,
+                            fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(8),
@@ -397,11 +401,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('6:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,
+                              fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(8),
@@ -410,11 +414,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('7:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                            fontSize: 15,fontWeight: FontWeight.w400,
+                            fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
 
-                        SizedBox(width: 8,),
+                        Expanded(child: SizedBox()),
 
                         Container(
                           padding: EdgeInsets.all(7),
@@ -423,7 +427,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child:  Text('8:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                            fontSize: 15,fontWeight: FontWeight.w400,
+                            fontSize: 13,fontWeight: FontWeight.w400,
                           ),),
                         ),
                       ],
@@ -437,7 +441,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child:  Text('9:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,
+                        fontSize: 13,fontWeight: FontWeight.w400,
                       ),),
                     ),
                   ],
@@ -472,11 +476,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child:  Text('10:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,
+                        fontSize: 13,fontWeight: FontWeight.w400,
                       ),),
                     ),
 
-                    SizedBox(width: 5,),
+                    Expanded(child: SizedBox()),
 
                     Container(
                       padding: EdgeInsets.all(5),
@@ -485,11 +489,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child:  Text('10:30 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                        fontSize: 13,fontWeight: FontWeight.w400,color: Appcolors.green2
                       ),),
                     ),
 
-                    SizedBox(width: 5,),
+                    Expanded(child: SizedBox()),
 
                     Container(
                       padding: EdgeInsets.all(5),
@@ -498,11 +502,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child:  Text('11:00 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                        fontSize: 13,fontWeight: FontWeight.w400,color: Appcolors.green2
                       ),),
                     ),
 
-                    SizedBox(width: 5,),
+                    Expanded(child: SizedBox()),
 
                     Container(
                       padding: EdgeInsets.all(5),
@@ -511,7 +515,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child:  Text('11:30 PM',style: Textstyle4Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,color: Appcolors.green2
+                        fontSize: 13,fontWeight: FontWeight.w400,color: Appcolors.green2
                       ),),
                     ),
                   ],
@@ -546,7 +550,6 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                 SizedBox(height: 3,),
 
                 Container(
-                  width: 300,
                   height: 50,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
@@ -596,7 +599,6 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                 SizedBox(height: 2,),
 
                 Container(
-                  width: 300,
                   height: 50,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
@@ -694,11 +696,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         ],
                       ),
 
-                      SizedBox(width: 20,),
+                      Expanded(child: SizedBox()),
 
                       Image.asset('assest/Iocns/minusicon.png',scale: 4,),
 
-                      SizedBox(width: 5),
+                      Expanded(child: SizedBox()),
 
                       Container(
                         padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
@@ -712,7 +714,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         ),),
                       ),
 
-                      SizedBox(width: 5),
+                      Expanded(child: SizedBox()),
 
                       Image.asset('assest/Iocns/addicon1.png',scale: 4,),
 
@@ -749,11 +751,11 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         ],
                       ),
 
-                      SizedBox(width: 20,),
+                      Expanded(child: SizedBox()),
 
                       Image.asset('assest/Iocns/minusicon.png',scale: 4,),
 
-                      SizedBox(width: 5),
+                      Expanded(child: SizedBox()),
 
                       Container(
                         padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
@@ -767,7 +769,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         ),),
                       ),
 
-                      SizedBox(width: 5),
+                      Expanded(child: SizedBox()),
 
                       Image.asset('assest/Iocns/addicon1.png',scale: 4,),
 
@@ -794,10 +796,10 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         ),
                         child: Column(
                           children: [
-                            Icon(Icons.clear,size: 45,color: Colors.red,),
+                            Icon(Icons.clear,size: 43,color: Colors.red,),
 
                             Text('Cancel',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontSize: 15,fontWeight: FontWeight.w400,
+                              fontSize: 13,fontWeight: FontWeight.w400,
                             ),),
                           ],
                         ),
@@ -816,8 +818,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                       },
 
                       child: Container(
-                        width: 250,
-                        padding: EdgeInsets.only(top: 15,bottom: 15),
+                        padding: EdgeInsets.only(top: 15,bottom: 15,left: 40,right: 40),
                         decoration: BoxDecoration(
                             color: Appcolors.green1,
                             borderRadius: BorderRadius.circular(10),
@@ -825,11 +826,12 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                         ),
                         child: Center(
                           child: Text('Proceed',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontSize: 30,fontWeight: FontWeight.w600,
+                            fontSize: 27,fontWeight: FontWeight.w600,
                           ),),
                         ),
                       ),
                     ),
+                    Expanded(child: SizedBox()),
                   ],
                 ),
 
@@ -853,21 +855,25 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
         title: Column(
           children: [
             Container(
+              padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
               decoration: BoxDecoration(
                 color: Appcolors.green1,
                 border: Border.all(color: Appcolors.greenlight),
                 borderRadius: BorderRadius.circular(50),
               ),
-              width: 40,
-              height: 40,
+
               child: Center(
                 child: Text('2',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 20
+                    color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 15
                 ),),
               ),
             ),
-            Text('Review &'),
-            Text('Payment'),
+            Text('Review &',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
+            Text('Payment',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
           ],
         ),
         content: Column(
@@ -1187,12 +1193,15 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                           Text('Note:',style: Textstyle1Light18.appbartextstyle.copyWith(
                               fontSize: 10,fontWeight: FontWeight.w700
                           ),),
-                          Text(' By adding credit/debit card you agree on EZi to save your card',style: Textstyle1Light18.appbartextstyle.copyWith(
+                          Text(' By adding credit/debit card you agree on EZi ',style: Textstyle1Light18.appbartextstyle.copyWith(
                               fontSize: 10,fontWeight: FontWeight.w400
                           ),),
                         ],
                       ),
-                      Text('information securely and display for future payments.',style: Textstyle1Light18.appbartextstyle.copyWith(
+                      Text('to save your card information securely and',style: Textstyle1Light18.appbartextstyle.copyWith(
+                          fontSize: 10,fontWeight: FontWeight.w400
+                      ),),
+                      Text('display for future payments.',style: Textstyle1Light18.appbartextstyle.copyWith(
                           fontSize: 10,fontWeight: FontWeight.w400
                       ),),
                     ],
@@ -1270,10 +1279,10 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                     ),
                     child: Column(
                       children: [
-                        Icon(Icons.clear,size: 45,color: Colors.red,),
+                        Icon(Icons.clear,size: 43,color: Colors.red,),
 
                         Text('Cancel',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 15,fontWeight: FontWeight.w400,
+                          fontSize: 13,fontWeight: FontWeight.w400,
                         ),),
                       ],
                     ),
@@ -1292,8 +1301,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                   },
 
                   child: Container(
-                    width: 250,
-                    padding: EdgeInsets.only(top: 15,bottom: 15),
+                    padding: EdgeInsets.only(top: 15,bottom: 15,left: 20,right: 20),
                     decoration: BoxDecoration(
                         color: Appcolors.green1,
                         borderRadius: BorderRadius.circular(10),
@@ -1301,11 +1309,12 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
                     ),
                     child: Center(
                       child: Text('Make Payment',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontSize: 30,fontWeight: FontWeight.w600,
+                        fontSize: 27,fontWeight: FontWeight.w600,
                       ),),
                     ),
                   ),
                 ),
+                Expanded(child: SizedBox()),
               ],
             ),
 
@@ -1319,21 +1328,25 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
         title: Column(
           children: [
             Container(
+              padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
               decoration: BoxDecoration(
                 color: Appcolors.green1,
                 border: Border.all(color: Appcolors.greenlight),
                 borderRadius: BorderRadius.circular(50),
               ),
-              width: 40,
-              height: 40,
               child: Center(
-                child: Text('2',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 20
+                child: Text('3',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 15
                 ),),
               ),
             ),
-            Text('Confirmation'),
-            Text('Receipt'),
+            Text('Confirmation',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
+            Text('Receipt',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
+
           ],
         ),
         content: Column(

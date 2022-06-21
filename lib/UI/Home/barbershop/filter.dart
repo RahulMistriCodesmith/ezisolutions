@@ -124,19 +124,19 @@ class _FilterPageState extends State<FilterPage> {
                     },
 
                     child: Container(
-                      padding: EdgeInsets.only(top: 15,bottom: 15,left: 42,right: 42),
+                      padding: EdgeInsets.only(top: 15,bottom: 15,left: 40,right: 40),
                       decoration: BoxDecoration(
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
                         color: selectedval1 == "All" ? Appcolors.green1 : Colors.white,
                       ),
                       child: Text('All',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 18,fontWeight: FontWeight.w600
+                          fontSize: 15,fontWeight: FontWeight.w600
                       ),),
                     ),
                   ),
 
-                  SizedBox(width: 20),
+                  Expanded(child: SizedBox()),
 
                   InkWell(
 
@@ -147,7 +147,7 @@ class _FilterPageState extends State<FilterPage> {
                     },
 
                     child: Container(
-                      padding: EdgeInsets.only(top: 21,bottom: 21,left: 42,right: 42),
+                      padding: EdgeInsets.only(top: 19,bottom: 19,left: 40,right: 40),
                       decoration: BoxDecoration(
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
@@ -157,7 +157,7 @@ class _FilterPageState extends State<FilterPage> {
                     ),
                   ),
 
-                  SizedBox(width: 20),
+                  Expanded(child: SizedBox()),
 
                   InkWell(
 
@@ -168,7 +168,7 @@ class _FilterPageState extends State<FilterPage> {
                     },
 
                     child: Container(
-                      padding: EdgeInsets.only(top: 21,bottom: 21,left: 35,right: 35),
+                      padding: EdgeInsets.only(top: 19,bottom: 19,left: 33,right: 33),
                       decoration: BoxDecoration(
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
@@ -194,7 +194,7 @@ class _FilterPageState extends State<FilterPage> {
                     },
 
                     child: Container(
-                      padding: EdgeInsets.only(top: 20,bottom: 20,left: 28,right: 28),
+                      padding: EdgeInsets.only(top: 18,bottom: 18,left: 26,right: 26),
                       decoration: BoxDecoration(
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
@@ -204,7 +204,7 @@ class _FilterPageState extends State<FilterPage> {
                     ),
                   ),
 
-                  SizedBox(width: 20),
+                  Expanded(child: SizedBox()),
 
                   InkWell(
 
@@ -215,7 +215,7 @@ class _FilterPageState extends State<FilterPage> {
                     },
 
                     child: Container(
-                      padding: EdgeInsets.only(top: 13,bottom: 13,left: 30,right: 30),
+                      padding: EdgeInsets.only(top: 9,bottom: 9,left: 28,right: 28),
                       decoration: BoxDecoration(
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
@@ -225,7 +225,7 @@ class _FilterPageState extends State<FilterPage> {
                     ),
                   ),
 
-                  SizedBox(width: 20),
+                  Expanded(child: SizedBox()),
 
                   InkWell(
 
@@ -236,7 +236,7 @@ class _FilterPageState extends State<FilterPage> {
                     },
 
                     child: Container(
-                      padding: EdgeInsets.only(top: 15,bottom: 15,left: 28,right: 28),
+                      padding: EdgeInsets.only(top: 13,bottom: 13,left: 26,right: 26),
                       decoration: BoxDecoration(
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),

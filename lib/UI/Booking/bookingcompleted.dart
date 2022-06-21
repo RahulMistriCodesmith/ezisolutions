@@ -366,13 +366,13 @@ class _BookingCompletedState extends State<BookingCompleted> {
                           ),),
                           Row(
                             children: [
-                              Text('No5. Jalan semarak off jalan nilai, 71000, Tampin,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              Text('No5. Jalan semarak off jalan nilai, 71000,',style: Textstyle2Light18.appbartextstyle.copyWith(
                                 fontWeight: FontWeight.w400,fontSize: 15,
                               ),),
                               Expanded(child: SizedBox()),
                             ],
                           ),
-                          Text('Negeri Sepuluh.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          Text('Tampin, Negeri Sepuluh.',style: Textstyle2Light18.appbartextstyle.copyWith(
                             fontWeight: FontWeight.w400,fontSize: 15,
                           ),),
 

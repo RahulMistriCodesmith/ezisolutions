@@ -634,7 +634,7 @@ class _HomePageState extends State<HomePage> {
                                             preferredServiceList[index]
                                             ['servicetext'],
                                             style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400
+                                                fontSize: 13,fontWeight: FontWeight.w400
                                             ),
                                             overflow: TextOverflow.ellipsis,
                                             maxLines: 2,
@@ -646,7 +646,7 @@ class _HomePageState extends State<HomePage> {
                               Flexible(
                                 child: Text(preferredServiceList[index]['text'],
                                     style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400
+                                        fontSize: 8,fontWeight: FontWeight.w400
                                     ),
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 2),

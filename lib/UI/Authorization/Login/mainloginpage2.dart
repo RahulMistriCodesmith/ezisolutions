@@ -746,7 +746,6 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                                 topRight: Radius.circular(20),
                               ),
                             ),
-                            barrierColor: Appcolors.grey,
                             context: context,
                             isScrollControlled: true,
                             builder: (BuildContext context) {

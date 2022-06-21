@@ -1392,7 +1392,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Expanded(child: SizedBox()),
 
                                 Container(
-                                  padding: EdgeInsets.only(top: 21,bottom: 21,left: 32,right: 32),
+                                  padding: EdgeInsets.only(top: 18,bottom: 18,left: 40,right: 40),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Appcolors.greenlight),
                                     borderRadius: BorderRadius.circular(10),
@@ -1404,7 +1404,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Expanded(child: SizedBox()),
 
                                 Container(
-                                  padding: EdgeInsets.only(top: 21,bottom: 21,left: 35,right: 35),
+                                  padding: EdgeInsets.only(top: 18,bottom: 18,left: 33,right: 33),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Appcolors.greenlight),
                                     borderRadius: BorderRadius.circular(10),
@@ -1421,7 +1421,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                             child: Row(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.only(top: 20,bottom: 20,left: 28,right: 28),
+                                  padding: EdgeInsets.only(top: 20,bottom: 20,left: 26,right: 26),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Appcolors.greenlight),
                                     borderRadius: BorderRadius.circular(10),
@@ -1433,7 +1433,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Expanded(child: SizedBox()),
 
                                 Container(
-                                  padding: EdgeInsets.only(top: 13,bottom: 13,left: 30,right: 30),
+                                  padding: EdgeInsets.only(top: 11,bottom: 11,left: 30,right: 30),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Appcolors.greenlight),
                                     borderRadius: BorderRadius.circular(10),
@@ -1445,7 +1445,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Expanded(child: SizedBox()),
 
                                 Container(
-                                  padding: EdgeInsets.only(top: 15,bottom: 15,left: 28,right: 28),
+                                  padding: EdgeInsets.only(top: 15,bottom: 15,left: 25,right: 25),
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Appcolors.greenlight),
                                     borderRadius: BorderRadius.circular(10),
@@ -1473,7 +1473,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       ),
                       child: Row(
                         children: [
-                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Image.asset('assest/Image/userimage.png',scale: 5),
                           Padding(
                             padding: const EdgeInsets.only(left: 15,right: 10),
                             child: Column(
@@ -1482,13 +1482,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Row(
                                   children: [
                                     Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 18,fontWeight: FontWeight.w600
+                                        fontSize: 13,fontWeight: FontWeight.w600
                                     ),),
                                     Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
                                     ),),
                                     
-                                    SizedBox(width: width*0.2),
+                                    SizedBox(width: width*0.15),
                                     
                                     Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400
@@ -1497,13 +1497,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   ],
                                 ),
                                 Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                               ],
                             ),
@@ -1511,6 +1511,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         ],
                       ),
                     ),
+
                     SizedBox(height: 20),
 
                     Container(
@@ -1522,7 +1523,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       ),
                       child: Row(
                         children: [
-                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Image.asset('assest/Image/userimage.png',scale: 5),
                           Padding(
                             padding: const EdgeInsets.only(left: 15,right: 10),
                             child: Column(
@@ -1531,13 +1532,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Row(
                                   children: [
                                     Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 18,fontWeight: FontWeight.w600
+                                        fontSize: 13,fontWeight: FontWeight.w600
                                     ),),
                                     Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
                                     ),),
 
-                                    SizedBox(width: width*0.2),
+                                    SizedBox(width: width*0.15),
 
                                     Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400
@@ -1546,13 +1547,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   ],
                                 ),
                                 Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                               ],
                             ),
@@ -1560,6 +1561,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         ],
                       ),
                     ),
+
                     SizedBox(height: 20),
 
                     Container(
@@ -1571,7 +1573,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       ),
                       child: Row(
                         children: [
-                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Image.asset('assest/Image/userimage.png',scale: 5),
                           Padding(
                             padding: const EdgeInsets.only(left: 15,right: 10),
                             child: Column(
@@ -1580,13 +1582,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Row(
                                   children: [
                                     Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 18,fontWeight: FontWeight.w600
+                                        fontSize: 13,fontWeight: FontWeight.w600
                                     ),),
                                     Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
                                     ),),
 
-                                    SizedBox(width: width*0.2),
+                                    SizedBox(width: width*0.15),
 
                                     Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400
@@ -1595,13 +1597,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   ],
                                 ),
                                 Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                               ],
                             ),
@@ -1609,6 +1611,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         ],
                       ),
                     ),
+
                     SizedBox(height: 20),
 
                     Container(
@@ -1620,7 +1623,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       ),
                       child: Row(
                         children: [
-                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Image.asset('assest/Image/userimage.png',scale: 5),
                           Padding(
                             padding: const EdgeInsets.only(left: 15,right: 10),
                             child: Column(
@@ -1629,13 +1632,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Row(
                                   children: [
                                     Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 18,fontWeight: FontWeight.w600
+                                        fontSize: 13,fontWeight: FontWeight.w600
                                     ),),
                                     Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
                                     ),),
 
-                                    SizedBox(width: width*0.2),
+                                    SizedBox(width: width*0.15),
 
                                     Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400
@@ -1644,13 +1647,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   ],
                                 ),
                                 Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                               ],
                             ),
@@ -1658,6 +1661,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         ],
                       ),
                     ),
+
                     SizedBox(height: 20),
 
                     Container(
@@ -1669,7 +1673,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       ),
                       child: Row(
                         children: [
-                          Image.asset('assest/Image/userimage.png',scale: 4.5),
+                          Image.asset('assest/Image/userimage.png',scale: 5),
                           Padding(
                             padding: const EdgeInsets.only(left: 15,right: 10),
                             child: Column(
@@ -1678,13 +1682,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Row(
                                   children: [
                                     Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 18,fontWeight: FontWeight.w600
+                                        fontSize: 13,fontWeight: FontWeight.w600
                                     ),),
                                     Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
                                     ),),
 
-                                    SizedBox(width: width*0.2),
+                                    SizedBox(width: width*0.15),
 
                                     Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         fontSize: 10,fontWeight: FontWeight.w400
@@ -1693,13 +1697,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   ],
                                 ),
                                 Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                                 Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w400,color: Colors.black
+                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
                                 ),),
                               ],
                             ),
@@ -1707,6 +1711,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         ],
                       ),
                     ),
+
                     SizedBox(height: 20),
 
                   ],
@@ -1750,7 +1755,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                                 Stack(
                                   children: [
-                                    Image.asset('assest/Image/tipimage.png',scale: 4,),
+                                    Image.asset('assest/Image/tipimage.png',scale: 5,),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 30,top: 10,),
                                       child: Container(
@@ -1784,13 +1789,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text('Experience',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600
+                                              fontSize: 13,fontWeight: FontWeight.w600
                                           ),),
                                           
                                           SizedBox(height: 10),
                                           
                                           Text('5 Years 10 Months',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 12,fontWeight: FontWeight.w400
+                                              fontSize: 10,fontWeight: FontWeight.w400
                                           ),),
                                         ],
                                       ),
@@ -1800,46 +1805,42 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                   ),
                                   SizedBox(height: 5),
                                   Text('About John',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w600
+                                      fontSize: 13,fontWeight: FontWeight.w600
                                   ),),
                                   Text('It is a long established fact that a reader',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
                                   Text('will be distracted by the readable',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
                                   Text('content of a page when looking at its',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
                                   Text('layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
-                                  Row(
-                                    children: [
-                                      SizedBox(width: width*0.33),
-                                      InkWell(
-                                        onTap: (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (context) => Tipping()));
-                                        },
+                                  InkWell(
+                                    onTap: (){
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => Tipping()));
+                                    },
 
-                                        child: Container(
-                                          padding: EdgeInsets.all(5),
-                                          decoration: BoxDecoration(
-                                            border: Border.all(color: Appcolors.greenlight),
-                                            borderRadius: BorderRadius.circular(10),
-                                            color: Appcolors.green1,
-                                          ),
-                                          child: Row(
-                                            children: [
-                                              Image.asset('assest/Image/tipimage1.png',scale: 4.5),
-                                              Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 15,fontWeight: FontWeight.w400
-                                              ),),
-                                            ],
-                                          ),
-                                        ),
+                                    child: Container(
+                                        margin: EdgeInsets.only(left: 100),
+                                      padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Appcolors.greenlight),
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Appcolors.green1,
                                       ),
-                                    ],
+                                      child: Row(
+                                        children: [
+                                          Image.asset('assest/Image/tipimage1.png',scale: 4.5),
+                                          Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400
+                                          ),),
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1864,7 +1865,24 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
 
-                                Image.asset('assest/Image/tipimage.png',scale: 4,),
+                                Stack(
+                                  children: [
+                                    Image.asset('assest/Image/tipimage.png',scale: 5,),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 30,top: 10,),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          color: Appcolors.green1,
+                                        ),
+                                        child: Text('Vacinated',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 10,fontWeight: FontWeight.w600
+                                        ),),
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
 
                                 Text('John Martin',style: Textstyle2Light18.appbartextstyle.copyWith(
                                     fontSize: 12,fontWeight: FontWeight.w600
@@ -1883,13 +1901,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text('Experience',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600
+                                              fontSize: 13,fontWeight: FontWeight.w600
                                           ),),
 
                                           SizedBox(height: 10),
 
                                           Text('5 Years 10 Months',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 12,fontWeight: FontWeight.w400
+                                              fontSize: 10,fontWeight: FontWeight.w400
                                           ),),
                                         ],
                                       ),
@@ -1898,41 +1916,43 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                     ],
                                   ),
                                   SizedBox(height: 5),
-                                  Text('About Christ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 15,fontWeight: FontWeight.w600
+                                  Text('About John',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                      fontSize: 13,fontWeight: FontWeight.w600
                                   ),),
                                   Text('It is a long established fact that a reader',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
                                   Text('will be distracted by the readable',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
                                   Text('content of a page when looking at its',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
                                   Text('layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400
+                                      fontSize: 10,fontWeight: FontWeight.w400
                                   ),),
-                                  Row(
-                                    children: [
-                                      SizedBox(width: width*0.33),
-                                      Container(
-                                        padding: EdgeInsets.all(5),
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Appcolors.green1),
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Image.asset('assest/Image/tipimage1.png',scale: 4.5),
-                                            Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400
-                                            ),),
-                                          ],
-                                        ),
+                                  InkWell(
+                                    onTap: (){
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => Tipping()));
+                                    },
+
+                                    child: Container(
+                                      margin: EdgeInsets.only(left: 100),
+                                      padding: EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Appcolors.greenlight),
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Appcolors.green1,
                                       ),
-                                    ],
+                                      child: Row(
+                                        children: [
+                                          Image.asset('assest/Image/tipimage1.png',scale: 4.5),
+                                          Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400
+                                          ),),
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1941,6 +1961,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                           ],
                         ),
                       ),
+
                       SizedBox(height: 20,),
                     ],
                   ),

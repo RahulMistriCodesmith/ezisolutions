@@ -139,6 +139,7 @@ class _RateReviewState extends State<RateReview> {
                           child: Padding(
                             padding: const EdgeInsets.only(left: 15,top: 10,right: 15),
                             child: Container(
+                              padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
                               width: width*0.2,
                               height: height*0.25,
                               child: Column(
@@ -154,7 +155,7 @@ class _RateReviewState extends State<RateReview> {
                                     fontWeight: FontWeight.w400,fontSize: 12,
                                   ),),
 
-                                  SizedBox(height: 20,),
+                                  Expanded(child: SizedBox()),
 
                                 ],
                               ),

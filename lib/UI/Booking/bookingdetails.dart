@@ -415,13 +415,13 @@ class _BookingDetailsState extends State<BookingDetails> {
                           ),),
                           Row(
                             children: [
-                              Text('No5. Jalan semarak off jalan nilai, 71000, Tampin,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              Text('No5. Jalan semarak off jalan nilai,71000, ',style: Textstyle2Light18.appbartextstyle.copyWith(
                                 fontWeight: FontWeight.w400,fontSize: 15,
                               ),),
                               Expanded(child: SizedBox()),
                             ],
                           ),
-                          Text('Negeri Sepuluh.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          Text('Tampin, Negeri Sepuluh.',style: Textstyle2Light18.appbartextstyle.copyWith(
                             fontWeight: FontWeight.w400,fontSize: 15,
                           ),),
 
@@ -479,10 +479,10 @@ class _BookingDetailsState extends State<BookingDetails> {
                   context: context,
                   builder: (ctx) => Dialog(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 15,top: 10,right: 15),
+                      padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
                       child: Container(
                         width: width*0.2,
-                        height: height*0.45,
+                        height: height*0.5,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -490,19 +490,19 @@ class _BookingDetailsState extends State<BookingDetails> {
                               fontWeight: FontWeight.w600,fontSize: 20,
                             ),),
 
-                            SizedBox(height: 20,),
+                            Expanded(child: SizedBox()),
 
                             Center(
                               child: Image.asset('assest/Image/fileimage.png',scale: 5,),
                             ),
 
-                            SizedBox(height: 20,),
+                            Expanded(child: SizedBox()),
 
                             Text('Your booking is in less than an 6 hour. Cancelling now will result to penalty charges of RM5 in your next booking. Do you still want to cancel?',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontWeight: FontWeight.w400,fontSize: 15,
                             ),),
 
-                            SizedBox(height: 20,),
+                            Expanded(child: SizedBox()),
 
                             Row(
                               children: [
@@ -515,7 +515,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                               ],
                             ),
 
-                            SizedBox(height: 20),
+                            Expanded(child: SizedBox()),
 
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -527,7 +527,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                       context: context,
                                       builder: (ctx) => Dialog(
                                         child: Padding(
-                                          padding: const EdgeInsets.only(left: 15,top: 10,right: 15),
+                                          padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
                                           child: Container(
                                             width: width*0.2,
                                             height: height*0.45,
@@ -538,13 +538,13 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                   fontWeight: FontWeight.w600,fontSize: 20,
                                                 ),),
 
-                                                SizedBox(height: 20,),
+                                                Expanded(child: SizedBox()),
 
                                                 Text('We are sorry that you have to cancel this booking. Let us know why.',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                   fontWeight: FontWeight.w400,fontSize: 15,
                                                 ),),
 
-                                                SizedBox(height: 20,),
+                                                Expanded(child: SizedBox()),
 
                                                 Container(
                                                   decoration: BoxDecoration(
@@ -560,7 +560,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                   ),
                                                 ),
 
-                                                SizedBox(height: 20),
+                                                Expanded(child: SizedBox()),
 
                                                 Row(
                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -598,6 +598,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                             child: Padding(
                                                               padding: const EdgeInsets.only(left: 15,top: 15,right: 15,bottom: 15),
                                                               child: Container(
+                                                                padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
                                                                 width: width*0.2,
                                                                 height: height*0.3,
                                                                 child: Column(
@@ -607,14 +608,14 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                                       fontWeight: FontWeight.w600,fontSize: 20,
                                                                     ),),
 
-                                                                    SizedBox(height: height*0.15,),
+                                                                    Expanded(child: SizedBox()),
 
                                                                     Text('Your booking have been successfully cancelled!',
                                                                       style: Textstyle2Light18.appbartextstyle.copyWith(
                                                                       fontWeight: FontWeight.w400,fontSize: 15,
                                                                     ),),
 
-                                                                    SizedBox(height: 20,),
+                                                                    Expanded(child: SizedBox()),
 
                                                                     Column(
                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -696,7 +697,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                     ),
                                   ),
                                 ),
-                                
+
                                 SizedBox(width: 30,),
 
                                 InkWell(
@@ -730,7 +731,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                   ),
                 );
               },
-              
+
               child: Center(
                 child: Container(
                   width: width*0.85,

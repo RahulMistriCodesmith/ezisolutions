@@ -21,20 +21,25 @@ class _TippingState extends State<Tipping> {
       title: Column(
         children: [
           Container(
+            padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
             decoration: BoxDecoration(
               color: Appcolors.green1,
               border: Border.all(color: Appcolors.greenlight),
               borderRadius: BorderRadius.circular(50),
             ),
-            width: 50,
-            height: 50,
+            
             child: Center(
               child: Text('1',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 20
+                  color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 15
               ),),
             ),
           ),
-          Text('Review & Payment'),
+          Text('Review &',style: Textstyle2Light18.appbartextstyle.copyWith(
+              fontWeight: FontWeight.w300,fontSize: 12
+          ),),
+          Text('Payment',style: Textstyle2Light18.appbartextstyle.copyWith(
+              fontWeight: FontWeight.w300,fontSize: 12
+          ),),
         ],
       ),
       content: Column(
@@ -83,7 +88,8 @@ class _TippingState extends State<Tipping> {
               Expanded(child: SizedBox()),
               
               Container(
-                width: 295,
+
+                width: 240,
                 height: 45,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -122,7 +128,7 @@ class _TippingState extends State<Tipping> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text('Credit/Debit Card',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      color: Appcolors.grey1,fontSize: 18,fontWeight: FontWeight.w600
+                      color: Appcolors.grey1,fontSize: 15,fontWeight: FontWeight.w600
                   ),),
                   Expanded(child: SizedBox()),
                   Container(
@@ -165,12 +171,15 @@ class _TippingState extends State<Tipping> {
                         Text('Note:',style: Textstyle1Light18.appbartextstyle.copyWith(
                             fontSize: 10,fontWeight: FontWeight.w700
                         ),),
-                        Text(' By adding credit/debit card you agree on EZi to save your card',style: Textstyle1Light18.appbartextstyle.copyWith(
+                        Text(' By adding credit/debit card you agree on EZi',style: Textstyle1Light18.appbartextstyle.copyWith(
                             fontSize: 10,fontWeight: FontWeight.w400
                         ),),
                       ],
                     ),
-                    Text('information securely and display for future payments.',style: Textstyle1Light18.appbartextstyle.copyWith(
+                    Text('to save your card for future payments.',style: Textstyle1Light18.appbartextstyle.copyWith(
+                        fontSize: 10,fontWeight: FontWeight.w400
+                    ),),
+                    Text('display for future payments.',style: Textstyle1Light18.appbartextstyle.copyWith(
                         fontSize: 10,fontWeight: FontWeight.w400
                     ),),
                   ],
@@ -249,7 +258,7 @@ class _TippingState extends State<Tipping> {
                       Icon(Icons.clear,size: 45,color: Colors.red,),
 
                       Text('Cancel',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontSize: 15,fontWeight: FontWeight.w400,
+                        fontSize: 13,fontWeight: FontWeight.w400,
                       ),),
                     ],
                   ),
@@ -268,8 +277,7 @@ class _TippingState extends State<Tipping> {
                 },
 
                 child: Container(
-                  width: 250,
-                  padding: EdgeInsets.only(top: 15,bottom: 15),
+                  padding: EdgeInsets.only(top: 15,bottom: 15,right: 10,left: 10),
                   decoration: BoxDecoration(
                       color: Appcolors.green1,
                       borderRadius: BorderRadius.circular(10),
@@ -277,7 +285,7 @@ class _TippingState extends State<Tipping> {
                   ),
                   child: Center(
                     child: Text('Make Payment',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontSize: 30,fontWeight: FontWeight.w600,
+                      fontSize: 27,fontWeight: FontWeight.w600,
                     ),),
                   ),
                 ),
@@ -296,20 +304,25 @@ class _TippingState extends State<Tipping> {
         title: Column(
           children: [
             Container(
+              padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
               decoration: BoxDecoration(
                 color: Appcolors.green1,
                 border: Border.all(color: Appcolors.greenlight),
                 borderRadius: BorderRadius.circular(50),
               ),
-              width: 50,
-              height: 50,
+
               child: Center(
                 child: Text('2',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 20
+                    color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 15
                 ),),
               ),
             ),
-            Text('Confirmation Receipt'),
+            Text('Confirmation',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
+            Text('Receipt',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
           ],
         ),
         content: Column(
@@ -334,7 +347,9 @@ class _TippingState extends State<Tipping> {
             Text('Your appointment have been successfully scheduled. You will receive a reminder 1 hour before your appointment starts. Thank you for using EZi!',style: Textstyle2Light18.appbartextstyle.copyWith(
                 fontWeight: FontWeight.w400,fontSize: 15
             ),),
+
             SizedBox(height: 20,),
+
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -457,10 +472,10 @@ class _TippingState extends State<Tipping> {
             ),
             SizedBox(height: 15,),
 
-            Center(
+            Padding(
+              padding: const EdgeInsets.only(left: 10,right: 10),
               child: Container(
-                width: 280,
-                height: 60,
+                padding: EdgeInsets.only(top: 5,bottom: 5),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(color: Appcolors.greenlight),
@@ -468,7 +483,7 @@ class _TippingState extends State<Tipping> {
                 ),
                 child: Center(
                   child: Text('Done',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w600,fontSize: 30,
+                    fontWeight: FontWeight.w600,fontSize: 27,
                   ),),
                 ),
               ),
