@@ -2,6 +2,8 @@
 
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
+import 'package:ezisolutions/UI/QRCodes/amountpay.dart';
+import 'package:ezisolutions/UI/QRCodes/qrcodes1.dart';
 import 'package:flutter/material.dart';
 class QRCodes extends StatefulWidget {
   const QRCodes({Key key}) : super(key: key);
@@ -54,17 +56,24 @@ class _QRCodesState extends State<QRCodes> {
 
                     Expanded(child: SizedBox()),
 
-                    Container(
-                      padding: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          color: Appcolors.green1,
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Appcolors.greenlight)
+                    GestureDetector(
+
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => QRCodes1()));
+                      },
+
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            color: Appcolors.green1,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Appcolors.greenlight)
+                        ),
+                        child: Image.asset('assest/Image/qrimage.png',scale: 5,),
                       ),
-                      child: Image.asset('assest/Image/qrimage.png',scale: 5,),
                     ),
 
-                    SizedBox(width: 15,),
+                    SizedBox(width: 15),
 
                     Container(
                       padding: EdgeInsets.all(5),
@@ -150,7 +159,7 @@ class _QRCodesState extends State<QRCodes> {
                               ),
                               Expanded(child: SizedBox()),
                               Text('Thank You For Using EZi Check-in',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                  fontWeight: FontWeight.w600,fontSize: 15
+                                  fontWeight: FontWeight.w600,fontSize: 13
                               ),),
                             ],
                           ),
@@ -228,7 +237,7 @@ class _QRCodesState extends State<QRCodes> {
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(18),
+                              borderRadius: BorderRadius.circular(10),
                               border: Border.all(color: Appcolors.greenlight)
                           ),
 
@@ -241,7 +250,7 @@ class _QRCodesState extends State<QRCodes> {
                             icon: Container(
                                 decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.circular(18),
+                                    borderRadius: BorderRadius.circular(10),
                                     border: Border.all(color: Appcolors.greenlight)
                                 ),
                                 child: const Icon(Icons.keyboard_arrow_down_outlined,color: Appcolors.greenlight,)),
@@ -273,20 +282,27 @@ class _QRCodesState extends State<QRCodes> {
               ],
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(left: 35,right: 35,top: 20,bottom: 20),
-              child: Container(
-                padding: EdgeInsets.only(top: 10,bottom: 10),
-               width: width,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Appcolors.greenlight,width: 2),
-                  color: Appcolors.green1,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Center(
-                  child: Text('Custom Quotation',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontSize: 20,fontWeight: FontWeight.w600
-                  ),),
+            InkWell(
+
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => AmountPay()));
+              },
+
+              child: Padding(
+                padding: const EdgeInsets.only(left: 35,right: 35,top: 20,bottom: 20),
+                child: Container(
+                  padding: EdgeInsets.only(top: 10,bottom: 10),
+                 width: width,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Appcolors.greenlight,width: 2),
+                    color: Appcolors.green1,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text('Custom Quotation',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontSize: 20,fontWeight: FontWeight.w600
+                    ),),
+                  ),
                 ),
               ),
             ),

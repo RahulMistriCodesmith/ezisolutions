@@ -273,154 +273,96 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                 selectedval == "services"
                 ?
-                    Container(
-                      child: Column(
-                        children: [
-                          SizedBox(height: 20),
+                    Column(
+                      children: [
+                        SizedBox(height: 20),
 
-                          Container(
-                            padding: EdgeInsets.only(top: 15,bottom: 15),
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10),
-                                border: Border.all(color: Appcolors.greenlight)
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 15,right: 15,bottom: 20),
-                                  child: Text('Recent Bookings',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 20,fontWeight: FontWeight.w600,
-                                  ),),
-                                ),
+                        Container(
+                          padding: EdgeInsets.only(top: 15,bottom: 15),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Appcolors.greenlight)
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15,right: 15,bottom: 20),
+                                child: Text('Recent Bookings',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                  fontSize: 20,fontWeight: FontWeight.w600,
+                                ),),
+                              ),
 
-                                SingleChildScrollView(
-                                  scrollDirection: Axis.horizontal,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(left: 20),
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.all(10),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(15),
-                                            border: Border.all(color: Appcolors.greenlight),
-                                          ),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Text('Cut + Shave',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 15,fontWeight: FontWeight.w600,
-                                                  ),),
-
-                                                  SizedBox(width: width*0.08),
-
-                                                  Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 10,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                ],
-                                              ),
-                                              Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
-
-                                              SizedBox(height: 10),
-
-                                              Row(
-                                                children: [
-
-                                                  Column(
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                                    children: [
-                                                      Text('20 May 2021,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                        fontSize: 10,fontWeight: FontWeight.w400,
-                                                      ),),
-                                                      Text('01:10 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                        fontSize: 10,fontWeight: FontWeight.w400,
-                                                      ),),
-                                                    ],
-                                                  ),
-
-                                                  SizedBox(width: width*0.15,),
-
-                                                  Image.asset('assest/Image/infoimage.png',scale: 4,),
-                                                ],
-                                              ),
-
-                                            ],
-                                          ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 20),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(15),
+                                          border: Border.all(color: Appcolors.greenlight),
                                         ),
-
-                                        SizedBox(width: 20),
-
-                                        GestureDetector(
-
-                                          onTap: (){
-                                            Navigator.push(context, MaterialPageRoute(builder: (context) => CustomPackagePage()));
-                                          },
-
-                                          child: Container(
-                                            padding: EdgeInsets.all(10),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(15),
-                                              border: Border.all(color: Appcolors.greenlight),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
                                               children: [
-                                                Row(
+                                                Text('Cut + Shave',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 15,fontWeight: FontWeight.w600,
+                                                ),),
+
+                                                SizedBox(width: width*0.08),
+
+                                                Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 10,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                              ],
+                                            ),
+                                            Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400,
+                                            ),),
+
+                                            SizedBox(height: 10),
+
+                                            Row(
+                                              children: [
+
+                                                Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
-                                                    Text('Custom Pack...',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 15,fontWeight: FontWeight.w600,
-                                                    ),),
-
-                                                    SizedBox(width: width*0.07),
-
-                                                    Text('90 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    Text('20 May 2021,',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                       fontSize: 10,fontWeight: FontWeight.w400,
                                                     ),),
-
-                                                  ],
-                                                ),
-                                                Text('RM 150',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 15,fontWeight: FontWeight.w400,
-                                                ),),
-
-                                                SizedBox(height: 10),
-
-                                                Row(
-                                                  children: [
-
-                                                    Column(
-                                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                                      children: [
-                                                        Text('18 May 2021,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                          fontSize: 10,fontWeight: FontWeight.w400,
-                                                        ),),
-                                                        Text('03:30 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                          fontSize: 10,fontWeight: FontWeight.w400,
-                                                        ),),
-                                                      ],
-                                                    ),
-
-                                                    SizedBox(width: width*0.18,),
-
-                                                    Image.asset('assest/Image/infoimage.png',scale: 4,),
+                                                    Text('01:10 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      fontSize: 10,fontWeight: FontWeight.w400,
+                                                    ),),
                                                   ],
                                                 ),
 
+                                                SizedBox(width: width*0.15,),
+
+                                                Image.asset('assest/Image/infoimage.png',scale: 4,),
                                               ],
                                             ),
-                                          ),
+
+                                          ],
                                         ),
+                                      ),
 
-                                        SizedBox(width: 20),
+                                      SizedBox(width: 20),
 
-                                        Container(
+                                      GestureDetector(
+
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context) => CustomPackagePage()));
+                                        },
+
+                                        child: Container(
                                           padding: EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(15),
@@ -431,19 +373,19 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                             children: [
                                               Row(
                                                 children: [
-                                                  Text('Cut + Shave',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  Text('Custom Pack...',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                     fontSize: 15,fontWeight: FontWeight.w600,
                                                   ),),
 
-                                                  SizedBox(width: width*0.08),
+                                                  SizedBox(width: width*0.07),
 
-                                                  Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  Text('90 min',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                     fontSize: 10,fontWeight: FontWeight.w400,
                                                   ),),
 
                                                 ],
                                               ),
-                                              Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              Text('RM 150',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                 fontSize: 15,fontWeight: FontWeight.w400,
                                               ),),
 
@@ -455,16 +397,16 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                   Column(
                                                     crossAxisAlignment: CrossAxisAlignment.start,
                                                     children: [
-                                                      Text('20 May 2021,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      Text('18 May 2021,',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                         fontSize: 10,fontWeight: FontWeight.w400,
                                                       ),),
-                                                      Text('01:10 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      Text('03:30 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                         fontSize: 10,fontWeight: FontWeight.w400,
                                                       ),),
                                                     ],
                                                   ),
 
-                                                  SizedBox(width: width*0.15,),
+                                                  SizedBox(width: width*0.18,),
 
                                                   Image.asset('assest/Image/infoimage.png',scale: 4,),
                                                 ],
@@ -473,18 +415,217 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                             ],
                                           ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+
+                                      SizedBox(width: 20),
+
+                                      Container(
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(15),
+                                          border: Border.all(color: Appcolors.greenlight),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Text('Cut + Shave',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 15,fontWeight: FontWeight.w600,
+                                                ),),
+
+                                                SizedBox(width: width*0.08),
+
+                                                Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 10,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                              ],
+                                            ),
+                                            Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400,
+                                            ),),
+
+                                            SizedBox(height: 10),
+
+                                            Row(
+                                              children: [
+
+                                                Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text('20 May 2021,',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      fontSize: 10,fontWeight: FontWeight.w400,
+                                                    ),),
+                                                    Text('01:10 PM',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      fontSize: 10,fontWeight: FontWeight.w400,
+                                                    ),),
+                                                  ],
+                                                ),
+
+                                                SizedBox(width: width*0.15,),
+
+                                                Image.asset('assest/Image/infoimage.png',scale: 4,),
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
+                              ),
 
-                              ],
-                            ),
+                            ],
                           ),
+                        ),
 
-                          SizedBox(height: 20),
+                        SizedBox(height: 20),
 
-                          Container(
+                        Container(
+                          padding: EdgeInsets.only(top: 15,bottom: 15),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Appcolors.greenlight)
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15,right: 15,bottom: 20),
+                                child: Text('Package Offers',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                  fontSize: 20,fontWeight: FontWeight.w600,
+                                ),),
+                              ),
+
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 20),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(15),
+                                          border: Border.all(color: Appcolors.greenlight),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('Cut + Shave',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w600,
+                                            ),),
+                                            Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400,
+                                            ),),
+
+                                            Row(
+                                              children: [
+
+                                                Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 10,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                                SizedBox(width: width*0.15,),
+
+                                                Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+                                      ),
+
+                                      SizedBox(width: 20),
+
+                                      Container(
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(15),
+                                          border: Border.all(color: Appcolors.greenlight),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('School Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w600,
+                                            ),),
+                                            Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400,
+                                            ),),
+
+                                            Row(
+                                              children: [
+
+                                                Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 10,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                                SizedBox(width: width*0.15,),
+
+                                                Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+                                      ),
+
+                                      SizedBox(width: 20),
+
+                                      Container(
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(15),
+                                          border: Border.all(color: Appcolors.greenlight),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('Box Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w600,
+                                            ),),
+                                            Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400,
+                                            ),),
+
+                                            Row(
+                                              children: [
+
+                                                Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 10,fontWeight: FontWeight.w400,
+                                                ),),
+
+                                                SizedBox(width: width*0.15,),
+
+                                                Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+
+                            ],
+                          ),
+                        ),
+
+                        SizedBox(height: 20),
+
+                        GestureDetector(
+
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => CustomPackagePage()));
+                          },
+
+                          child: Container(
                             padding: EdgeInsets.only(top: 15,bottom: 15),
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -496,221 +637,158 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(left: 15,right: 15,bottom: 20),
-                                  child: Text('Package Offers',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 20,fontWeight: FontWeight.w600,
-                                  ),),
-                                ),
-
-                                SingleChildScrollView(
-                                  scrollDirection: Axis.horizontal,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(left: 20),
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.all(10),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(15),
-                                            border: Border.all(color: Appcolors.greenlight),
-                                          ),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Text('Cut + Shave',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w600,
-                                              ),),
-                                              Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
-
-                                              Row(
-                                                children: [
-
-                                                  Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 10,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                  SizedBox(width: width*0.15,),
-
-                                                  Image.asset('assest/Iocns/addicon.png',scale: 4,),
-                                                ],
-                                              ),
-
-                                            ],
-                                          ),
-                                        ),
-
-                                        SizedBox(width: 20),
-
-                                        Container(
-                                          padding: EdgeInsets.all(10),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(15),
-                                            border: Border.all(color: Appcolors.greenlight),
-                                          ),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Text('School Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w600,
-                                              ),),
-                                              Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
-
-                                              Row(
-                                                children: [
-
-                                                  Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 10,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                  SizedBox(width: width*0.15,),
-
-                                                  Image.asset('assest/Iocns/addicon.png',scale: 4,),
-                                                ],
-                                              ),
-
-                                            ],
-                                          ),
-                                        ),
-
-                                        SizedBox(width: 20),
-
-                                        Container(
-                                          padding: EdgeInsets.all(10),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(15),
-                                            border: Border.all(color: Appcolors.greenlight),
-                                          ),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Text('Box Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w600,
-                                              ),),
-                                              Text('RM 15',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
-
-                                              Row(
-                                                children: [
-
-                                                  Text('30 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 10,fontWeight: FontWeight.w400,
-                                                  ),),
-
-                                                  SizedBox(width: width*0.15,),
-
-                                                  Image.asset('assest/Iocns/addicon.png',scale: 4,),
-                                                ],
-                                              ),
-
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                  child: Row(
+                                    children: [
+                                      Text('Custom Package ',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 20,fontWeight: FontWeight.w600,
+                                      ),),
+                                      Text('(Best Seller - Special Discount)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 12,fontWeight: FontWeight.w400,
+                                      ),),
+                                    ],
                                   ),
                                 ),
 
-                              ],
-                            ),
-                          ),
-
-                          SizedBox(height: 20),
-
-                          GestureDetector(
-
-                            onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => CustomPackagePage()));
-                            },
-
-                            child: Container(
-                              padding: EdgeInsets.only(top: 15,bottom: 15),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: Appcolors.greenlight)
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15,right: 15,bottom: 20),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20,right: 20),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(color: Appcolors.greenlight)
+                                    ),
                                     child: Row(
                                       children: [
-                                        Text('Custom Package ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                          fontSize: 20,fontWeight: FontWeight.w600,
-                                        ),),
-                                        Text('(Best Seller - Special Discount)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                          fontSize: 12,fontWeight: FontWeight.w400,
-                                        ),),
-                                      ],
-                                    ),
-                                  ),
-
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 20,right: 20),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius: BorderRadius.circular(10),
-                                          border: Border.all(color: Appcolors.greenlight)
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(top: 10,left: 10,bottom: 10),
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Text('Readymade Package',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 18,fontWeight: FontWeight.w600,
-                                                ),),
-
-                                                Text('* Home cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 15,fontWeight: FontWeight.w400,
-                                                ),),
-
-                                                Text('* Men short hair cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 15,fontWeight: FontWeight.w400,
-                                                ),),
-
-                                                Text('* Clean shave',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 15,fontWeight: FontWeight.w400,
-                                                ),),
-
-                                                Text('* 10 min head massage',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontSize: 15,fontWeight: FontWeight.w400,
-                                                ),),
-
-                                              ],
-                                            ),
-                                          ),
-
-                                          Expanded(child: SizedBox()),
-
-                                          Column(
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 10,left: 10,bottom: 10),
+                                          child: Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
-                                              Text('RM25 RM20',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              Text('Readymade Package',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                 fontSize: 18,fontWeight: FontWeight.w600,
                                               ),),
 
-                                              Text('Estimate 60 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              Text('* Home cut',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                 fontSize: 15,fontWeight: FontWeight.w400,
                                               ),),
 
-                                              SizedBox(height: height*0.025,),
+                                              Text('* Men short hair cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                fontSize: 15,fontWeight: FontWeight.w400,
+                                              ),),
 
-                                              Row(
+                                              Text('* Clean shave',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                fontSize: 15,fontWeight: FontWeight.w400,
+                                              ),),
+
+                                              Text('* 10 min head massage',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                fontSize: 15,fontWeight: FontWeight.w400,
+                                              ),),
+
+                                            ],
+                                          ),
+                                        ),
+
+                                        Expanded(child: SizedBox()),
+
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('RM25 RM20',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 18,fontWeight: FontWeight.w600,
+                                            ),),
+
+                                            Text('Estimate 60 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w400,
+                                            ),),
+
+                                            SizedBox(height: height*0.025,),
+
+                                            Row(
+                                              children: [
+                                                Image.asset('assest/Iocns/editicon.png',scale: 4,),
+                                                SizedBox(width: width*0.1,),
+                                                Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+
+                                      ],
+                                    ),
+                                  ),
+                                ),
+
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(height: 20),
+
+                        Container(
+                          padding: EdgeInsets.only(top: 15,bottom: 15),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15,right: 15),
+                                child: Text('All Services',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                  fontSize: 20,fontWeight: FontWeight.w600,
+                                ),),
+                              ),
+
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20,top: 10),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(color: Appcolors.greenlight),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 15,fontWeight: FontWeight.w600,
+                                          ),),
+
+                                          SizedBox(height: 10),
+
+                                          Image.asset('assest/Image/tolderimage.png',scale: 4),
+
+                                          SizedBox(height: 15),
+
+                                          Row(
+                                            children: [
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
-                                                  Image.asset('assest/Iocns/editicon.png',scale: 4,),
-                                                  SizedBox(width: width*0.1,),
-                                                  Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                                  Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w600,
+                                                  ),),
+                                                  Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 10,fontWeight: FontWeight.w400,
+                                                  ),),
                                                 ],
                                               ),
+
+                                              SizedBox(width: width*0.15,),
+
+                                              GestureDetector(
+
+                                                  onTap: (){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookingAppoinment()));
+                                                  },
+
+                                                  child: Image.asset('assest/Iocns/addicon.png',scale: 4,)),
 
                                             ],
                                           ),
@@ -718,245 +796,165 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         ],
                                       ),
                                     ),
-                                  ),
 
-                                ],
+                                    Expanded(child: SizedBox()),
+
+                                    Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(color: Appcolors.greenlight),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 15,fontWeight: FontWeight.w600,
+                                          ),),
+
+                                          SizedBox(height: 10),
+
+                                          Image.asset('assest/Image/tipimage.png',scale: 4),
+                                          SizedBox(height: 15),
+
+                                          Row(
+                                            children: [
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w600,
+                                                  ),),
+                                                  Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 10,fontWeight: FontWeight.w400,
+                                                  ),),
+                                                ],
+                                              ),
+
+                                              SizedBox(width: width*0.15,),
+
+                                              Image.asset('assest/Iocns/addicon.png',scale: 4,),
+
+                                            ],
+                                          ),
+
+                                        ],
+                                      ),
+                                    ),
+
+                                    Expanded(child: SizedBox()),
+
+
+                                  ],
+                                ),
                               ),
-                            ),
+
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20,top: 10),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(color: Appcolors.greenlight),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 15,fontWeight: FontWeight.w600,
+                                          ),),
+
+                                          SizedBox(height: 10),
+
+                                          Image.asset('assest/Image/tolderimage.png',scale: 4),
+                                          SizedBox(height: 15),
+
+                                          Row(
+                                            children: [
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w600,
+                                                  ),),
+                                                  Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 10,fontWeight: FontWeight.w400,
+                                                  ),),
+                                                ],
+                                              ),
+
+                                              SizedBox(width: width*0.15,),
+
+                                              Image.asset('assest/Iocns/addicon.png',scale: 4,),
+
+                                            ],
+                                          ),
+
+                                        ],
+                                      ),
+                                    ),
+
+                                    Expanded(child: SizedBox()),
+
+                                    Container(
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(color: Appcolors.greenlight),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 15,fontWeight: FontWeight.w600,
+                                          ),),
+
+                                          SizedBox(height: 10),
+
+                                          Image.asset('assest/Image/tipimage.png',scale: 4),
+                                          SizedBox(height: 15),
+
+                                          Row(
+                                            children: [
+                                              Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 15,fontWeight: FontWeight.w600,
+                                                  ),),
+                                                  Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 10,fontWeight: FontWeight.w400,
+                                                  ),),
+                                                ],
+                                              ),
+
+                                              SizedBox(width: width*0.15,),
+
+                                              Image.asset('assest/Iocns/addicon.png',scale: 4,),
+
+                                            ],
+                                          ),
+
+                                        ],
+                                      ),
+                                    ),
+
+                                    Expanded(child: SizedBox()),
+
+
+                                  ],
+                                ),
+                              ),
+
+                            ],
                           ),
+                        ),
 
-                          SizedBox(height: 20),
-
-                          Container(
-                            padding: EdgeInsets.only(top: 15,bottom: 15),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 15,right: 15),
-                                  child: Text('All Services',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 20,fontWeight: FontWeight.w600,
-                                  ),),
-                                ),
-
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 20,top: 10),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.all(15),
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
-                                        ),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600,
-                                            ),),
-
-                                            SizedBox(height: 10),
-
-                                            Image.asset('assest/Image/tolderimage.png',scale: 4),
-
-                                            SizedBox(height: 15),
-
-                                            Row(
-                                              children: [
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 15,fontWeight: FontWeight.w600,
-                                                    ),),
-                                                    Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 10,fontWeight: FontWeight.w400,
-                                                    ),),
-                                                  ],
-                                                ),
-
-                                                SizedBox(width: width*0.15,),
-
-                                                GestureDetector(
-
-                                                    onTap: (){
-                                                      Navigator.push(context, MaterialPageRoute(builder: (context) => BookingAppoinment()));
-                                                    },
-
-                                                    child: Image.asset('assest/Iocns/addicon.png',scale: 4,)),
-
-                                              ],
-                                            ),
-
-                                          ],
-                                        ),
-                                      ),
-
-                                      Expanded(child: SizedBox()),
-
-                                      Container(
-                                        padding: EdgeInsets.all(15),
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
-                                        ),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600,
-                                            ),),
-
-                                            SizedBox(height: 10),
-
-                                            Image.asset('assest/Image/tipimage.png',scale: 4),
-                                            SizedBox(height: 15),
-
-                                            Row(
-                                              children: [
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 15,fontWeight: FontWeight.w600,
-                                                    ),),
-                                                    Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 10,fontWeight: FontWeight.w400,
-                                                    ),),
-                                                  ],
-                                                ),
-
-                                                SizedBox(width: width*0.15,),
-
-                                                Image.asset('assest/Iocns/addicon.png',scale: 4,),
-
-                                              ],
-                                            ),
-
-                                          ],
-                                        ),
-                                      ),
-
-                                      Expanded(child: SizedBox()),
-
-
-                                    ],
-                                  ),
-                                ),
-
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 20,top: 10),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.all(15),
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
-                                        ),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600,
-                                            ),),
-
-                                            SizedBox(height: 10),
-
-                                            Image.asset('assest/Image/tolderimage.png',scale: 4),
-                                            SizedBox(height: 15),
-
-                                            Row(
-                                              children: [
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 15,fontWeight: FontWeight.w600,
-                                                    ),),
-                                                    Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 10,fontWeight: FontWeight.w400,
-                                                    ),),
-                                                  ],
-                                                ),
-
-                                                SizedBox(width: width*0.15,),
-
-                                                Image.asset('assest/Iocns/addicon.png',scale: 4,),
-
-                                              ],
-                                            ),
-
-                                          ],
-                                        ),
-                                      ),
-
-                                      Expanded(child: SizedBox()),
-
-                                      Container(
-                                        padding: EdgeInsets.all(15),
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
-                                        ),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Todler Cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600,
-                                            ),),
-
-                                            SizedBox(height: 10),
-
-                                            Image.asset('assest/Image/tipimage.png',scale: 4),
-                                            SizedBox(height: 15),
-
-                                            Row(
-                                              children: [
-                                                Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text('RM 10',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 15,fontWeight: FontWeight.w600,
-                                                    ),),
-                                                    Text('15 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 10,fontWeight: FontWeight.w400,
-                                                    ),),
-                                                  ],
-                                                ),
-
-                                                SizedBox(width: width*0.15,),
-
-                                                Image.asset('assest/Iocns/addicon.png',scale: 4,),
-
-                                              ],
-                                            ),
-
-                                          ],
-                                        ),
-                                      ),
-
-                                      Expanded(child: SizedBox()),
-
-
-                                    ],
-                                  ),
-                                ),
-
-                              ],
-                            ),
-                          ),
-
-                          SizedBox(height: 20),
-                        ],
-                      ),
+                        SizedBox(height: 20),
+                      ],
                     )
                 :
                     SizedBox(),
@@ -978,6 +976,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                             ],
                           ),
                         ),
+                        
                         Padding(
                           padding: const EdgeInsets.only(left: 3,right: 3,),
                           child: Container(
@@ -995,7 +994,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                       return showDialog(
                                         context: context,
                                         builder: (ctx) => Dialog(
-                                           child: Image.asset('assest/Image/quote1.png',scale: 1,),
+                                           child: Image.asset('assest/Image/quote1.png',),
                                         ),
                                       );
                                     },
@@ -1005,12 +1004,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                    Text('Quote ',style: Textstyle2Light18.appbartextstyle.copyWith(
                                       fontSize: 18,fontWeight: FontWeight.w600,overflow: TextOverflow.ellipsis
                                     ),),
                                     Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
                                       fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
+                                    ),
+                                    ),
                                     Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
                                       fontSize: 12,fontWeight: FontWeight.w400,
                                     ),),
@@ -1464,253 +1464,94 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         :
                     SizedBox(height: 20),
 
-                    Container(
-                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Appcolors.greenlight),
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset('assest/Image/userimage.png',scale: 5),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15,right: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                    ListView.builder(
+                        shrinkWrap: true,
+                        padding: EdgeInsets.only(bottom: 10),
+                        itemCount: 5,
+                        scrollDirection: Axis.vertical,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 10),
+                            width: width,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                                border: Border.all(
+                                    color:
+                                    Appcolors.greenlight,
+                                    width: 2)),
+                            child: Row(
                               children: [
-                                Row(
-                                  children: [
-                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 13,fontWeight: FontWeight.w600
-                                    ),),
-                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
-                                    ),),
-                                    
-                                    SizedBox(width: width*0.15),
-                                    
-                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400
-                                    ),),
-                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
-                                  ],
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 5),
+                                  child: Image.asset(
+                                    "assest/Image/userimage.png",
+                                    scale: 4.5,
+                                  ),
                                 ),
-                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
+                                Expanded(
+                                    child: Padding(
+                                      padding:
+                                      EdgeInsets.symmetric(horizontal: 4),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                "Users name",
+                                                style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 18,fontWeight: FontWeight.w600
+                                                ),
+                                              ),
+                                              Text(
+                                                "(6 hours ago)",
+                                                style:Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 10,fontWeight: FontWeight.w300
+                                                ),
+                                              ),
+
+                                              Expanded(child: SizedBox()),
+
+                                              Text(
+                                                "5",
+                                                style:Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 12,fontWeight: FontWeight.w600
+                                                ),
+                                              ),
+
+                                              Image.asset('assest/Iocns/staricon3.png',scale: 7,),
+
+                                            ],
+                                          ),
+
+                                          SizedBox(height: 2),
+
+                                          Text(
+                                            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+                                            style:
+                                            Textstyle2Light18.appbartextstyle.copyWith(
+                                                fontSize: 12,fontWeight: FontWeight.w400
+                                            ),
+                                            textAlign: TextAlign.justify,
+                                            maxLines: 3,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+
+                                        ],
+                                      ),
+                                    ))
                               ],
                             ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    SizedBox(height: 20),
-
-                    Container(
-                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Appcolors.greenlight),
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset('assest/Image/userimage.png',scale: 5),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15,right: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 13,fontWeight: FontWeight.w600
-                                    ),),
-                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
-                                    ),),
-
-                                    SizedBox(width: width*0.15),
-
-                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400
-                                    ),),
-                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
-                                  ],
-                                ),
-                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    SizedBox(height: 20),
-
-                    Container(
-                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Appcolors.greenlight),
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset('assest/Image/userimage.png',scale: 5),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15,right: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 13,fontWeight: FontWeight.w600
-                                    ),),
-                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
-                                    ),),
-
-                                    SizedBox(width: width*0.15),
-
-                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400
-                                    ),),
-                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
-                                  ],
-                                ),
-                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    SizedBox(height: 20),
-
-                    Container(
-                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Appcolors.greenlight),
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset('assest/Image/userimage.png',scale: 5),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15,right: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 13,fontWeight: FontWeight.w600
-                                    ),),
-                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
-                                    ),),
-
-                                    SizedBox(width: width*0.15),
-
-                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400
-                                    ),),
-                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
-                                  ],
-                                ),
-                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    SizedBox(height: 20),
-
-                    Container(
-                      padding: EdgeInsets.only(left: 10,right: 10,top: 15,bottom: 15),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Appcolors.greenlight),
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset('assest/Image/userimage.png',scale: 5),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15,right: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text('Users name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 13,fontWeight: FontWeight.w600
-                                    ),),
-                                    Text('(6 hours ago)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400,color: Appcolors.greenlight
-                                    ),),
-
-                                    SizedBox(width: width*0.15),
-
-                                    Text('5',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w400
-                                    ),),
-                                    Image.asset('assest/Iocns/staricon.png',scale: 4),
-                                  ],
-                                ),
-                                Text('It is a long established fact that a reader will be',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('distracted by the readable content of a page',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                                Text('when looking at its layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w400,color: Colors.black
-                                ),),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                          );
+                        }),
 
                     SizedBox(height: 20),
 
@@ -1739,230 +1580,176 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       ),
                       
                       SizedBox(height: 15),
-                      
-                      Container(
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Appcolors.greenlight),
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                        ),
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
 
-                                Stack(
-                                  children: [
-                                    Image.asset('assest/Image/tipimage.png',scale: 5,),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 30,top: 10,),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Text('Vacinated',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 10,fontWeight: FontWeight.w600
-                                        ),),
-                                      ),
-                                    ),
-
-                                  ],
-                                ),
-
-                                Text('John Martin',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w600
-                                ),),
-
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 10,right: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                      ListView.builder(
+                          shrinkWrap: true,
+                          padding: EdgeInsets.only(bottom: 10),
+                          itemCount: 5,
+                          scrollDirection: Axis.vertical,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemBuilder: (context, index) {
+                            return Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              width: width,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  border: Border.all(
+                                      color:
+                                      Appcolors.greenlight,
+                                      width: 2)),
+                              child: Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Text('Experience',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 13,fontWeight: FontWeight.w600
-                                          ),),
-                                          
-                                          SizedBox(height: 10),
-                                          
-                                          Text('5 Years 10 Months',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 10,fontWeight: FontWeight.w400
-                                          ),),
-                                        ],
-                                      ),
-                                      SizedBox(width: width*0.22,),
-                                      Image.asset('assest/Image/saveimage.png',scale: 4),
-                                    ],
-                                  ),
-                                  SizedBox(height: 5),
-                                  Text('About John',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 13,fontWeight: FontWeight.w600
-                                  ),),
-                                  Text('It is a long established fact that a reader',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  Text('will be distracted by the readable',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  Text('content of a page when looking at its',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  Text('layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  InkWell(
-                                    onTap: (){
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => Tipping()));
-                                    },
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 5),
+                                    child: Column(
+                                      children: [
+                                        Stack(
+                                          children: [
+                                            Image.asset('assest/Image/tipimage.png',scale: 3.7,),
+                                            Padding(
+                                              padding: const EdgeInsets.only(left: 50,top: 10,),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  color: Appcolors.green1,
+                                                ),
+                                                child: Text('Vacinated',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 10,fontWeight: FontWeight.w600
+                                                ),),
+                                              ),
+                                            ),
 
-                                    child: Container(
-                                        margin: EdgeInsets.only(left: 100),
-                                      padding: EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(color: Appcolors.greenlight),
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: Appcolors.green1,
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          Image.asset('assest/Image/tipimage1.png',scale: 4.5),
-                                          Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w400
-                                          ),),
-                                        ],
-                                      ),
+                                          ],
+                                        ),
+
+                                        SizedBox(height: 5,),
+
+                                        Text(
+                                          "John Martin",
+                                          style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 12,fontWeight: FontWeight.w600
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
+                                  Expanded(
+                                      child: Padding(
+                                        padding:
+                                        EdgeInsets.symmetric(horizontal: 4),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Text(
+                                                  "Experiance",
+                                                  style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      fontSize: 18,fontWeight: FontWeight.w600
+                                                  ),
+                                                ),
+
+                                                Expanded(child: SizedBox()),
+
+                                                Image.asset('assest/Image/saveimage.png',scale: 4,),
+
+                                              ],
+                                            ),
+
+                                            Text(
+                                              "5 Years 10 Months",
+                                              style:
+                                              Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 12,fontWeight: FontWeight.w400
+                                              ),
+                                              textAlign: TextAlign.justify,
+                                              maxLines: 3,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+
+                                            SizedBox(height: 15),
+
+                                            Text(
+                                              "About John",
+                                              style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 18,fontWeight: FontWeight.w600
+                                              ),
+                                              textAlign: TextAlign.justify,
+                                              maxLines: 3,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                            SizedBox(height: 5),
+                                            Text(
+                                              "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+                                              style:
+                                              Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 12,fontWeight: FontWeight.w400
+                                              ),
+                                              textAlign: TextAlign.justify,
+                                              maxLines: 3,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+
+                                            SizedBox(height: 10,),
+
+                                            Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                              children: [
+
+                                                Expanded(child: SizedBox()),
+
+                                                InkWell(
+                                                  
+                                                  onTap: (){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Tipping()));
+                                                  },
+                                                  
+                                                  child: Container(
+                                                    padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                                                    decoration: BoxDecoration(
+                                                        color: Appcolors.green1,
+                                                        borderRadius: BorderRadius.circular(15),
+                                                        border: Border.all(
+                                                            color:
+                                                            Appcolors.greenlight,
+                                                            width: 2)),
+                                                    child: Row(
+                                                      children: [
+
+                                                        Image.asset('assest/Image/tipimage1.png',scale: 4),
+                                                        
+                                                        SizedBox(width: 5,),
+
+                                                        Text(
+                                                          "Tip EZian",
+                                                          style:Textstyle2Light18.appbartextstyle.copyWith(
+                                                              fontSize: 15,fontWeight: FontWeight.w400
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+                                      ))
                                 ],
                               ),
-                            ),
+                            );
+                          }),
 
-                          ],
-                        ),
-                      ),
-
-                      SizedBox(height: 20,),
-
-                      Container(
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Appcolors.greenlight),
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                        ),
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-
-                                Stack(
-                                  children: [
-                                    Image.asset('assest/Image/tipimage.png',scale: 5,),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 30,top: 10,),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Text('Vacinated',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 10,fontWeight: FontWeight.w600
-                                        ),),
-                                      ),
-                                    ),
-
-                                  ],
-                                ),
-
-                                Text('John Martin',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 12,fontWeight: FontWeight.w600
-                                ),),
-
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 10,right: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Text('Experience',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 13,fontWeight: FontWeight.w600
-                                          ),),
-
-                                          SizedBox(height: 10),
-
-                                          Text('5 Years 10 Months',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 10,fontWeight: FontWeight.w400
-                                          ),),
-                                        ],
-                                      ),
-                                      SizedBox(width: width*0.22,),
-                                      Image.asset('assest/Image/saveimage.png',scale: 4),
-                                    ],
-                                  ),
-                                  SizedBox(height: 5),
-                                  Text('About John',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 13,fontWeight: FontWeight.w600
-                                  ),),
-                                  Text('It is a long established fact that a reader',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  Text('will be distracted by the readable',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  Text('content of a page when looking at its',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  Text('layout.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 10,fontWeight: FontWeight.w400
-                                  ),),
-                                  InkWell(
-                                    onTap: (){
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => Tipping()));
-                                    },
-
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 100),
-                                      padding: EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                        border: Border.all(color: Appcolors.greenlight),
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: Appcolors.green1,
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          Image.asset('assest/Image/tipimage1.png',scale: 4.5),
-                                          Text('Tip EZian',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w400
-                                          ),),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-
-                          ],
-                        ),
-                      ),
-
-                      SizedBox(height: 20,),
                     ],
                   ),
                 )
@@ -2001,4 +1788,11 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
       ),
     );
   }
+  List stocksList = [
+    CompanyStocks(image: "assest/Image/quote1.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image: "assest/Image/quote2.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image: "assest/Image/quote1.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image: "assest/Image/quote2.png", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image: "assest/Image/quote2.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+  ];
 }

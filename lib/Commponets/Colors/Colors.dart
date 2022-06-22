@@ -19,6 +19,16 @@ class Appcolors{
   static const Color orange = Color(0xFFF6800D);
 }
 
+class CompanyStocks {
+  String name;
+  String price;
+
+  String image;
+
+  CompanyStocks({this.image,this.name,this.price});
+}
+
+
 class Inputdec1 {
   static InputDecoration inputDecoration = InputDecoration(
 

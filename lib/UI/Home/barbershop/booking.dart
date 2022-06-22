@@ -1,7 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Home/barbershop/filter.dart';
 import 'package:ezisolutions/UI/Home/barbershop/partnerprofilepage.dart';
+import 'package:ezisolutions/UI/Home/listviewex.dart';
 import 'package:flutter/material.dart';
 class BookingPage extends StatefulWidget {
   const BookingPage({Key key}) : super(key: key);
@@ -11,6 +14,10 @@ class BookingPage extends StatefulWidget {
 }
 
 class _BookingPageState extends State<BookingPage> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -65,7 +72,6 @@ class _BookingPageState extends State<BookingPage> {
                     child: TextFormField(
                       decoration: Inputdec3.inputDecoration.copyWith(
                         hintText: 'Search for partners & services',
-
                       ),
                     ),
                   ),
@@ -102,465 +108,153 @@ class _BookingPageState extends State<BookingPage> {
               ),
             ),
 
-            GestureDetector(
-
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => PartnerProfilePage()));
-              },
-
-              child: Container(
-                padding: EdgeInsets.all(7),
-                margin: EdgeInsets.only(left: 20,right: 20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Appcolors.greenlight),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      offset: const Offset(
-                        2.0,
-                        4.0,
-                      ),
-                      blurRadius: 5.0,
-                      spreadRadius: 0.5,
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Image.asset('assest/Image/shopimage.png',scale: 5,),
-
-                    SizedBox(width: 10,),
-
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text('EZi Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontWeight: FontWeight.w600,fontSize: 18
-                            ),),
-                            Text('(4.5KM)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontWeight: FontWeight.w300,fontSize: 10
-                            ),),
-
-                            SizedBox(width: 10,),
-
-                            Container(
-                              padding: EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                color: Appcolors.greenlight,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                            ),
-
-                            Text('Open',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontWeight: FontWeight.w600,fontSize: 12
-                            ),),
-                          ],
-                        ),
-                        Text('Uptown Damansara',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontWeight: FontWeight.w400,fontSize: 12
-                        ),),
-
-                        SizedBox(height: 15,),
-
-                        Text('Service Category',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontWeight: FontWeight.w600,fontSize: 12
-                        ),),
-
-                        Text('Shop & Home',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontWeight: FontWeight.w400,fontSize: 12
-                        ),),
-
-                        Row(
-                          children: [
-                            Text('5.0',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontWeight: FontWeight.w400,fontSize: 12
-                            ),),
-
-                            Image.asset('assest/Iocns/staricon.png',scale: 3,),
-
-                            SizedBox(width: 10,),
-
-                            Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontWeight: FontWeight.w600,fontSize: 15
-                            ),),
-                          ],
-                        ),
-
-                      ],
-                    ),
-
-                  ],
-                ),
-              ),
-            ),
-
-            SizedBox(height: 20),
-
-            Container(
-              padding: EdgeInsets.all(7),
-              margin: EdgeInsets.only(left: 20,right: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Appcolors.greenlight),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    offset: const Offset(
-                      2.0,
-                      4.0,
-                    ),
-                    blurRadius: 5.0,
-                    spreadRadius: 0.5,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Image.asset('assest/Image/shopimage.png',scale: 5,),
-
-                  SizedBox(width: 10,),
-
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+            ListView.builder(
+                shrinkWrap: true,
+                padding: EdgeInsets.only(bottom: 10),
+                itemCount: 5,
+                scrollDirection: Axis.vertical,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => PartnerProfilePage()));
+                    },
+                    
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 10),
+                      width: width,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(
+                              color:
+                              Appcolors.greenlight,
+                              width: 2)),
+                      child: Row(
                         children: [
-                          Text('EZi Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 18
-                          ),),
-                          Text('(4.5KM)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w300,fontSize: 10
-                          ),),
-
-                          SizedBox(width: 10,),
-
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: Appcolors.greenlight,
-                              borderRadius: BorderRadius.circular(50),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 5),
+                            child: Image.asset(
+                              "assest/Image/shopimage.png",
+                              scale: 4.5,
                             ),
                           ),
+                          Expanded(
+                              child: Padding(
+                                padding:
+                                EdgeInsets.symmetric(horizontal: 4),
+                                child: Column(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "EZi Barber",
+                                          style: Textstyle2Light18.appbartextstyle.copyWith(
+                                            fontSize: 18,fontWeight: FontWeight.w600
+                                          ),
+                                        ),
+                                        Text(
+                                          "(4.5K M)",
+                                          style:Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 10,fontWeight: FontWeight.w300
+                                          ),
+                                        ),
 
-                          Text('Open',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 12
-                          ),),
+                                        Expanded(child: SizedBox()),
+
+                                        Container(
+                                          width: 20,
+                                          height: 20,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(30),
+                                            color: Appcolors.greenlight,
+                                          ),
+                                        ),
+
+                                        Text(
+                                          "Open",
+                                          style:Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 12,fontWeight: FontWeight.w600
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
+
+                                    Text(
+                                      "Uptown Damansara",
+                                      style:
+                                      Textstyle2Light18.appbartextstyle.copyWith(
+                                          fontSize: 12,fontWeight: FontWeight.w400
+                                      ),
+                                      textAlign: TextAlign.justify,
+                                      maxLines: 3,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+
+                                    SizedBox(height: 15),
+
+                                    Text(
+                                      "Service Category",
+                                      style: Textstyle2Light18.appbartextstyle.copyWith(
+                                          fontSize: 18,fontWeight: FontWeight.w600
+                                      ),
+                                      textAlign: TextAlign.justify,
+                                      maxLines: 3,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    Text(
+                                      "Shop & Home",
+                                      style:
+                                      Textstyle2Light18.appbartextstyle.copyWith(
+                                          fontSize: 12,fontWeight: FontWeight.w400
+                                      ),
+                                      textAlign: TextAlign.justify,
+                                      maxLines: 3,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "5.0",
+                                          style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 12,fontWeight: FontWeight.w400
+                                          ),
+                                        ),
+                                        Image.asset('assest/Iocns/staricon.png',scale: 4,),
+
+
+                                        Expanded(child: SizedBox()),
+
+                                        Text(
+                                          "RM10 - RM150",
+                                          style:Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 15,fontWeight: FontWeight.w600
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
+
+                                  ],
+                                ),
+                              ))
                         ],
                       ),
-                      Text('Uptown Damansara',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      SizedBox(height: 15,),
-
-                      Text('Service Category',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w600,fontSize: 12
-                      ),),
-
-                      Text('Shop & Home',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      Row(
-                        children: [
-                          Text('5.0',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w400,fontSize: 12
-                          ),),
-
-                          Image.asset('assest/Iocns/staricon.png',scale: 3,),
-
-                          SizedBox(width: 10,),
-
-                          Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 15
-                          ),),
-                        ],
-                      ),
-
-                    ],
-                  ),
-
-                ],
-              ),
-            ),
-
-            SizedBox(height: 20),
-
-            Container(
-              padding: EdgeInsets.all(7),
-              margin: EdgeInsets.only(left: 20,right: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Appcolors.greenlight),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    offset: const Offset(
-                      2.0,
-                      4.0,
                     ),
-                    blurRadius: 5.0,
-                    spreadRadius: 0.5,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Image.asset('assest/Image/shopimage.png',scale: 5,),
-
-                  SizedBox(width: 10,),
-
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text('EZi Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 18
-                          ),),
-                          Text('(4.5KM)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w300,fontSize: 10
-                          ),),
-
-                          SizedBox(width: 10,),
-
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: Appcolors.greenlight,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                          ),
-
-                          Text('Open',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 12
-                          ),),
-                        ],
-                      ),
-                      Text('Uptown Damansara',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      SizedBox(height: 15,),
-
-                      Text('Service Category',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w600,fontSize: 12
-                      ),),
-
-                      Text('Shop & Home',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      Row(
-                        children: [
-                          Text('5.0',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w400,fontSize: 12
-                          ),),
-
-                          Image.asset('assest/Iocns/staricon.png',scale: 3,),
-
-                          SizedBox(width: 10,),
-
-                          Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 15
-                          ),),
-                        ],
-                      ),
-
-                    ],
-                  ),
-
-                ],
-              ),
-            ),
-
-            SizedBox(height: 20),
-
-            Container(
-              padding: EdgeInsets.all(7),
-              margin: EdgeInsets.only(left: 20,right: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Appcolors.greenlight),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    offset: const Offset(
-                      2.0,
-                      4.0,
-                    ),
-                    blurRadius: 5.0,
-                    spreadRadius: 0.5,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Image.asset('assest/Image/shopimage.png',scale: 5,),
-
-                  SizedBox(width: 10,),
-
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text('EZi Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 18
-                          ),),
-                          Text('(4.5KM)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w300,fontSize: 10
-                          ),),
-
-                          SizedBox(width: 10,),
-
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: Appcolors.greenlight,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                          ),
-
-                          Text('Open',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 12
-                          ),),
-                        ],
-                      ),
-                      Text('Uptown Damansara',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      SizedBox(height: 15,),
-
-                      Text('Service Category',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w600,fontSize: 12
-                      ),),
-
-                      Text('Shop & Home',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      Row(
-                        children: [
-                          Text('5.0',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w400,fontSize: 12
-                          ),),
-
-                          Image.asset('assest/Iocns/staricon.png',scale: 3,),
-
-                          SizedBox(width: 10,),
-
-                          Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 15
-                          ),),
-                        ],
-                      ),
-
-                    ],
-                  ),
-
-                ],
-              ),
-            ),
-
-            SizedBox(height: 20),
-
-            Container(
-              padding: EdgeInsets.all(7),
-              margin: EdgeInsets.only(left: 20,right: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Appcolors.greenlight),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    offset: const Offset(
-                      2.0,
-                      4.0,
-                    ),
-                    blurRadius: 5.0,
-                    spreadRadius: 0.5,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Image.asset('assest/Image/shopimage.png',scale: 5,),
-
-                  SizedBox(width: 10,),
-
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text('EZi Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 18
-                          ),),
-                          Text('(4.5KM)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w300,fontSize: 10
-                          ),),
-
-                          SizedBox(width: 10,),
-
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: Appcolors.greenlight,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                          ),
-
-                          Text('Open',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 12
-                          ),),
-                        ],
-                      ),
-                      Text('Uptown Damansara',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      SizedBox(height: 15,),
-
-                      Text('Service Category',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w600,fontSize: 12
-                      ),),
-
-                      Text('Shop & Home',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 12
-                      ),),
-
-                      Row(
-                        children: [
-                          Text('5.0',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w400,fontSize: 12
-                          ),),
-
-                          Image.asset('assest/Iocns/staricon.png',scale: 3,),
-
-                          SizedBox(width: 10),
-
-                          Text('RM10 - RM150',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 15
-                          ),),
-                        ],
-                      ),
-
-                    ],
-                  ),
-
-                ],
-              ),
-            ),
+                  );
+                }),
 
           ],
         ),
