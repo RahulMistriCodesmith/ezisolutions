@@ -621,25 +621,28 @@ class _HomePageState extends State<HomePage> {
                                           width: 2)),
                                   height: 50,
                                   // width: 120,
-                                  margin: EdgeInsets.symmetric(vertical: 2),
+                                  margin: EdgeInsets.symmetric(vertical: 2,horizontal: 2),
                                   // padding: EdgeInsets.symmetric(horizontal: 1,vertical: 5),
-                                  child: Row(
-                                    children: [
-                                      preferredServiceList[index]['image'],
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 2,vertical: 2),
+                                    child: Row(
+                                      children: [
+                                        preferredServiceList[index]['image'],
 
-                                      SizedBox(width: 8),
+                                        SizedBox(width: 8),
 
-                                      Flexible(
-                                          child: Text(
-                                            preferredServiceList[index]
-                                            ['servicetext'],
-                                            style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 13,fontWeight: FontWeight.w400
-                                            ),
-                                            overflow: TextOverflow.ellipsis,
-                                            maxLines: 2,
-                                          )),
-                                    ],
+                                        Flexible(
+                                            child: Text(
+                                              preferredServiceList[index]
+                                              ['servicetext'],
+                                              style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontSize: 14,fontWeight: FontWeight.w400
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
+                                              maxLines: 2,
+                                            )),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

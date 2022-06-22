@@ -647,7 +647,6 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
                             }
                             return null;
                           },
-
                           decoration: Inputdec2.inputDecoration.copyWith(
                             hintText: 'Contact no',
                           ),
@@ -1372,9 +1371,6 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
 
                             if (contact.text == "123" && password.text == "123") {
 
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('Processing Data')),
-                              );
                               Navigator.push(context, MaterialPageRoute(builder: (context) => MyLocation()));
                             }
                           });

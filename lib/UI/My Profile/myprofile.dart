@@ -1,5 +1,6 @@
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
+import 'package:ezisolutions/UI/My%20Profile/editprofile.dart';
 import 'package:flutter/material.dart';
 class MyProfile extends StatefulWidget {
   const MyProfile({Key key}) : super(key: key);
@@ -51,7 +52,208 @@ class _MyProfileState extends State<MyProfile> {
               ),
             ),
 
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                      offset: const Offset(
+                        2.0,
+                        4.0,
+                      ),
+                    blurRadius: 10,
+                    spreadRadius: 0.2
+                  ),
+                ],
+                  border: Border.all(color: Appcolors.greenlight,width: 1),
+                  color: Colors.white,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20,top: 5,bottom: 5,right: 20),
+                child: Row(
+                  children: [
+                   Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                       Text('Member Details',style: Textstyle2Light18.appbartextstyle.copyWith(
+                           fontWeight: FontWeight.w600,fontSize: 20
+                       ),),
 
+                       SizedBox(height: 10),
+
+                       Text('John Smith',style: Textstyle2Light18.appbartextstyle.copyWith(
+                           fontWeight: FontWeight.w400,fontSize: 15
+                       ),),
+
+                       Text('+60 12-3334444',style: Textstyle2Light18.appbartextstyle.copyWith(
+                           fontWeight: FontWeight.w400,fontSize: 15
+                       ),),
+                     ],
+                   ),
+
+                    Expanded(child: SizedBox()),
+
+                    InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
+                        },
+                        child: Image.asset('assest/Image/pen.png',scale: 5,)),
+
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 25),
+
+            Container(
+              padding: EdgeInsets.only(left: 10,right: 3,top: 5,bottom: 5),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Appcolors.greenlight),
+                  color: Appcolors.green1,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                children: [
+                  ImageIcon(AssetImage('assest/Iocns/locationicon.png'),size: 35,color: Appcolors.greenlight,),
+
+                  SizedBox(width: width*0.02,),
+
+                  Text('Saved Addresses',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 20
+                  ),),
+
+                  Expanded(child: SizedBox()),
+
+                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              padding: EdgeInsets.only(left: 10,right: 3,top: 5,bottom: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Appcolors.greenlight),
+                color: Appcolors.green1,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                children: [
+                  ImageIcon(AssetImage('assest/Iocns/contacticon.png'),size: 35,color: Appcolors.greenlight,),
+
+                  SizedBox(width: width*0.02,),
+
+                  Text('Contact Us',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 20
+                  ),),
+
+                  Expanded(child: SizedBox()),
+
+                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              padding: EdgeInsets.only(left: 10,right: 3,top: 5,bottom: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Appcolors.greenlight),
+                color: Appcolors.green1,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                children: [
+                  ImageIcon(AssetImage('assest/Iocns/helpicon.png'),size: 35,color: Appcolors.greenlight,),
+
+                  SizedBox(width: width*0.02,),
+
+                  Text('Help Center',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 20
+                  ),),
+
+                  Expanded(child: SizedBox()),
+
+                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              padding: EdgeInsets.only(left: 10,right: 3,top: 5,bottom: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Appcolors.greenlight),
+                color: Appcolors.green1,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                children: [
+                  ImageIcon(AssetImage('assest/Iocns/conditionicon.png'),size: 35,color: Appcolors.greenlight,),
+
+                  SizedBox(width: width*0.02,),
+
+                  Text('Terms & Condition',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 20
+                  ),),
+
+                  Expanded(child: SizedBox()),
+
+                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              padding: EdgeInsets.only(left: 10,right: 3,top: 5,bottom: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Appcolors.greenlight),
+                color: Appcolors.green1,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                children: [
+                  ImageIcon(AssetImage('assest/Iocns/privacyicon.png'),size: 35,color: Appcolors.greenlight,),
+
+                  SizedBox(width: width*0.02,),
+
+                  Text('Privacy Policy',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 20
+                  ),),
+
+                  Expanded(child: SizedBox()),
+
+                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+
+                ],
+              ),
+            ),
+
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 10,vertical: 30),
+              padding: EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
+                border: Border.all(color: Appcolors.greenlight),
+                borderRadius: BorderRadius.circular(5),
+                color: Appcolors.green1
+              ),
+              child: Center(
+                child: Text('LOGOUT',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w600,fontSize: 20,color: Appcolors.greenlight
+                ),),
+              ),
+            ),
 
           ],
         ),

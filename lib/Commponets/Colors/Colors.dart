@@ -23,9 +23,10 @@ class CompanyStocks {
   String name;
   String price;
 
-  String image;
+  String image1;
+  String image2;
 
-  CompanyStocks({this.image,this.name,this.price});
+  CompanyStocks({this.image1,this.image2,this.name,this.price});
 }
 
 

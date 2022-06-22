@@ -132,7 +132,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                   child: Container(
 
                     decoration: BoxDecoration(
-                      border: Border.all(color: Appcolors.greenlight),
+                      border: Border.all(color: Appcolors.greenlight,width: 2),
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.white,
                     ),
@@ -167,7 +167,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               Container(
                                   padding: EdgeInsets.all(7),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Appcolors.greenlight),
+                                    border: Border.all(color: Appcolors.greenlight,width: 2),
                                     borderRadius: BorderRadius.circular(10),
                                     color: Appcolors.green1,
                                   ),
@@ -179,7 +179,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         Container(
                           padding: EdgeInsets.only(left: 28,right: 28,top: 10,bottom: 10),
                           decoration: BoxDecoration(
-                            border: Border.all(color: Appcolors.greenlight),
+                            border: Border.all(color: Appcolors.greenlight,width: 2),
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(15),
                               bottomRight: Radius.circular(15),
@@ -282,7 +282,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: Appcolors.greenlight)
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -297,14 +297,14 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Padding(
-                                  padding: const EdgeInsets.only(left: 20),
+                                  padding: const EdgeInsets.only(left: 20,right: 20),
                                   child: Row(
                                     children: [
                                       Container(
                                         padding: EdgeInsets.all(10),
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
+                                          border: Border.all(color: Appcolors.greenlight,width: 2),
                                         ),
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -366,7 +366,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                           padding: EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(15),
-                                            border: Border.all(color: Appcolors.greenlight),
+                                            border: Border.all(color: Appcolors.greenlight,width: 2),
                                           ),
                                           child: Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -423,7 +423,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         padding: EdgeInsets.all(10),
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
+                                          border: Border.all(color: Appcolors.greenlight,width: 2),
                                         ),
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -488,7 +488,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: Appcolors.greenlight)
+                              border: Border.all(color: Appcolors.greenlight,width: 2),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -503,14 +503,14 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Padding(
-                                  padding: const EdgeInsets.only(left: 20),
+                                  padding: const EdgeInsets.only(left: 20,right: 20),
                                   child: Row(
                                     children: [
                                       Container(
                                         padding: EdgeInsets.all(10),
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
+                                          border: Border.all(color: Appcolors.greenlight,width: 2),
                                         ),
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -545,7 +545,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         padding: EdgeInsets.all(10),
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
+                                          border: Border.all(color: Appcolors.greenlight,width: 2),
                                         ),
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -580,7 +580,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                         padding: EdgeInsets.all(10),
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(15),
-                                          border: Border.all(color: Appcolors.greenlight),
+                                          border: Border.all(color: Appcolors.greenlight,width: 2),
                                         ),
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -655,7 +655,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(color: Appcolors.greenlight)
+                                        border: Border.all(color: Appcolors.greenlight,width: 2)
                                     ),
                                     child: Row(
                                       children: [
@@ -751,7 +751,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                       padding: EdgeInsets.all(15),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(15),
-                                        border: Border.all(color: Appcolors.greenlight),
+                                        border: Border.all(color: Appcolors.greenlight,width: 2),
                                       ),
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -803,7 +803,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                       padding: EdgeInsets.all(15),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(15),
-                                        border: Border.all(color: Appcolors.greenlight),
+                                        border: Border.all(color: Appcolors.greenlight,width: 2),
                                       ),
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -858,7 +858,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                       padding: EdgeInsets.all(15),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(15),
-                                        border: Border.all(color: Appcolors.greenlight),
+                                        border: Border.all(color: Appcolors.greenlight,width: 2),
                                       ),
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -903,7 +903,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                       padding: EdgeInsets.all(15),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(15),
-                                        border: Border.all(color: Appcolors.greenlight),
+                                        border: Border.all(color: Appcolors.greenlight,width: 2),
                                       ),
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -976,346 +976,101 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                             ],
                           ),
                         ),
-                        
-                        Padding(
-                          padding: const EdgeInsets.only(left: 3,right: 3,),
-                          child: Container(
-                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Appcolors.greenlight),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                            ),
-                            child: Row(
-                              children: [
 
-                                GestureDetector(
-                                    onTap: (){
-                                      return showDialog(
-                                        context: context,
-                                        builder: (ctx) => Dialog(
-                                           child: Image.asset('assest/Image/quote1.png',),
-                                        ),
-                                      );
-                                    },
-                                    child: Image.asset('assest/Image/quote1.png',scale: 5)),
-
-                                Expanded(child: SizedBox()),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                        ListView.builder(
+                          shrinkWrap: true,
+                          padding: EdgeInsets.only(bottom: 10),
+                          itemCount: stocksList.length,
+                          scrollDirection: Axis.vertical,
+                          physics: NeverScrollableScrollPhysics(),
+                            itemBuilder: (context, index) {
+                             return Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 10, vertical: 10),
+                                width: width,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    border: Border.all(
+                                        color:
+                                        Appcolors.greenlight,
+                                        width: 2)),
+                                child: Row(
                                   children: [
-                                    Text('Quote ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 18,fontWeight: FontWeight.w600,overflow: TextOverflow.ellipsis
-                                    ),),
-                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),
-                                    ),
-                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('adipisci lli. consectetur, adisci elit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text(' dipisci veli consectetur, ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    InkWell(
 
-                                      onTap: (){
-                                        share();
-                                      },
+                                    GestureDetector(
+                                        onTap: (){
+                                          return showDialog(
+                                            context: context,
+                                            builder: (ctx) => Dialog(
+                                              child: Image.asset(stocksList[index].image1,),
+                                            ),
+                                          );
+                                        },
+                                        child: Image.asset(
+                                          stocksList[index].image1,
+                                          scale: 4.5,),),
 
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Appcolors.greenlight),
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
-                                      ),
-                                    ),
+                                    Expanded(
+                                        child: Padding(
+                                          padding:
+                                          EdgeInsets.symmetric(horizontal: 4),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+
+                                              Text(
+                                                stocksList[index].name,
+                                                style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 18,fontWeight: FontWeight.w600
+                                                ),
+
+                                              ),
+
+                                              SizedBox(height: 2),
+
+                                              Text(
+                                                stocksList[index].price,
+                                                style:
+                                                Textstyle2Light18.appbartextstyle.copyWith(
+                                                    fontSize: 14,fontWeight: FontWeight.w400
+                                                ),
+                                                textAlign: TextAlign.justify,
+                                                maxLines: 5,
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+
+                                              SizedBox(height: 20,),
+
+                                              Row(
+                                                children: [
+                                                  Expanded(child: SizedBox()),
+                                                  InkWell(
+
+                                                    onTap: (){
+                                                      share();
+                                                    },
+
+                                                    child: Image.asset(
+                                                      stocksList[index].image2,
+                                                      scale: 4.5,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+
+                                            ],
+                                          ),
+                                        ))
                                   ],
                                 ),
-                                Expanded(child: SizedBox()),
-                              ],
-                            ),
-                          ),
+                              );
+                            },
                         ),
-                        SizedBox(height: 20),
 
-                        Padding(
-                          padding: const EdgeInsets.only(left: 3,right: 3,),
-                          child: Container(
-                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Appcolors.greenlight),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                            ),
-                            child: Row(
-                              children: [
-
-                                GestureDetector(
-                                    onTap: (){
-                                      return showDialog(
-                                        context: context,
-                                        builder: (ctx) => Dialog(
-                                          child: Image.asset('assest/Image/quote2.png',scale: 1,),
-                                        ),
-                                      );
-                                    },
-                                    child: Image.asset('assest/Image/quote2.png',scale: 5)),
-
-                                Expanded(child: SizedBox()),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 18,fontWeight: FontWeight.w600,
-                                    ),),
-                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-
-                                    InkWell(
-
-                                      onTap: (){
-                                        share();
-                                      },
-
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Appcolors.greenlight),
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Expanded(child: SizedBox()),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 20),
-
-                        Padding(
-                          padding: const EdgeInsets.only(left: 3,right: 3,),
-                          child: Container(
-                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Appcolors.greenlight),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                            ),
-                            child: Row(
-                              children: [
-
-                                GestureDetector(
-                                    onTap: (){
-                                      return showDialog(
-                                        context: context,
-                                        builder: (ctx) => Dialog(
-                                          child: Image.asset('assest/Image/quote1.png',scale: 1,),
-                                        ),
-                                      );
-                                    },
-                                    child: Image.asset('assest/Image/quote1.png',scale: 5)),
-
-                                Expanded(child: SizedBox()),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 18,fontWeight: FontWeight.w600,
-                                    ),),
-                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('adipisci lli. consectetur, adisci elit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text(' dipisci veli consectetur, ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    InkWell(
-
-                                      onTap: (){
-                                        share();
-                                      },
-
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Appcolors.greenlight),
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Expanded(child: SizedBox()),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 20),
-
-                        Padding(
-                          padding: const EdgeInsets.only(left: 3,right: 3,),
-                          child: Container(
-                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Appcolors.greenlight),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                            ),
-                            child: Row(
-                              children: [
-
-                                GestureDetector(
-                                    onTap: (){
-                                      return showDialog(
-                                        context: context,
-                                        builder: (ctx) => Dialog(
-                                          child: Image.asset('assest/Image/quote2.png',scale: 1,),
-                                        ),
-                                      );
-                                    },
-                                    child: Image.asset('assest/Image/quote2.png',scale: 5)),
-
-                                Expanded(child: SizedBox()),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 18,fontWeight: FontWeight.w600,
-                                    ),),
-                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-
-                                    InkWell(
-
-                                      onTap: (){
-                                        share();
-                                      },
-
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Appcolors.greenlight),
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Expanded(child: SizedBox()),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 20),
-
-                        Padding(
-                          padding: const EdgeInsets.only(left: 3,right: 3,),
-                          child: Container(
-                            padding: EdgeInsets.only(top: 4,bottom: 4,left: 4,right: 4),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Appcolors.greenlight),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                            ),
-                            child: Row(
-                              children: [
-
-                                GestureDetector(
-                                    onTap: (){
-                                      return showDialog(
-                                        context: context,
-                                        builder: (ctx) => Dialog(
-                                          child: Image.asset('assest/Image/quote2.png',scale: 1,),
-                                        ),
-                                      );
-                                    },
-                                    child: Image.asset('assest/Image/quote2.png',scale: 5)),
-
-                                Expanded(child: SizedBox()),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Quote',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 18,fontWeight: FontWeight.w600,
-                                    ),),
-                                    Text('Neque porro quisquam est',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('qui dolorem ipsum quia',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('dolor sit amet, consectetur,',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-                                    Text('adipisci velit.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 12,fontWeight: FontWeight.w400,
-                                    ),),
-
-                                    InkWell(
-
-                                      onTap: (){
-                                        share();
-                                      },
-
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(color: Appcolors.greenlight),
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: Appcolors.green1,
-                                        ),
-                                        child: Icon(Icons.share_outlined,size: 30,color: Appcolors.greenlight,),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Expanded(child: SizedBox()),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 20),
                       ],
                     )
                     :
@@ -1332,7 +1087,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        border: Border.all(color: Appcolors.greenlight),
+                        border: Border.all(color: Appcolors.greenlight,width: 2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: InkWell(
@@ -1352,7 +1107,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                             Container(
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  border: Border.all(color: Appcolors.greenlight),
+                                  border: Border.all(color: Appcolors.greenlight,width: 2),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Icon(Icons.arrow_drop_down,color: Appcolors.greenlight,)),
@@ -1368,7 +1123,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        border: Border.all(color: Appcolors.greenlight),
+                        border: Border.all(color: Appcolors.greenlight,width: 2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -1380,7 +1135,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Container(
                                   padding: EdgeInsets.only(top: 15,bottom: 15,left: 42,right: 42),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Appcolors.greenlight),
+                                    border: Border.all(color: Appcolors.greenlight,width: 2),
                                     borderRadius: BorderRadius.circular(10),
                                     color: Appcolors.green1,
                                   ),
@@ -1394,7 +1149,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Container(
                                   padding: EdgeInsets.only(top: 18,bottom: 18,left: 40,right: 40),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Appcolors.greenlight),
+                                    border: Border.all(color: Appcolors.greenlight,width: 2),
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.white,
                                   ),
@@ -1406,7 +1161,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Container(
                                   padding: EdgeInsets.only(top: 18,bottom: 18,left: 33,right: 33),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Appcolors.greenlight),
+                                    border: Border.all(color: Appcolors.greenlight,width: 2),
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.white,
                                   ),
@@ -1423,7 +1178,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Container(
                                   padding: EdgeInsets.only(top: 20,bottom: 20,left: 26,right: 26),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Appcolors.greenlight),
+                                    border: Border.all(color: Appcolors.greenlight,width: 2),
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.white,
                                   ),
@@ -1435,7 +1190,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Container(
                                   padding: EdgeInsets.only(top: 11,bottom: 11,left: 30,right: 30),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Appcolors.greenlight),
+                                    border: Border.all(color: Appcolors.greenlight,width: 2),
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.white,
                                   ),
@@ -1447,7 +1202,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                 Container(
                                   padding: EdgeInsets.only(top: 15,bottom: 15,left: 25,right: 25),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Appcolors.greenlight),
+                                    border: Border.all(color: Appcolors.greenlight,width: 2),
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.white,
                                   ),
@@ -1570,7 +1325,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                       Container(
                         padding: EdgeInsets.only(left: 10,right: 10,top: 5,bottom: 5),
                         decoration: BoxDecoration(
-                          border: Border.all(color: Appcolors.greenlight),
+                          border: Border.all(color: Appcolors.greenlight,width: 2),
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.white,
                         ),
@@ -1789,10 +1544,10 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
     );
   }
   List stocksList = [
-    CompanyStocks(image: "assest/Image/quote1.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
-    CompanyStocks(image: "assest/Image/quote2.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
-    CompanyStocks(image: "assest/Image/quote1.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
-    CompanyStocks(image: "assest/Image/quote2.png", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
-    CompanyStocks(image: "assest/Image/quote2.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image2: "assest/Iocns/shareicon.png",image1: "assest/Image/quote1.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image2: "assest/Iocns/shareicon.png",image1: "assest/Image/quote2.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image2: "assest/Iocns/shareicon.png",image1: "assest/Image/quote1.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image2: "assest/Iocns/shareicon.png",image1: "assest/Image/quote2.png",name: "Quote",price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
+    CompanyStocks(image2: "assest/Iocns/shareicon.png",image1: "assest/Image/quote2.png",name: "Quote", price: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci lli. consectetur, adisci elit. dipisci veli consectetur, "),
   ];
 }

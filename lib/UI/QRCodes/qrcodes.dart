@@ -166,7 +166,7 @@ class _QRCodesState extends State<QRCodes> {
                         ),
 
                         Padding(
-                          padding: const EdgeInsets.only(left: 20,right: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                           child: Row(
                             children: [
                               Column(
@@ -308,7 +308,7 @@ class _QRCodesState extends State<QRCodes> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 35,right: 35),
+              padding: const EdgeInsets.only(left: 35,right: 35,bottom: 20),
               child: RichText(
                 text: TextSpan(
                   text: 'Note: ',
