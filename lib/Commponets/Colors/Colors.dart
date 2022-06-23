@@ -33,7 +33,7 @@ class CompanyStocks {
 class Inputdec1 {
   static InputDecoration inputDecoration = InputDecoration(
 
-    //   focusColor: AppColor.white,
+      focusColor: Colors.white,
 
 
     hintStyle: Textstyle2Light18.appbartextstyle.copyWith(
@@ -43,16 +43,16 @@ class Inputdec1 {
       child: Image.asset("assets/Image/Search Icon.png", width: 10, height: 10,color: Colors.grey,),
     ),*/
 
-    /*errorBorder: OutlineInputBorder(
+    errorBorder: OutlineInputBorder(
         borderSide: BorderSide(color: Colors.redAccent)
-    ),*/
+    ),
 
     border: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
 borderSide: BorderSide(color: Appcolors.greenlight, width: 2),
     ),
 
-    filled: true,
+    filled: false,
 
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -69,34 +69,35 @@ borderSide: BorderSide(color: Appcolors.greenlight, width: 2),
 class Inputdec3 {
   static InputDecoration inputDecoration = InputDecoration(
 
-    //   focusColor: AppColor.white,
+      focusColor: Colors.white,
 
 
     hintStyle: Textstyle2Light18.appbartextstyle.copyWith(
-        fontSize: 15,color: Colors.grey),
+        fontSize: 16,color: Colors.grey),
     /* prefixIcon: Padding(
       padding: EdgeInsets.all(14.0),
       child: Image.asset("assets/Image/Search Icon.png", width: 10, height: 10,color: Colors.grey,),
     ),*/
 
-    /*errorBorder: OutlineInputBorder(
+    errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         borderSide: BorderSide(color: Colors.redAccent)
-    ),*/
+    ),
 
     border: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
-      borderSide: BorderSide(color: Appcolors.greenlight, width: 2),
+      borderSide: BorderSide(color: Appcolors.greenlight),
     ),
 
     filled: true,
 
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
-      borderSide: BorderSide(width: 2,color: Appcolors.greenlight),
+      borderSide: BorderSide(color: Appcolors.greenlight),
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
-      borderSide: BorderSide(width: 2,color: Appcolors.greenlight),
+      borderSide: BorderSide(color: Appcolors.greenlight),
     ),
 
   );
@@ -115,7 +116,7 @@ class Inputdec2 {
       child: Image.asset("assets/Image/Search Icon.png", width: 10, height: 10,color: Colors.grey,),
     ),*/
 
-    /*errorBorder: OutlineInputBorder(
+   /* errorBorder: OutlineInputBorder(
         borderSide: BorderSide(color: Colors.redAccent)
     ),*/
 

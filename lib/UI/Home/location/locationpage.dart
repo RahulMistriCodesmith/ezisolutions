@@ -74,6 +74,7 @@ class _LocationPageState extends State<LocationPage> {
                     markers: _markers,
                     onCameraMove: _onCameraMove
                 ),
+
                 Padding(
                   padding: const EdgeInsets.all(14.0),
                   child: Align(

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, void_checks
+
 import 'dart:io';
 
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
@@ -154,6 +156,8 @@ class _EditProfileState extends State<EditProfile> {
               ),
             ),
 
+
+
             SizedBox(height: 15),
 
             Padding(
@@ -170,6 +174,46 @@ class _EditProfileState extends State<EditProfile> {
                   ),),
                 ],
               ),
+            ),
+
+            Row(
+              children: [
+
+                Container(
+                  margin: EdgeInsets.only(left: 65),
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.green1),
+                  ),
+                  child: Text('+60',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 15,color: Appcolors.greenlight
+                  ),),
+                ),
+
+                Container(
+                  width: width*0.54,
+                  margin: EdgeInsets.symmetric(vertical: 8,horizontal: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.greenlight),
+                  ),
+                  child: Row(
+                    children: [
+                      Text('John Smith',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontWeight: FontWeight.w400,fontSize: 15,
+                      ),),
+
+                      Expanded(child: SizedBox()),
+
+                      Image.asset('assest/Image/pen.png',scale: 5,),
+                    ],
+                  ),
+                ),
+              ],
             ),
 
             SizedBox(height: 20,),
@@ -251,12 +295,519 @@ class _EditProfileState extends State<EditProfile> {
             ),
 
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 35,vertical: 15),
               child: Text('Additional Info',style: Textstyle2Light18.appbartextstyle.copyWith(
                 fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
               ),),
             ),
 
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+
+                  Image.asset('assest/Iocns/idcard.png',scale: 5,),
+
+                  SizedBox(width: 10),
+
+                  Text('Identification No',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 18,
+                  ),),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 8,),
+
+            Row(
+              children: [
+
+                Container(
+                  margin: EdgeInsets.only(left: 65),
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.greenlight),
+                  ),
+                  child: Text('951210',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 15,
+                  ),),
+                ),
+
+                Expanded(child: SizedBox()),
+
+                Text('-',style: TextStyle(fontSize: 20),),
+
+                Expanded(child: SizedBox()),
+
+                Container(
+
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.greenlight),
+                  ),
+                  child: Text('13',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 15,
+                  ),),
+                ),
+
+                Expanded(child: SizedBox()),
+
+                Text('-',style: TextStyle(fontSize: 20),),
+
+                Expanded(child: SizedBox()),
+
+                Container(
+                  
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.greenlight),
+                  ),
+                  child: Text('5117',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 15,
+                  ),),
+                ),
+
+                Expanded(child: SizedBox()),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 20,right: 60),
+                  child: Image.asset('assest/Image/pen.png',scale: 5,),
+                ),
+
+              ],
+            ),
+
+            SizedBox(height: 20,),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+
+                  Image.asset('assest/Iocns/birthdayicon.png',scale: 5,),
+
+                  SizedBox(width: 10),
+
+                  Text('Birthday',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 18,
+                  ),),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 8,),
+
+            Row(
+              children: [
+
+                Container(
+                  margin: EdgeInsets.only(left: 65),
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Appcolors.background,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.green1),
+                  ),
+                  child: Text('10',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 15,color: Appcolors.greenlight
+                  ),),
+                ),
+
+                Expanded(child: SizedBox()),
+
+                Container(
+
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Appcolors.background,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.green1),
+                  ),
+                  child: Text('December',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 15,color: Appcolors.greenlight
+                  ),),
+                ),
+
+                Expanded(child: SizedBox()),
+
+                Container(
+
+                  padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Appcolors.background,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.green1),
+                  ),
+                  child: Text('1995',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 15,color: Appcolors.greenlight
+                  ),),
+                ),
+
+                SizedBox(width: width*0.27,),
+
+              ],
+            ),
+
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+
+                  Image.asset('assest/Iocns/gender.png',scale: 5,),
+
+                  SizedBox(width: 10),
+
+                  Text('Gender',style: Textstyle2Light18.appbartextstyle.copyWith(
+                    fontWeight: FontWeight.w400,fontSize: 18,
+                  ),),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 8,),
+
+            Container(
+              margin: EdgeInsets.only(left: 65,right: 40,bottom: 20),
+              padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+              decoration: BoxDecoration(
+                color: Appcolors.background,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Appcolors.green1),
+              ),
+              child: Row(
+                children: [
+                  Text('Male',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 15,color: Appcolors.greenlight
+                  ),),
+                  Expanded(child: SizedBox()),
+                  Text('Female',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,fontSize: 15,color: Appcolors.background
+                  ),),
+                ],
+              ),
+            ),
+            
+            GestureDetector(
+
+              onTap: (){
+                return showDialog(
+                  context: context,
+                  builder: (ctx) => Dialog(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
+                      child: Container(
+                        width: width*0.2,
+                        height: height*0.5,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Delete My Account!',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,fontSize: 20,
+                            ),),
+
+                            Expanded(child: SizedBox()),
+
+                            Center(
+                              child: Image.asset('assest/Image/deleteaccount.png',scale: 5,),
+                            ),
+
+                            Expanded(child: SizedBox()),
+
+                            Text('Are you sure you want to delete your account?',style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 15,
+                            ),),
+
+                            Expanded(child: SizedBox()),
+
+                            RichText(
+                              text: TextSpan(
+                                text: 'Note: ',
+                                style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 15,fontWeight: FontWeight.w600,color: Colors.black
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: 'All your information will be deleted from our databases after 7 days only. During that period your login credentials will be suspended. There is no way to undo this action once you have done it.',
+                                    style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 15,fontWeight: FontWeight.w400,color: Colors.black
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            Expanded(child: SizedBox()),
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                GestureDetector(
+
+                                  onTap: (){
+                                    return showDialog(
+                                      context: context,
+                                      builder: (ctx) => Dialog(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
+                                          child: Container(
+                                            width: width*0.2,
+                                            height: height*0.65,
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Text('Why Delete Account?',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontWeight: FontWeight.w600,fontSize: 20,
+                                                ),),
+
+                                                Expanded(child: SizedBox()),
+
+                                                Center(child: Image.asset('assest/Image/deleteaccount1.png',scale: 5,)),
+
+                                                Expanded(child: SizedBox()),
+
+                                                Text('Why do you want to delete your account?',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                  fontWeight: FontWeight.w400,fontSize: 18,
+                                                ),),
+
+                                                Expanded(child: SizedBox()),
+
+                                                RichText(
+                                                  text: TextSpan(
+                                                    text: 'Remarks: ',
+                                                    style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                        fontSize: 15,fontWeight: FontWeight.w600,color: Colors.black
+                                                    ),
+                                                    children: <TextSpan>[
+                                                      TextSpan(
+                                                        text: 'Your honest feedback will be used to improve how we do things.',
+                                                        style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                            fontSize: 15,fontWeight: FontWeight.w400,color: Colors.black
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+
+                                                Expanded(child: SizedBox()),
+
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      border: Border.all(color: Appcolors.greenlight),
+                                                      borderRadius: BorderRadius.circular(10),
+                                                      color: Colors.white
+                                                  ),
+                                                  child: TextField(
+                                                    maxLines: 6,
+                                                    decoration: Inputdec1.inputDecoration.copyWith(
+                                                      hintText: 'Remarks*',
+                                                    ),
+                                                  ),
+                                                ),
+
+                                                Expanded(child: SizedBox()),
+
+                                                Row(
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    GestureDetector(
+
+                                                      onTap: (){
+                                                        return showDialog(
+                                                          context: context,
+                                                          builder: (ctx) => Dialog(
+                                                            child: Padding(
+                                                              padding: const EdgeInsets.only(left: 15,top: 15,right: 15,bottom: 15),
+                                                              child: Container(
+                                                                padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 10),
+                                                                width: width*0.2,
+                                                                height: height*0.5,
+                                                                child: Column(
+                                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                                  children: [
+                                                                    Text('Farewell...',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                      fontWeight: FontWeight.w600,fontSize: 20,
+                                                                    ),),
+
+                                                                    Expanded(child: SizedBox()),
+
+                                                                    Center(child: Image.asset('assest/Image/farewell.png',scale: 5,)),
+
+                                                                    Expanded(child: SizedBox()),
+
+                                                                    Text('It’s never EZi to watch you go, but we hope to cross path again! We will always be here for you. Thank you for using our service John Smith, you’re awesome.',
+                                                                      style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                        fontWeight: FontWeight.w400,fontSize: 12,
+                                                                      ),),
+
+                                                                    Expanded(child: SizedBox()),
+
+                                                                    Text('Sincerely,',
+                                                                      style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                        fontWeight: FontWeight.w400,fontSize: 12,
+                                                                      ),),
+                                                                    Text('EZi Team',
+                                                                      style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                        fontWeight: FontWeight.w400,fontSize: 12,
+                                                                      ),),
+
+                                                                    Container(
+                                                                      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+                                                                      margin: EdgeInsets.only(top: 20),
+                                                                      decoration: BoxDecoration(
+                                                                      color: Appcolors.green1,
+                                                                      border: Border.all(color: Appcolors.greenlight),
+                                                                      borderRadius: BorderRadius.circular(10),
+                                                                    ),
+                                                                      child: Center(
+                                                                        child: Text('Submit',
+                                                                          style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                            fontWeight: FontWeight.w600,fontSize: 20,
+                                                                          ),),
+                                                                      ),
+                                                                    ),
+
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        );
+                                                      },
+
+                                                      child: Container(
+                                                        width: width*0.2,
+                                                        height: 50,
+                                                        decoration: BoxDecoration(
+                                                          color: Appcolors.green1,
+                                                          border: Border.all(color: Appcolors.greenlight),
+                                                          borderRadius: BorderRadius.circular(10),
+                                                        ),
+                                                        child: Center(
+                                                          child: Text('Yes',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                            fontSize: 20,fontWeight: FontWeight.w600,
+                                                          ),),
+                                                        ),
+                                                      ),
+                                                    ),
+
+                                                    SizedBox(width: 30,),
+
+                                                    InkWell(
+
+                                                      onTap: (){
+                                                        Navigator.pop(context);
+                                                      },
+
+                                                      child: Container(
+                                                        width: width*0.2,
+                                                        height: 50,
+                                                        decoration: BoxDecoration(
+                                                          color: Appcolors.green1,
+                                                          border: Border.all(color: Appcolors.greenlight),
+                                                          borderRadius: BorderRadius.circular(10),
+                                                        ),
+                                                        child: Center(
+                                                          child: Text('No',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                            fontSize: 20,fontWeight: FontWeight.w600,
+                                                          ),),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+
+                                  child: Container(
+                                    width: width*0.2,
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      color: Appcolors.green1,
+                                      border: Border.all(color: Appcolors.greenlight),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Center(
+                                      child: Text('YES',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 20,fontWeight: FontWeight.w600,
+                                      ),),
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(width: 30,),
+
+                                InkWell(
+
+                                  onTap: (){
+                                    Navigator.pop(context);
+                                  },
+
+                                  child: Container(
+                                    width: width*0.2,
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      color: Appcolors.green1,
+                                      border: Border.all(color: Appcolors.greenlight),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Center(
+                                      child: Text('NO',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 20,fontWeight: FontWeight.w600,
+                                      ),),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                );
+              },
+
+
+              child: Container(
+                margin: EdgeInsets.only(left: 25,right: 25,bottom: 20),
+                padding: EdgeInsets.symmetric(vertical: 8),
+                decoration: BoxDecoration(
+                  color: Appcolors.green1,
+                  border: Border.all(color: Appcolors.greenlight),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assest/Iocns/delete.png',scale: 5,),
+
+                    SizedBox(width: 10,),
+
+                    Text('Delete My Account',style: Textstyle2Light18.appbartextstyle.copyWith(
+                        fontWeight: FontWeight.w600,fontSize: 20,color: Appcolors.greenlight
+                    ),),
+                  ],
+                ),
+              ),
+            ),
 
           ],
         ),
