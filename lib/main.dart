@@ -1,7 +1,19 @@
+import 'package:ezisolutions/UI/Authorization/Login/languagepage.dart';
 import 'package:ezisolutions/UI/Authorization/Login/mainloginpage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+
+  SystemChrome.setPreferredOrientations(
+      [
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown
+      ]
+  );
+
   runApp(const MyApp());
 }
 

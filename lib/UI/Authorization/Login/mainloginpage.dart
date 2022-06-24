@@ -3,14 +3,15 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
-import 'package:ezisolutions/UI/Authorization/Login/mainloginpage2.dart';
-import 'package:ezisolutions/UI/Home/location/locationpage.dart';
+import 'package:ezisolutions/UI/Authorization/Login/languagepage.dart';
 import 'package:ezisolutions/UI/Home/location/mylocation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:slider_button/slider_button.dart';
@@ -23,9 +24,21 @@ class MainLoginPage extends StatefulWidget {
 
 class _MainLoginPageState extends State<MainLoginPage> {
 
+  TextEditingController phoneController = new TextEditingController();
+  String phoneNumber = "";
+
+  void _onCountryChange(CountryCode countryCode) {
+    this.phoneNumber =  countryCode.toString();
+    print("New Country selected: " + countryCode.toString());
+  }
+
+  void check(){
+    print("Full Text: "+ this.phoneNumber + phoneController.text);
+  }
+
   final GlobalKey<FormState> _forMKey = GlobalKey<FormState>();
 
-  TextEditingController contact = TextEditingController();
+
 
   var onTapRecognizer;
 
@@ -38,6 +51,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
   var errorController;
 
   var textEditingController;
+  bool status = false;
 
 
   @override
@@ -60,7 +74,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
   var selectedval = 'slide1';
 
 
-
+bool cl=false;
   File imageFile;
 
   TextEditingController email = TextEditingController();
@@ -69,6 +83,8 @@ class _MainLoginPageState extends State<MainLoginPage> {
   TextEditingController pass = TextEditingController();
   TextEditingController address = TextEditingController();
   TextEditingController pincode = TextEditingController();
+  TextEditingController contact = TextEditingController();
+  TextEditingController contact1 = TextEditingController();
 
   int _activeCurrentStep = 0;
 
@@ -76,6 +92,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
   @override
   Widget build(BuildContext context) {
+
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -100,44 +117,37 @@ class _MainLoginPageState extends State<MainLoginPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        width: width*0.18,
-                        height: height*0.039,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Appcolors.blue),
-                          borderRadius: BorderRadius.circular(5),
-                          color: Appcolors.blue1.withOpacity(0.5),
-                        ),
-                        child: RaisedButton(
-                            color: Appcolors.blue1.withOpacity(0.5),
-                          shape: RoundedRectangleBorder(
+                      GestureDetector(
+
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LanguagePage()));
+                        },
+
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 23,vertical: 7),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.greenlight,),
                             borderRadius: BorderRadius.circular(5),
+                            color: Appcolors.green1.withOpacity(0.5),
                           ),
-                            child: Text('BM',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          child: Text('ENG',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontSize: 15,fontWeight: FontWeight.w600
-                            ),),
-                            onPressed: (){}),
+                          ),),
+                        ),
                       ),
 
                       Expanded(child: SizedBox()),
 
                       Container(
-                        width: width*0.18,
-                        height: height*0.039,
+                        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
                         decoration: BoxDecoration(
                           border: Border.all(color: Appcolors.greenlight,),
                           borderRadius: BorderRadius.circular(5),
                           color: Appcolors.green1.withOpacity(0.5),
                         ),
-                        child: RaisedButton(
-                            color: Appcolors.green1,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            child: Text('SKIP',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontSize: 15,fontWeight: FontWeight.w600
-                            ),),
-                            onPressed: (){}),
+                        child: Text('SKIP',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 15,fontWeight: FontWeight.w600
+                        ),),
                       ),
 
                     ],
@@ -155,7 +165,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                 SizedBox(height: height*0.03,),
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 56,right: 51),
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: Text('Login To Your Account',style: Textstyle2Light18.appbartextstyle.copyWith(
                       fontSize: 20,fontWeight: FontWeight.w600
                   ),),
@@ -163,144 +173,203 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                 SizedBox(height: 10,),
 
-                Padding(
-                  padding: const EdgeInsets.only(left: 56,right: 51),
+               /* Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: Row(
                     children: [
-                      GestureDetector(
-                        child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 13,vertical: 13),
-                          decoration: BoxDecoration(
-                          border: Border.all(color: Appcolors.greenlight),
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white
-                          ),
-                          child: Center(child: Text('+91',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontSize: 23,color: Colors.grey),)),
+                      Container(
+                        height: height*0.075,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: Appcolors.greenlight)
                         ),
-                        onTap: (){
-                          showCountryPicker(
-                            context: context,
-                            //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
-                            exclude: <String>['KN', 'MF'],
-                            favorite: <String>['IN'],
-                            //Optional. Shows phone code before the country name.
-                            showPhoneCode: true,
-                            onSelect: (Country country) {
-                              print('Select country: ${country.displayName}');
-                            },
+                        child: CountryCodePicker(
+                          onChanged: _onCountryChange,
+                          // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                          initialSelection: 'IN',
+                          favorite: ['+91'],
+                          textStyle: Textstyle2Light18.appbartextstyle.copyWith(
+                              color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
+                          ),
+                          // optional. Shows only country name and flag
 
-                            countryListTheme: CountryListThemeData(
-
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(40.0),
-                                topRight: Radius.circular(40.0),
-                              ),
-
-                              inputDecoration: InputDecoration(
-                                labelText: 'Search',
-                                hintText: 'Start typing to search',
-                                prefixIcon: const Icon(Icons.search),
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: const Color(0xFF8C98A8).withOpacity(0.2),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          );
-                        },
+                          showFlag: false,
+                          // optional. Shows only country name and flag when popup is closed.
+                          showOnlyCountryWhenClosed: false,
+                          showFlagDialog: true,
+                          // optional. aligns the flag and the Text left
+                          alignLeft: false,
+                        ),
                       ),
 
-                      Expanded(child: SizedBox()),
 
-                      Container(
-                        width: width*0.55,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: TextFormField(
-                          controller: contact,
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'enter phone number';
-                            }
-                            return null;
-                          },
-                          cursorHeight: 16,
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
 
-                          decoration: Inputdec3.inputDecoration.copyWith(
-                            hintText: 'Contact no',
+                          ),
+                          child: TextFormField(
+                            controller: contact,
 
+                            keyboardType: TextInputType.phone,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'enter phone number';
+                              }
+                              return null;
+                            },
+                            cursorHeight: 18,
+
+                            decoration: Inputdec3.inputDecoration.copyWith(
+                              hintText: 'Contact no',
+
+                            ),
                           ),
                         ),
                       ),
 
                     ],
                   ),
-                ),
+                ),*/
+
+          Padding(
+              padding: EdgeInsets.only(left: 51, right: 50),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 76,
+                   child: Expanded(
+                     child: Container(
+                        height: height*0.075,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Appcolors.greenlight),
+                          color: Colors.white
+                        ),
+                        child: CountryCodePicker(
+                          onChanged: _onCountryChange,
+                          // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                          initialSelection: 'IN',
+                          favorite: ['+91'],
+                          textStyle: Textstyle2Light18.appbartextstyle.copyWith(
+                              color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
+                          ),
+                          // optional. Shows only country name and flag
+
+                          showFlag: false,
+                          // optional. Shows only country name and flag when popup is closed.
+                          showOnlyCountryWhenClosed: false,
+                          showFlagDialog: true,
+                          // optional. aligns the flag and the Text left
+                          alignLeft: false,
+                        ),
+                      ),
+                   ),
+                  ),
+                  SizedBox(width: 5),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white
+
+                      ),
+                      child: TextFormField(
+
+                        controller: contact,
+
+                        keyboardType: TextInputType.phone,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "";
+
+                          }
+                        },
+                        // cursorHeight: 18,
+
+                        decoration: Inputdec3.inputDecoration.copyWith(
+                          errorStyle: TextStyle(height: 0),
+                          hintText: 'Contact no',
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
                 SizedBox(height: 20,),
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 56,right: 51),
-                  child: TextFormField(
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'enter pasword';
-                      }
-                      return null;
-                    },
-                    obscureText: _isObscure,
-                    controller: password,
-
-                    decoration: Inputdec3.inputDecoration.copyWith(
-                      hintText: 'Password',
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Appcolors.greenlight,
+                  padding: const EdgeInsets.symmetric(horizontal: 55),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white
+                    ),
+                    child: TextFormField(
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "";
+                        }
+                        return null;
+                      },
+                      obscureText: _isObscure,
+                      controller: password,
+                      cursorHeight: 18,
+                      decoration: Inputdec3.inputDecoration.copyWith(
+                        errorStyle: TextStyle(height: 0),
+                        hintText: 'Password',
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Appcolors.greenlight,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              _isObscure = !_isObscure;
+                            });
+                          },
                         ),
-                        onPressed: () {
-                          setState(() {
-                            _isObscure = !_isObscure;
-                          });
-                        },
                       ),
                     ),
                   ),
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 56,right: 51),
+                  padding: const EdgeInsets.symmetric(horizontal: 56),
                   child: Row(
                     children: [
-                      Container(
-
-                        width: 37.82,
-                        height: 21.61,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Appcolors.blue),
-                          borderRadius: BorderRadius.circular(10.806),
-                        ),
-                        child: Switch(
-                          value: isSwitched,
-                          onChanged: (value){
-                            setState(() {
-                              isSwitched = value;
-                            });
-                          },
-                          activeTrackColor: Colors.white,
-                          inactiveTrackColor: Colors.white,
-                          activeColor: Appcolors.blue1,
-                          inactiveThumbColor: Appcolors.blue1,
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Appcolors.blue),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: FlutterSwitch(
+                            width: width*0.13,
+                            height: height*0.028,
+                            toggleBorder: Border.all(color: Appcolors.blue),
+                            toggleColor: Appcolors.blue1,
+                            activeColor: Appcolors.blue.withOpacity(0.2),
+                            inactiveColor: Appcolors.blue.withOpacity(0.2),
+                            toggleSize: 20.0,
+                            value: status,
+                            borderRadius: 20.0,
+                            showOnOff: false,
+                            onToggle: (val) {
+                              setState(() {
+                                status = val;
+                              });
+                            },
+                          ),
                         ),
                       ),
 
-                      SizedBox(width: width*0.02,),
-
                       Text('Remember me',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 15,fontWeight: FontWeight.w400
+                          fontSize: 13,fontWeight: FontWeight.w400
                       ),),
 
                       Expanded(child: SizedBox()),
@@ -354,7 +423,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                   },
 
                                                   child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                      fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                      fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
                                                   ),),
                                                 ),
                                               ],
@@ -362,55 +431,40 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                             SizedBox(height: 15),
                                             Text('No worries. Just key in the mobile number that is registered with us and we will help you get this sorted out.',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                 fontSize: 15,fontWeight: FontWeight.w400
-                                            ),),
+                                            ),
+                                              textAlign: TextAlign.justify,
+                                            ),
 
                                             Padding(
-                                              padding: const EdgeInsets.only(left: 30,top: 20,bottom: 20),
+                                              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                                               child: Row(
                                                 children: [
-                                                  GestureDetector(
+                                                  Expanded(
                                                     child: Container(
-                                                      width: width*0.15,
-                                                      height: height*0.06,
+                                                      height: height*0.075,
                                                       decoration: BoxDecoration(
-                                                        border: Border.all(color: Appcolors.greenlight),
-                                                        borderRadius: BorderRadius.circular(10),
+                                                          borderRadius: BorderRadius.circular(20),
+                                                          border: Border.all(color: Appcolors.greenlight),
+                                                          color: Colors.white
                                                       ),
-                                                      child: Center(child: Text('61+',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                          fontSize: 26,color: Colors.grey),)),
-                                                    ),
-                                                    onTap: (){
-                                                      showCountryPicker(
-                                                        context: context,
-                                                        //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
-                                                        exclude: <String>['KN', 'MF'],
-                                                        favorite: <String>['SE'],
-                                                        //Optional. Shows phone code before the country name.
-                                                        showPhoneCode: true,
-                                                        onSelect: (Country country) {
-                                                          print('Select country: ${country.displayName}');
-                                                        },
-                                                        // Optional. Sets the theme for the country list picker.
-                                                        countryListTheme: CountryListThemeData(
-                                                          // Optional. Sets the border radius for the bottomsheet.
-                                                          borderRadius: BorderRadius.only(
-                                                            topLeft: Radius.circular(40.0),
-                                                            topRight: Radius.circular(40.0),
-                                                          ),
-                                                          // Optional. Styles the search field.
-                                                          inputDecoration: InputDecoration(
-                                                            labelText: 'Search',
-                                                            hintText: 'Start typing to search',
-                                                            prefixIcon: const Icon(Icons.search),
-                                                            border: OutlineInputBorder(
-                                                              borderSide: BorderSide(
-                                                                color: const Color(0xFF8C98A8).withOpacity(0.2),
-                                                              ),
-                                                            ),
-                                                          ),
+                                                      child: CountryCodePicker(
+                                                        onChanged: _onCountryChange,
+                                                        // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                                                        initialSelection: 'IN',
+                                                        favorite: ['+91'],
+                                                        textStyle: Textstyle2Light18.appbartextstyle.copyWith(
+                                                            color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
                                                         ),
-                                                      );
-                                                    },
+                                                        // optional. Shows only country name and flag
+
+                                                        showFlag: false,
+                                                        // optional. Shows only country name and flag when popup is closed.
+                                                        showOnlyCountryWhenClosed: false,
+                                                        showFlagDialog: true,
+                                                        // optional. aligns the flag and the Text left
+                                                        alignLeft: false,
+                                                      ),
+                                                    ),
                                                   ),
 
                                                   SizedBox(width: 10,),
@@ -418,20 +472,19 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                   Container(
                                                     // padding: EdgeInsets.only(left: 5),
                                                     width: width*0.55,
-                                                    height: height*0.06,
                                                     decoration: BoxDecoration(
-                                                      border: Border.all(color: Appcolors.greenlight),
-                                                      borderRadius: BorderRadius.circular(10),
+                                                      borderRadius: BorderRadius.circular(20),
+                                                      color: Colors.white
                                                     ),
                                                     child: TextFormField(
                                                       validator: (value) {
                                                         if (value == null || value.isEmpty) {
-
+                                                          return "";
                                                         }
                                                         return null;
                                                       },
-                                                      textAlign: TextAlign.center,
-                                                      decoration: Inputdec2.inputDecoration.copyWith(
+                                                      textAlign: TextAlign.justify,
+                                                      decoration: Inputdec3.inputDecoration.copyWith(
                                                         hintText: 'Contact no',
 
                                                       ),
@@ -490,7 +543,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                       },
 
                                                                       child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                          fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                                          fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
                                                                       ),),
                                                                     ),
                                                                   ],
@@ -502,7 +555,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                     style: TextStyle(
                                                                         color: Colors.black,
                                                                         fontFamily: 'OpenSans-VariableFont',
-                                                                        fontSize: 15),
+                                                                        fontSize: 15,),
                                                                     children: <TextSpan>[
                                                                       TextSpan(
                                                                           text: 'Resend code (15 seconds)',
@@ -511,7 +564,6 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                               fontFamily: 'OpenSans-VariableFont',
                                                                               fontSize: 10,decoration: TextDecoration.underline)
                                                                       ),
-
                                                                     ],
                                                                   ),
                                                                 ),
@@ -531,9 +583,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                       shape: PinCodeFieldShape.box,
                                                                       borderRadius: BorderRadius.circular(10),
                                                                       fieldOuterPadding: EdgeInsets.only(top: 10),
-                                                                      inactiveFillColor: Colors.white,
-                                                                      inactiveColor: Colors.white,
-                                                                      activeFillColor: Colors.white,
+                                                                      inactiveFillColor: Colors.orangeAccent,
+                                                                      inactiveColor: Colors.orangeAccent,
+                                                                      activeFillColor: Colors.orangeAccent,
                                                                       borderWidth: 10,
                                                                       fieldHeight: 50,
                                                                       fieldWidth: 40,
@@ -574,13 +626,14 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                       },
 
                                                                       child: Container(
+                                                                        margin: EdgeInsets.symmetric(horizontal: 20),
+                                                                        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 6),
                                                                         decoration: BoxDecoration(
                                                                           color: Appcolors.green1,
                                                                           border: Border.all(color: Appcolors.greenlight),
                                                                           borderRadius: BorderRadius.circular(20),
                                                                         ),
-                                                                        width: 60,
-                                                                        height: 60,
+
                                                                         child: Column(
                                                                           crossAxisAlignment: CrossAxisAlignment.center,
                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -594,7 +647,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                       ),
                                                                     ),
 
-                                                                    SizedBox(width: 15),
+                                                                    Expanded(child: SizedBox()),
 
                                                                     InkWell(
 
@@ -643,7 +696,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                               },
 
                                                                                               child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                  fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                                                                  fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
                                                                                               ),),
                                                                                             ),
                                                                                           ],
@@ -651,7 +704,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                         SizedBox(height: 15),
                                                                                         Text('Set new password for your account so you can login and access all our services at your fingertips!',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                                                             fontSize: 15,fontWeight: FontWeight.w400
-                                                                                        ),),
+                                                                                        ),
+                                                                                        textAlign: TextAlign.justify,
+                                                                                        ),
 
                                                                                         SizedBox(height: 20),
 
@@ -710,7 +765,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                         ),
 
                                                                                         Padding(
-                                                                                          padding: const EdgeInsets.only(left: 20,top: 25),
+                                                                                          padding: const EdgeInsets.only(left: 20,top: 25,right: 20),
                                                                                           child: Row(
                                                                                             children: [
 
@@ -721,8 +776,8 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                                 },
 
                                                                                                 child: Container(
-                                                                                                  width: 60,
-                                                                                                  height: 60,
+                                                                                                  margin: EdgeInsets.symmetric(horizontal: 10),
+                                                                                                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 6),
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: Appcolors.green1,
                                                                                                     border: Border.all(color: Appcolors.greenlight),
@@ -742,7 +797,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                                 ),
                                                                                               ),
 
-                                                                                              SizedBox(width: 15),
+                                                                                              Expanded(child: SizedBox()),
 
                                                                                               InkWell(
 
@@ -769,15 +824,19 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                                                 children: <Widget>[
                                                                                                                   Row(
                                                                                                                     children: [
-                                                                                                                      Text('Reset Password - Successful',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                                          fontSize: 20,fontWeight: FontWeight.w600
-                                                                                                                      ),),
+                                                                                                                      Expanded(
+                                                                                                                        child: Text('Reset Password - Successful',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                                            fontSize: 20,fontWeight: FontWeight.w600
+                                                                                                                        ),
+                                                                                                                          textAlign: TextAlign.justify,
+                                                                                                                          overflow: TextOverflow.ellipsis,
+                                                                                                                        ),
+                                                                                                                      ),
 
                                                                                                                       Expanded(child: SizedBox()),
 
                                                                                                                       Container(
-                                                                                                                        width: 20,
-                                                                                                                        height: 20,
+                                                                                                                        padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
                                                                                                                         decoration: BoxDecoration(
                                                                                                                           color: Appcolors.red,
                                                                                                                           borderRadius: BorderRadius.circular(50),
@@ -791,7 +850,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                                                         },
 
                                                                                                                         child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                                            fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                                                                                            fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
                                                                                                                         ),),
                                                                                                                       ),
                                                                                                                     ],
@@ -799,7 +858,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                                                   SizedBox(height: 15),
                                                                                                                   Text('Your password was successfully updated! You can now access all our services.',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                                                                                       fontSize: 15,fontWeight: FontWeight.w400
-                                                                                                                  ),),
+                                                                                                                  ),
+                                                                                                                    textAlign: TextAlign.justify,
+                                                                                                                  ),
 
 
 
@@ -837,7 +898,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                                 },
 
                                                                                                 child: Container(
-                                                                                                  width: width*0.6,
+                                                                                                  width: width*0.55,
                                                                                                   height: height*0.07,
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: Appcolors.green1,
@@ -948,72 +1009,77 @@ class _MainLoginPageState extends State<MainLoginPage> {
                               password.text == "1234") {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => MyLocation()));
                           }
-
-                        }
-                        /*else {
+                          else {
                           return showDialog(
                             context: context,
                             builder: (ctx) =>
                                 Dialog(
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 15, top: 10, right: 15),
-                                    child: Container(
-                                      padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
-                                      height: height * 0.6,
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment
-                                            .start,
-                                        children: [
-                                          Text('Login Fail',
-                                            style: Textstyle2Light18
-                                                .appbartextstyle.copyWith(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 20,
-                                            ),),
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                                    padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                                    height: height * 0.4,
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment
+                                          .center,
+                                      children: [
+                                        Text('Login Fail',
+                                          style: Textstyle2Light18
+                                              .appbartextstyle.copyWith(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 20,
+                                          ),),
 
-                                          Expanded(child: SizedBox()),
+                                        Expanded(child: SizedBox()),
 
-                                          Image.asset('assest/Image/failicon.png',
-                                            scale: 5,),
+                                        Image.asset('assest/Image/failicon.png',
+                                          scale: 5,),
 
-                                          Expanded(child: SizedBox()),
+                                        Expanded(child: SizedBox()),
 
-                                          Text(
-                                            'The mobile number or password is incorrect.',
-                                            style: Textstyle2Light18
-                                                .appbartextstyle.copyWith(
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 12,
-                                            ),),
+                                        Text(
+                                          'The mobile number or password is incorrect.',
+                                          style: Textstyle2Light18
+                                              .appbartextstyle.copyWith(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 15,
+                                          ),),
 
-                                          Expanded(child: SizedBox()),
+                                        Expanded(child: SizedBox()),
 
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              color: Appcolors.green1,
-                                              border: Border.all(
-                                                  color: Appcolors.greenlight),
-                                              borderRadius: BorderRadius.circular(
-                                                  15),
-                                            ),
-                                            child: Text('Try agin',
-                                              style: Textstyle2Light18
-                                                  .appbartextstyle.copyWith(
-                                                fontWeight: FontWeight.w600,
-                                                fontSize: 25,
-                                              ),),
+                                        Container(
+                                          width: width,
+                                          padding: EdgeInsets.symmetric(vertical: 6),
+                                          decoration: BoxDecoration(
+                                            color: Appcolors.green1,
+                                            border: Border.all(
+                                                color: Appcolors.greenlight),
+                                            borderRadius: BorderRadius.circular(
+                                                15),
                                           ),
+                                          child: Expanded(
+                                            child: Center(
+                                              child: Text('Try agin',
+                                                style: Textstyle2Light18
+                                                    .appbartextstyle.copyWith(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 25,
+                                                ),
+                                              textAlign: TextAlign.justify,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
 
-                                          Expanded(child: SizedBox()),
 
-                                        ],
-                                      ),
+                                      ],
                                     ),
                                   ),
                                 ),
                           );
-                        };*/
+                        };
+
+                        }
+
                       },
                       label: Text('Slide To Login',style: Textstyle2Light18.appbartextstyle.copyWith(
                         fontSize: 20,fontWeight: FontWeight.w600,
@@ -1117,8 +1183,8 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                               Expanded(child: SizedBox()),
 
                                               Container(
-                                                width: 20,
-                                                height: 20,
+
+                                                padding: EdgeInsets.symmetric(horizontal: 4,vertical: 4),
                                                 decoration: BoxDecoration(
                                                   color: Appcolors.red,
                                                   borderRadius: BorderRadius.circular(50),
@@ -1132,94 +1198,126 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                 },
 
                                                 child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                    fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                    fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
                                                 ),),
                                               ),
                                             ],
                                           ),
+
+                                          SizedBox(height: 10,),
+
                                           Text('Register with us today and get all the services at your fingertips!',style: Textstyle2Light18.appbartextstyle.copyWith(
                                               fontSize: 15,fontWeight: FontWeight.w400
-                                          ),),
+                                          ),
+                                          textAlign: TextAlign.justify,
+                                          ),
 
                                           Padding(
-                                            padding: const EdgeInsets.only(top: 20,bottom: 20),
+                                            padding: const EdgeInsets.only(top: 20,bottom: 20,left: 25,right: 25),
                                             child: Row(
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                GestureDetector(
-                                                  onTap: (){
+                                                Expanded(
+
+                                                  child: GestureDetector(
+                                                    onTap: (){
 
 
-                                                    showModalBottomSheet(
-                                                      isScrollControlled: true,
-                                                      shape: RoundedRectangleBorder(
-                                                        borderRadius: BorderRadius.only(
-                                                          topLeft: Radius.circular(20),
-                                                          topRight: Radius.circular(20),
+                                                      showModalBottomSheet(
+                                                        isScrollControlled: true,
+                                                        shape: RoundedRectangleBorder(
+                                                          borderRadius: BorderRadius.only(
+                                                            topLeft: Radius.circular(20),
+                                                            topRight: Radius.circular(20),
+                                                          ),
                                                         ),
-                                                      ),
-                                                      context: context,
-                                                      builder: (BuildContext context) {
-                                                        return StatefulBuilder(
-                                                            builder: (context, setState) {
-                                                              return Container(
-                                                                height: height-100,
-                                                                width: width,
-                                                                child: Padding(
-                                                                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                                                                  child: Column(
-                                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                                    children: <Widget>[
+                                                        context: context,
+                                                        builder: (BuildContext context) {
+                                                          return StatefulBuilder(
+                                                              builder: (context, setState) {
+                                                                return Container(
+                                                                  height: height-100,
+                                                                  width: width,
+                                                                  child: Padding(
+                                                                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                                                                    child: Column(
+                                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                                      children: <Widget>[
 
-                                                                      GestureDetector(
+                                                                        GestureDetector(
 
-                                                                        onTap: (){
-                                                                          Navigator.pop(context);
-                                                                        },
+                                                                          onTap: (){
+                                                                            Navigator.pop(context);
+                                                                          },
 
-                                                                        child: Row(
-                                                                          children: [
-                                                                            Text('Let’s Get You An Account!',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                fontSize: 20,fontWeight: FontWeight.w600
-                                                                            ),),
+                                                                          child: Row(
+                                                                            children: [
+                                                                              Text('Let’s Get You An Account!',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                  fontSize: 20,fontWeight: FontWeight.w600
+                                                                              ),),
 
-                                                                            Expanded(child: SizedBox()),
+                                                                              Expanded(child: SizedBox()),
 
-                                                                            Container(
-                                                                              width: 20,
-                                                                              height: 20,
-                                                                              decoration: BoxDecoration(
-                                                                                color: Appcolors.red,
-                                                                                borderRadius: BorderRadius.circular(50),
+                                                                              Container(
+                                                                                width: 20,
+                                                                                height: 20,
+                                                                                decoration: BoxDecoration(
+                                                                                  color: Appcolors.red,
+                                                                                  borderRadius: BorderRadius.circular(50),
+                                                                                ),
+                                                                                child: Icon(Icons.clear,color: Colors.white,size: 13,),
                                                                               ),
-                                                                              child: Icon(Icons.clear,color: Colors.white,size: 13,),
-                                                                            ),
-                                                                            Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                                                            ),),
-                                                                          ],
+                                                                              Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                  fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                                              ),),
+                                                                            ],
+                                                                          ),
                                                                         ),
-                                                                      ),
 
-                                                                      Expanded(
-                                                                        child: Stepper(
-                                                                          elevation: 0,
-                                                                          type: StepperType.horizontal,
-                                                                          currentStep: _activeCurrentStep,
-                                                                          steps: stepList(),
+                                                                        Expanded(
+                                                                          child: Stepper(
+                                                                            elevation: 0,
+                                                                            type: StepperType.horizontal,
+                                                                            currentStep: _activeCurrentStep,
+                                                                            steps: stepList(),
+                                                                          ),
                                                                         ),
-                                                                      ),
 
-                                                                    ],
+                                                                      ],
+                                                                    ),
                                                                   ),
-                                                                ),
-                                                              );
-                                                            }
-                                                        );
-                                                      },
-                                                    );
+                                                                );
+                                                              }
+                                                          );
+                                                        },
+                                                      );
 
-                                                  },
+                                                    },
+
+                                                    child: Column(
+                                                      children: [
+                                                        Container(
+                                                          decoration: BoxDecoration(
+                                                            border: Border.all(color: Appcolors.greenlight),
+                                                          ),
+                                                          child: Padding(
+                                                            padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
+                                                            child: Image.asset('assest/Iocns/membericon.png',scale: 4,),
+                                                          ),
+                                                        ),
+                                                        SizedBox(height: 10,),
+                                                        Text('Members',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                            fontSize: 20,fontWeight: FontWeight.w600
+                                                        ),),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+
+
+                                                SizedBox(width: width*0.1,),
+
+                                                Expanded(
 
                                                   child: Column(
                                                     children: [
@@ -1229,35 +1327,15 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                         ),
                                                         child: Padding(
                                                           padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
-                                                          child: Image.asset('assest/Iocns/membericon.png',scale: 5,),
+                                                          child: Image.asset('assest/Iocns/partnericon.png',scale: 4,),
                                                         ),
                                                       ),
                                                       SizedBox(height: 10,),
-                                                      Text('Members',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                      Text('Partners',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                           fontSize: 20,fontWeight: FontWeight.w600
                                                       ),),
                                                     ],
                                                   ),
-                                                ),
-
-                                                SizedBox(width: 80,),
-
-                                                Column(
-                                                  children: [
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                        border: Border.all(color: Appcolors.greenlight),
-                                                      ),
-                                                      child: Padding(
-                                                        padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
-                                                        child: Image.asset('assest/Iocns/partnericon.png',scale: 5,),
-                                                      ),
-                                                    ),
-                                                    SizedBox(height: 10,),
-                                                    Text('Partners',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                        fontSize: 20,fontWeight: FontWeight.w600
-                                                    ),),
-                                                  ],
                                                 ),
                                               ],
                                             ),
@@ -1274,6 +1352,8 @@ class _MainLoginPageState extends State<MainLoginPage> {
                         ),
                   ),
                 ),
+
+                SizedBox(height: 15),
 
               ],
             ),
@@ -1304,27 +1384,19 @@ class _MainLoginPageState extends State<MainLoginPage> {
   List<Step> stepList() => [
 
     Step(
-      state: _activeCurrentStep <= 0 ? StepState.editing : StepState.complete,
       isActive: _activeCurrentStep >= 0,
       title: Column(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Appcolors.green1,
-              border: Border.all(color: Appcolors.greenlight),
-              borderRadius: BorderRadius.circular(50),
-            ),
-            width: 50,
-            height: 50,
-            child: Center(
-              child: Text('1',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 20
-              ),),
-            ),
-          ),
-          Text('Users Details'),
+
+          Text('Users',style: Textstyle2Light18.appbartextstyle.copyWith(
+              fontWeight: FontWeight.w300,fontSize: 12
+          ),),
+          Text('Details',style: Textstyle2Light18.appbartextstyle.copyWith(
+              fontWeight: FontWeight.w300,fontSize: 12
+          ),),
         ],
       ),
+
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -1554,12 +1626,11 @@ class _MainLoginPageState extends State<MainLoginPage> {
               });
             },
             child: Container(
-              padding: EdgeInsets.only(left: 115,right: 115),
-              height: 60,
+              padding: EdgeInsets.symmetric(vertical: 5),
               decoration: BoxDecoration(
                 color: Appcolors.green1,
                 border: Border.all(color: Appcolors.greenlight),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(15),
               ),
               child: Center(
                 child: Text('Next',style: Textstyle2Light18.appbartextstyle.copyWith(
@@ -1574,28 +1645,20 @@ class _MainLoginPageState extends State<MainLoginPage> {
     ),
 
     Step(
-        state:
-        _activeCurrentStep <= 1 ? StepState.editing : StepState.complete,
+
         isActive: _activeCurrentStep >= 1,
         title: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Appcolors.green1,
-                border: Border.all(color: Appcolors.greenlight),
-                borderRadius: BorderRadius.circular(50),
-              ),
-              width: 50,
-              height: 50,
-              child: Center(
-                child: Text('2',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    color: Appcolors.greenlight,fontWeight: FontWeight.w400,fontSize: 20
-                ),),
-              ),
-            ),
-            Text('Mobile No Verification'),
+
+            Text('Mobile No',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
+            Text('Verification',style: Textstyle2Light18.appbartextstyle.copyWith(
+                fontWeight: FontWeight.w300,fontSize: 12
+            ),),
           ],
         ),
+
         content: Container(
           child: Column(
             children: [
