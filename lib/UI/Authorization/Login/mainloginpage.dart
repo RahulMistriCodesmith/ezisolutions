@@ -4,7 +4,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:country_code_picker/country_code_picker.dart';
-import 'package:country_picker/country_picker.dart';
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Authorization/Login/languagepage.dart';
@@ -173,66 +172,7 @@ bool cl=false;
 
                 SizedBox(height: 10,),
 
-               /* Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: height*0.075,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Appcolors.greenlight)
-                        ),
-                        child: CountryCodePicker(
-                          onChanged: _onCountryChange,
-                          // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
-                          initialSelection: 'IN',
-                          favorite: ['+91'],
-                          textStyle: Textstyle2Light18.appbartextstyle.copyWith(
-                              color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
-                          ),
-                          // optional. Shows only country name and flag
 
-                          showFlag: false,
-                          // optional. Shows only country name and flag when popup is closed.
-                          showOnlyCountryWhenClosed: false,
-                          showFlagDialog: true,
-                          // optional. aligns the flag and the Text left
-                          alignLeft: false,
-                        ),
-                      ),
-
-
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-
-                          ),
-                          child: TextFormField(
-                            controller: contact,
-
-                            keyboardType: TextInputType.phone,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'enter phone number';
-                              }
-                              return null;
-                            },
-                            cursorHeight: 18,
-
-                            decoration: Inputdec3.inputDecoration.copyWith(
-                              hintText: 'Contact no',
-
-                            ),
-                          ),
-                        ),
-                      ),
-
-                    ],
-                  ),
-                ),*/
 
                 Padding(
                   padding: EdgeInsets.only(left: 51, right: 50),
@@ -428,61 +368,56 @@ bool cl=false;
                                             ),
 
                                             Padding(
-                                              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                                              padding: EdgeInsets.symmetric(horizontal: 25,vertical: 20),
                                               child: Row(
                                                 children: [
-                                                  Expanded(
-                                                    child: Container(
-                                                      height: height*0.075,
-                                                      decoration: BoxDecoration(
-                                                          borderRadius: BorderRadius.circular(20),
-                                                          border: Border.all(color: Appcolors.greenlight),
-                                                          color: Colors.white
+                                                  Container(
+                                                    // width: 76,
+                                                    height: height*0.079,
+                                                    decoration: BoxDecoration(
+                                                        borderRadius: BorderRadius.circular(20),
+                                                        border: Border.all(color: Appcolors.greenlight),
+                                                        color: Colors.white
+                                                    ),
+                                                    child: CountryCodePicker(
+                                                      onChanged: _onCountryChange,
+                                                      // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                                                      initialSelection: 'IN',
+                                                      favorite: ['+91'],
+                                                      textStyle: Textstyle2Light18.appbartextstyle.copyWith(
+                                                          color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
                                                       ),
-                                                      child: CountryCodePicker(
-                                                        onChanged: _onCountryChange,
-                                                        // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
-                                                        initialSelection: 'IN',
-                                                        favorite: ['+91'],
-                                                        textStyle: Textstyle2Light18.appbartextstyle.copyWith(
-                                                            color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
-                                                        ),
-                                                        // optional. Shows only country name and flag
+                                                      // optional. Shows only country name and flag
 
-                                                        showFlag: false,
-                                                        // optional. Shows only country name and flag when popup is closed.
-                                                        showOnlyCountryWhenClosed: false,
-                                                        showFlagDialog: true,
-                                                        // optional. aligns the flag and the Text left
-                                                        alignLeft: false,
-                                                      ),
+                                                      showFlag: false,
+                                                      // optional. Shows only country name and flag when popup is closed.
+                                                      showOnlyCountryWhenClosed: false,
+                                                      showFlagDialog: true,
+                                                      // optional. aligns the flag and the Text left
+                                                      alignLeft: false,
                                                     ),
                                                   ),
-
-                                                  SizedBox(width: 10,),
-
-                                                  Container(
-                                                    // padding: EdgeInsets.only(left: 5),
-                                                    width: width*0.55,
-                                                    decoration: BoxDecoration(
-                                                      borderRadius: BorderRadius.circular(20),
-                                                      color: Colors.white
-                                                    ),
+                                                  SizedBox(width: 5),
+                                                  Expanded(
                                                     child: TextFormField(
+
+                                                      controller: contact,
+
+                                                      keyboardType: TextInputType.phone,
                                                       validator: (value) {
                                                         if (value == null || value.isEmpty) {
                                                           return "";
-                                                        }
-                                                        return null;
-                                                      },
-                                                      textAlign: TextAlign.justify,
-                                                      decoration: Inputdec3.inputDecoration.copyWith(
-                                                        hintText: 'Contact no',
 
+                                                        }
+                                                      },
+                                                      // cursorHeight: 18,
+
+                                                      decoration: Inputdec3.inputDecoration.copyWith(
+                                                        errorStyle: TextStyle(height: 0),
+                                                        hintText: 'Contact no',
                                                       ),
                                                     ),
                                                   ),
-
                                                 ],
                                               ),
                                             ),
@@ -562,8 +497,9 @@ bool cl=false;
                                                                 SizedBox(height: 30,),
 
                                                                 Container(
+                                                                  margin: EdgeInsets.symmetric(horizontal: 10),
                                                                   padding: EdgeInsets.only(left: 20,right: 20,),
-                                                                  width: width,
+
                                                                   child: PinCodeTextField(
 
                                                                     length: 4,
@@ -572,10 +508,8 @@ bool cl=false;
                                                                     pinTheme: PinTheme(
 
                                                                         shape: PinCodeFieldShape.box,
-                                                                        borderRadius: BorderRadius.circular(20),
-                                                                        fieldHeight: 60,
-                                                                        // fieldOuterPadding: EdgeInsets.only(left: 20,right: 20),
-                                                                        fieldWidth: 70,
+                                                                        borderRadius: BorderRadius.circular(15),
+
                                                                         activeFillColor: Appcolors.greenlight,
                                                                         inactiveColor: Appcolors.greenlight,
                                                                         inactiveFillColor: Colors.white,
@@ -616,330 +550,333 @@ bool cl=false;
 
                                                                 SizedBox(height: 20),
 
-                                                                Row(
-                                                                  children: [
+                                                                Padding(
+                                                                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                                                                  child: Row(
+                                                                    children: [
 
-                                                                    InkWell(
+                                                                      InkWell(
 
-                                                                      onTap: (){
-                                                                        Navigator.pop(context);
-                                                                      },
+                                                                        onTap: (){
+                                                                          Navigator.pop(context);
+                                                                        },
 
-                                                                      child: Container(
-                                                                        margin: EdgeInsets.symmetric(horizontal: 20),
-                                                                        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 6),
-                                                                        decoration: BoxDecoration(
-                                                                          color: Appcolors.green1,
-                                                                          border: Border.all(color: Appcolors.greenlight),
-                                                                          borderRadius: BorderRadius.circular(20),
-                                                                        ),
+                                                                        child: Container(
+                                                                          width: width*0.2,
+                                                                          padding: EdgeInsets.symmetric(vertical: 6),
+                                                                          decoration: BoxDecoration(
+                                                                            color: Appcolors.green1,
+                                                                            border: Border.all(color: Appcolors.greenlight),
+                                                                            borderRadius: BorderRadius.circular(20),
+                                                                          ),
 
-                                                                        child: Column(
-                                                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                                                          mainAxisAlignment: MainAxisAlignment.center,
-                                                                          children: [
-                                                                            Icon(Icons.arrow_back),
-                                                                            Text('Back',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                              fontSize: 15,fontWeight: FontWeight.w400,
-                                                                            ),),
-                                                                          ],
+                                                                          child: Column(
+                                                                            crossAxisAlignment: CrossAxisAlignment.center,
+                                                                            mainAxisAlignment: MainAxisAlignment.center,
+                                                                            children: [
+                                                                              Icon(Icons.arrow_back),
+                                                                              Text('Back',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                fontSize: 15,fontWeight: FontWeight.w400,
+                                                                              ),),
+                                                                            ],
+                                                                          ),
                                                                         ),
                                                                       ),
-                                                                    ),
 
-                                                                    Expanded(child: SizedBox()),
+                                                                      Expanded(child: SizedBox()),
 
-                                                                    InkWell(
+                                                                      InkWell(
 
-                                                                      onTap: (){
+                                                                        onTap: (){
 
-                                                                        showModalBottomSheet(
-                                                                          shape: RoundedRectangleBorder(
-                                                                            borderRadius: BorderRadius.only(
-                                                                              topLeft: Radius.circular(20),
-                                                                              topRight: Radius.circular(20),
+                                                                          showModalBottomSheet(
+                                                                            shape: RoundedRectangleBorder(
+                                                                              borderRadius: BorderRadius.only(
+                                                                                topLeft: Radius.circular(20),
+                                                                                topRight: Radius.circular(20),
+                                                                              ),
                                                                             ),
-                                                                          ),
-                                                                          barrierColor: Appcolors.grey,
-                                                                          context: context,
-                                                                          isScrollControlled: true,
-                                                                          builder: (BuildContext context) {
-                                                                            return StatefulBuilder(
-                                                                                builder: (context, setState) {
-                                                                                  return Padding(
-                                                                                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                                                                                    child: Column(
-                                                                                      mainAxisSize: MainAxisSize.min,
-                                                                                      mainAxisAlignment: MainAxisAlignment.center,
-                                                                                      children: <Widget>[
-                                                                                        Row(
-                                                                                          children: [
-                                                                                            Text('Reset Password',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                fontSize: 20,fontWeight: FontWeight.w600
-                                                                                            ),),
-
-                                                                                            Expanded(child: SizedBox()),
-
-                                                                                            Container(
-                                                                                              width: 20,
-                                                                                              height: 20,
-                                                                                              decoration: BoxDecoration(
-                                                                                                color: Appcolors.red,
-                                                                                                borderRadius: BorderRadius.circular(50),
-                                                                                              ),
-                                                                                              child: Icon(Icons.clear,color: Colors.white,size: 13,),
-                                                                                            ),
-                                                                                            InkWell(
-
-                                                                                              onTap: (){
-                                                                                                Navigator.pop(context);
-                                                                                              },
-
-                                                                                              child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                  fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                                                                              ),),
-                                                                                            ),
-                                                                                          ],
-                                                                                        ),
-                                                                                        SizedBox(height: 15),
-                                                                                        Text('Set new password for your account so you can login and access all our services at your fingertips!',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                            fontSize: 15,fontWeight: FontWeight.w400
-                                                                                        ),
-                                                                                        textAlign: TextAlign.justify,
-                                                                                        ),
-
-                                                                                        SizedBox(height: 20),
-
-                                                                                        Container(
-                                                                                          padding: EdgeInsets.only(left: 10),
-                                                                                          width: width*0.78,
-                                                                                          height: height*0.06,
-                                                                                          decoration: BoxDecoration(
-                                                                                            border: Border.all(color: Appcolors.greenlight),
-                                                                                            borderRadius: BorderRadius.circular(10),
-                                                                                          ),
-                                                                                          child: TextFormField(
-                                                                                            obscureText: _isObscure,
-                                                                                            decoration: Inputdec2.inputDecoration.copyWith(
-                                                                                              hintText: 'New Password',
-                                                                                              suffixIcon: IconButton(
-                                                                                                icon: Icon(
-                                                                                                  _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
-                                                                                                ),
-                                                                                                onPressed: () {
-                                                                                                  setState(() {
-                                                                                                    _isObscure = !_isObscure;
-                                                                                                  });
-                                                                                                },
-                                                                                              ),
-                                                                                            ),
-                                                                                          ),
-                                                                                        ),
-
-                                                                                        SizedBox(height: 20),
-
-                                                                                        Container(
-                                                                                          padding: EdgeInsets.only(left: 10),
-                                                                                          width: width*0.78,
-                                                                                          height: height*0.06,
-                                                                                          decoration: BoxDecoration(
-                                                                                            border: Border.all(color: Appcolors.greenlight),
-                                                                                            borderRadius: BorderRadius.circular(10),
-                                                                                          ),
-                                                                                          child: TextFormField(
-                                                                                            obscureText: _isObscure,
-                                                                                            decoration: Inputdec2.inputDecoration.copyWith(
-                                                                                              hintText: 'Retype New Password',
-                                                                                              suffixIcon: IconButton(
-                                                                                                icon: Icon(
-                                                                                                  _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
-                                                                                                ),
-                                                                                                onPressed: () {
-                                                                                                  setState(() {
-                                                                                                    _isObscure = !_isObscure;
-                                                                                                  });
-                                                                                                },
-                                                                                              ),
-                                                                                            ),
-                                                                                          ),
-                                                                                        ),
-
-                                                                                        Padding(
-                                                                                          padding: const EdgeInsets.only(left: 20,top: 25,right: 20),
-                                                                                          child: Row(
+                                                                            barrierColor: Appcolors.grey,
+                                                                            context: context,
+                                                                            isScrollControlled: true,
+                                                                            builder: (BuildContext context) {
+                                                                              return StatefulBuilder(
+                                                                                  builder: (context, setState) {
+                                                                                    return Padding(
+                                                                                      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                                                                                      child: Column(
+                                                                                        mainAxisSize: MainAxisSize.min,
+                                                                                        mainAxisAlignment: MainAxisAlignment.center,
+                                                                                        children: <Widget>[
+                                                                                          Row(
                                                                                             children: [
+                                                                                              Text('Reset Password',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                  fontSize: 20,fontWeight: FontWeight.w600
+                                                                                              ),),
 
+                                                                                              Expanded(child: SizedBox()),
+
+                                                                                              Container(
+                                                                                                width: 20,
+                                                                                                height: 20,
+                                                                                                decoration: BoxDecoration(
+                                                                                                  color: Appcolors.red,
+                                                                                                  borderRadius: BorderRadius.circular(50),
+                                                                                                ),
+                                                                                                child: Icon(Icons.clear,color: Colors.white,size: 13,),
+                                                                                              ),
                                                                                               InkWell(
 
                                                                                                 onTap: (){
                                                                                                   Navigator.pop(context);
                                                                                                 },
 
-                                                                                                child: Container(
-                                                                                                  margin: EdgeInsets.symmetric(horizontal: 10),
-                                                                                                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 6),
-                                                                                                  decoration: BoxDecoration(
-                                                                                                    color: Appcolors.green1,
-                                                                                                    border: Border.all(color: Appcolors.greenlight),
-                                                                                                    borderRadius: BorderRadius.circular(20),
-                                                                                                  ),
-
-                                                                                                  child: Column(
-                                                                                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                                                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                                                                    children: [
-                                                                                                      Icon(Icons.arrow_back),
-                                                                                                      Text('Back',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                        fontSize: 15,fontWeight: FontWeight.w400,
-                                                                                                      ),),
-                                                                                                    ],
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-
-                                                                                              Expanded(child: SizedBox()),
-
-                                                                                              InkWell(
-
-                                                                                                onTap: (){
-
-                                                                                                  showModalBottomSheet(
-                                                                                                    shape: RoundedRectangleBorder(
-                                                                                                      borderRadius: BorderRadius.only(
-                                                                                                        topLeft: Radius.circular(20),
-                                                                                                        topRight: Radius.circular(20),
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                    barrierColor: Appcolors.grey,
-                                                                                                    context: context,
-                                                                                                    isScrollControlled: true,
-                                                                                                    builder: (BuildContext context) {
-                                                                                                      return StatefulBuilder(
-                                                                                                          builder: (context, setState) {
-                                                                                                            return Padding(
-                                                                                                              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                                                                                                              child: Column(
-                                                                                                                mainAxisSize: MainAxisSize.min,
-                                                                                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                                                                                children: <Widget>[
-                                                                                                                  Row(
-                                                                                                                    children: [
-                                                                                                                      Expanded(
-                                                                                                                        child: Text('Reset Password - Successful',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                                            fontSize: 20,fontWeight: FontWeight.w600
-                                                                                                                        ),
-                                                                                                                          textAlign: TextAlign.justify,
-                                                                                                                          overflow: TextOverflow.ellipsis,
-                                                                                                                        ),
-                                                                                                                      ),
-
-                                                                                                                      Expanded(child: SizedBox()),
-
-                                                                                                                      Container(
-                                                                                                                        padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
-                                                                                                                        decoration: BoxDecoration(
-                                                                                                                          color: Appcolors.red,
-                                                                                                                          borderRadius: BorderRadius.circular(50),
-                                                                                                                        ),
-                                                                                                                        child: Icon(Icons.clear,color: Colors.white,size: 13,),
-                                                                                                                      ),
-                                                                                                                      InkWell(
-
-                                                                                                                        onTap: (){
-                                                                                                                          Navigator.pop(context);
-                                                                                                                        },
-
-                                                                                                                        child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                                            fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                                                                                                        ),),
-                                                                                                                      ),
-                                                                                                                    ],
-                                                                                                                  ),
-                                                                                                                  SizedBox(height: 15),
-                                                                                                                  Text('Your password was successfully updated! You can now access all our services.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                                      fontSize: 15,fontWeight: FontWeight.w400
-                                                                                                                  ),
-                                                                                                                    textAlign: TextAlign.justify,
-                                                                                                                  ),
-
-
-
-                                                                                                                  Padding(
-                                                                                                                    padding: const EdgeInsets.only(left: 20,top: 110,right: 20),
-                                                                                                                    child: InkWell(
-
-                                                                                                                      onTap: (){
-                                                                                                                        Navigator.push(context, MaterialPageRoute(builder: (context)=> MainLoginPage()));
-                                                                                                                      },
-
-                                                                                                                      child: Container(
-                                                                                                                        width: width*0.8,
-                                                                                                                        height: height*0.07,
-                                                                                                                        decoration: BoxDecoration(
-                                                                                                                          color: Appcolors.green1,
-                                                                                                                          border: Border.all(color: Appcolors.greenlight),
-                                                                                                                          borderRadius: BorderRadius.circular(20),
-                                                                                                                        ),
-                                                                                                                        child: Center(
-                                                                                                                          child: Text('Login',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                                            fontSize: 25,fontWeight: FontWeight.w600,
-                                                                                                                          ),),
-                                                                                                                        ),
-                                                                                                                      ),
-                                                                                                                    ),
-                                                                                                                  ),
-                                                                                                                ],
-                                                                                                              ),
-                                                                                                            );
-                                                                                                          }
-                                                                                                      );
-                                                                                                    },
-                                                                                                  );
-                                                                                                },
-
-                                                                                                child: Container(
-                                                                                                  width: width*0.55,
-                                                                                                  height: height*0.07,
-                                                                                                  decoration: BoxDecoration(
-                                                                                                    color: Appcolors.green1,
-                                                                                                    border: Border.all(color: Appcolors.greenlight),
-                                                                                                    borderRadius: BorderRadius.circular(20),
-                                                                                                  ),
-                                                                                                  child: Center(
-                                                                                                    child: Text('Reset',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                      fontSize: 25,fontWeight: FontWeight.w600,
-                                                                                                    ),),
-                                                                                                  ),
-                                                                                                ),
+                                                                                                child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                    fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                                                                ),),
                                                                                               ),
                                                                                             ],
                                                                                           ),
-                                                                                        ),
-                                                                                      ],
-                                                                                    ),
-                                                                                  );
-                                                                                }
-                                                                            );
-                                                                          },
-                                                                        );
-                                                                      },
+                                                                                          SizedBox(height: 15),
+                                                                                          Text('Set new password for your account so you can login and access all our services at your fingertips!',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                              fontSize: 15,fontWeight: FontWeight.w400
+                                                                                          ),
+                                                                                          textAlign: TextAlign.justify,
+                                                                                          ),
 
-                                                                      child: Container(
-                                                                        width: width*0.6,
-                                                                        height: height*0.07,
-                                                                        decoration: BoxDecoration(
-                                                                          color: Appcolors.green1,
-                                                                          border: Border.all(color: Appcolors.greenlight),
-                                                                          borderRadius: BorderRadius.circular(20),
-                                                                        ),
-                                                                        child: Center(
-                                                                          child: Text('Next',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                            fontSize: 25,fontWeight: FontWeight.w600,
-                                                                          ),),
+                                                                                          SizedBox(height: 20),
+
+                                                                                          Container(
+
+                                                                                            decoration: BoxDecoration(
+                                                                                              color: Colors.white,
+                                                                                              borderRadius: BorderRadius.circular(20),
+                                                                                            ),
+                                                                                            child: TextFormField(
+                                                                                              obscureText: _isObscure,
+                                                                                              decoration: Inputdec3.inputDecoration.copyWith(
+                                                                                                hintText: 'New Password',
+                                                                                                suffixIcon: IconButton(
+                                                                                                  icon: Icon(
+                                                                                                    _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
+                                                                                                  ),
+                                                                                                  onPressed: () {
+                                                                                                    setState(() {
+                                                                                                      _isObscure = !_isObscure;
+                                                                                                    });
+                                                                                                  },
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                          ),
+
+                                                                                          SizedBox(height: 20),
+
+                                                                                          Container(
+
+                                                                                            decoration: BoxDecoration(
+                                                                                              color: Colors.white,
+                                                                                              borderRadius: BorderRadius.circular(20),
+                                                                                            ),
+                                                                                            child: TextFormField(
+                                                                                              obscureText: _isObscure,
+                                                                                              decoration: Inputdec3.inputDecoration.copyWith(
+                                                                                                hintText: 'Retype New Password',
+                                                                                                suffixIcon: IconButton(
+                                                                                                  icon: Icon(
+                                                                                                    _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
+                                                                                                  ),
+                                                                                                  onPressed: () {
+                                                                                                    setState(() {
+                                                                                                      _isObscure = !_isObscure;
+                                                                                                    });
+                                                                                                  },
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                          ),
+
+                                                                                          SizedBox(height: 15,),
+
+                                                                                          Padding(
+                                                                                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                                                            child: Row(
+                                                                                              children: [
+
+                                                                                                InkWell(
+
+                                                                                                  onTap: (){
+                                                                                                    Navigator.pop(context);
+                                                                                                  },
+
+                                                                                                  child: Container(
+                                                                                                    width: width*0.2,
+                                                                                                    padding: EdgeInsets.symmetric(vertical: 6),
+                                                                                                    decoration: BoxDecoration(
+                                                                                                      color: Appcolors.green1,
+                                                                                                      border: Border.all(color: Appcolors.greenlight),
+                                                                                                      borderRadius: BorderRadius.circular(20),
+                                                                                                    ),
+
+                                                                                                    child: Column(
+                                                                                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                                                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                                                                      children: [
+                                                                                                        Icon(Icons.arrow_back),
+                                                                                                        Text('Back',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                          fontSize: 15,fontWeight: FontWeight.w400,
+                                                                                                        ),),
+                                                                                                      ],
+                                                                                                    ),
+                                                                                                  ),
+                                                                                                ),
+
+                                                                                                Expanded(child: SizedBox()),
+
+                                                                                                InkWell(
+
+                                                                                                  onTap: (){
+
+                                                                                                    showModalBottomSheet(
+                                                                                                      shape: RoundedRectangleBorder(
+                                                                                                        borderRadius: BorderRadius.only(
+                                                                                                          topLeft: Radius.circular(20),
+                                                                                                          topRight: Radius.circular(20),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                      barrierColor: Appcolors.grey,
+                                                                                                      context: context,
+                                                                                                      isScrollControlled: true,
+                                                                                                      builder: (BuildContext context) {
+                                                                                                        return StatefulBuilder(
+                                                                                                            builder: (context, setState) {
+                                                                                                              return Padding(
+                                                                                                                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                                                                                                                child: Column(
+                                                                                                                  mainAxisSize: MainAxisSize.min,
+                                                                                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                                                                                  children: <Widget>[
+                                                                                                                    Row(
+                                                                                                                      children: [
+                                                                                                                        Expanded(
+                                                                                                                          child: Text('Reset Password - Successful',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                                              fontSize: 20,fontWeight: FontWeight.w600
+                                                                                                                          ),
+                                                                                                                            textAlign: TextAlign.justify,
+                                                                                                                            overflow: TextOverflow.ellipsis,
+                                                                                                                          ),
+                                                                                                                        ),
+
+                                                                                                                        Expanded(child: SizedBox()),
+
+                                                                                                                        Container(
+                                                                                                                          padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                                                                                                                          decoration: BoxDecoration(
+                                                                                                                            color: Appcolors.red,
+                                                                                                                            borderRadius: BorderRadius.circular(50),
+                                                                                                                          ),
+                                                                                                                          child: Icon(Icons.clear,color: Colors.white,size: 13,),
+                                                                                                                        ),
+                                                                                                                        InkWell(
+
+                                                                                                                          onTap: (){
+                                                                                                                            Navigator.pop(context);
+                                                                                                                          },
+
+                                                                                                                          child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                                              fontSize: 16,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                                                                                                                          ),),
+                                                                                                                        ),
+                                                                                                                      ],
+                                                                                                                    ),
+                                                                                                                    SizedBox(height: 15),
+                                                                                                                    Text('Your password was successfully updated! You can now access all our services.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                                        fontSize: 15,fontWeight: FontWeight.w400
+                                                                                                                    ),
+                                                                                                                      textAlign: TextAlign.justify,
+                                                                                                                    ),
+
+
+
+                                                                                                                    Padding(
+                                                                                                                      padding: const EdgeInsets.only(left: 20,top: 110,right: 20),
+                                                                                                                      child: InkWell(
+
+                                                                                                                        onTap: (){
+                                                                                                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> MainLoginPage()));
+                                                                                                                        },
+
+                                                                                                                        child: Container(
+                                                                                                                          width: width*0.8,
+                                                                                                                          height: height*0.07,
+                                                                                                                          decoration: BoxDecoration(
+                                                                                                                            color: Appcolors.green1,
+                                                                                                                            border: Border.all(color: Appcolors.greenlight),
+                                                                                                                            borderRadius: BorderRadius.circular(20),
+                                                                                                                          ),
+                                                                                                                          child: Center(
+                                                                                                                            child: Text('Login',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                                              fontSize: 25,fontWeight: FontWeight.w600,
+                                                                                                                            ),),
+                                                                                                                          ),
+                                                                                                                        ),
+                                                                                                                      ),
+                                                                                                                    ),
+                                                                                                                  ],
+                                                                                                                ),
+                                                                                                              );
+                                                                                                            }
+                                                                                                        );
+                                                                                                      },
+                                                                                                    );
+                                                                                                  },
+
+                                                                                                  child: Container(
+                                                                                                    width: width*0.6,
+                                                                                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                                                                                    decoration: BoxDecoration(
+                                                                                                      color: Appcolors.green1,
+                                                                                                      border: Border.all(color: Appcolors.greenlight),
+                                                                                                      borderRadius: BorderRadius.circular(20),
+                                                                                                    ),
+                                                                                                    child: Center(
+                                                                                                      child: Text('Reset',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                                                        fontSize: 25,fontWeight: FontWeight.w600,
+                                                                                                      ),),
+                                                                                                    ),
+                                                                                                  ),
+                                                                                                ),
+
+                                                                                              ],
+                                                                                            ),
+                                                                                          ),
+                                                                                        ],
+                                                                                      ),
+                                                                                    );
+                                                                                  }
+                                                                              );
+                                                                            },
+                                                                          );
+                                                                        },
+
+                                                                        child: Container(
+                                                                          width: width*0.5,
+                                                                          padding: EdgeInsets.symmetric(vertical: 10),
+                                                                          decoration: BoxDecoration(
+                                                                            color: Appcolors.green1,
+                                                                            border: Border.all(color: Appcolors.greenlight),
+                                                                            borderRadius: BorderRadius.circular(20),
+                                                                          ),
+                                                                          child: Center(
+                                                                            child: Text('Next',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                                              fontSize: 25,fontWeight: FontWeight.w600,
+                                                                            ),),
+                                                                          ),
                                                                         ),
                                                                       ),
-                                                                    ),
-                                                                  ],
+                                                                      Expanded(child: SizedBox()),
+                                                                    ],
+                                                                  ),
                                                                 ),
 
                                                                 SizedBox(height: 20),
@@ -955,8 +892,8 @@ bool cl=false;
                                               },
 
                                               child: Container(
-                                                width: width*0.75,
-                                                height: height*0.06,
+                                                margin: EdgeInsets.symmetric(horizontal: 25,),
+                                                padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
                                                 decoration: BoxDecoration(
                                                   color: Appcolors.green1,
                                                   border: Border.all(color: Appcolors.greenlight),
@@ -1243,7 +1180,7 @@ bool cl=false;
                                                           return StatefulBuilder(
                                                               builder: (context, setState) {
                                                                 return Container(
-                                                                  height: height-100,
+                                                                  height: height-70,
                                                                   width: width,
                                                                   child: Padding(
                                                                     padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
@@ -1391,6 +1328,7 @@ bool cl=false;
   List<Step> stepList() => [
 
     Step(
+
       isActive: _activeCurrentStep >= 0,
       title: Column(
         children: [
@@ -1482,34 +1420,29 @@ bool cl=false;
 
           Row(
             children: [
-              SizedBox(
-                width: 76,
-                child: Expanded(
-                  child: Container(
+              Container(
 
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Appcolors.greenlight),
-                        color: Colors.white
-                    ),
-                    child: CountryCodePicker(
-                      onChanged: _onCountryChange,
-                      // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
-                      initialSelection: 'IN',
-                      favorite: ['+91'],
-                      textStyle: Textstyle2Light18.appbartextstyle.copyWith(
-                          color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
-                      ),
-                      // optional. Shows only country name and flag
-
-                      showFlag: false,
-                      // optional. Shows only country name and flag when popup is closed.
-                      showOnlyCountryWhenClosed: false,
-                      showFlagDialog: true,
-                      // optional. aligns the flag and the Text left
-                      alignLeft: false,
-                    ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Appcolors.greenlight),
+                    color: Colors.white
+                ),
+                child: CountryCodePicker(
+                  onChanged: _onCountryChange,
+                  // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                  initialSelection: 'IN',
+                  favorite: ['+91'],
+                  textStyle: Textstyle2Light18.appbartextstyle.copyWith(
+                      color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
                   ),
+                  // optional. Shows only country name and flag
+
+                  showFlag: false,
+                  // optional. Shows only country name and flag when popup is closed.
+                  showOnlyCountryWhenClosed: false,
+                  showFlagDialog: true,
+                  // optional. aligns the flag and the Text left
+                  alignLeft: false,
                 ),
               ),
               SizedBox(width: 5),
@@ -1694,7 +1627,9 @@ bool cl=false;
               SizedBox(height: 20,),
 
               Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
                 padding: EdgeInsets.only(left: 20,right: 20,),
+
                 child: PinCodeTextField(
 
                   length: 4,
@@ -1703,11 +1638,9 @@ bool cl=false;
                   pinTheme: PinTheme(
 
                     shape: PinCodeFieldShape.box,
-                    borderRadius: BorderRadius.circular(20),
-                    fieldHeight: 55,
-                    // fieldOuterPadding: EdgeInsets.only(left: 20,right: 20),
-                    fieldWidth: 55,
-                    activeFillColor: Appcolors.green2,
+                    borderRadius: BorderRadius.circular(15),
+
+                    activeFillColor: Appcolors.greenlight,
                     inactiveColor: Appcolors.greenlight,
                     inactiveFillColor: Colors.white,
                     // selectedFillColor: Colors.deepPurple,
