@@ -1,5 +1,6 @@
 // ignore_for_file: sort_child_properties_last, prefer_const_constructors
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Booking/bookingcancelled.dart';
@@ -13,6 +14,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final List<String> imageList = [
+    'assest/Image/saloonimage.png',
+    'assest/Image/saloonimage.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -224,353 +231,39 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            SizedBox(height: height*0.25,),
 
-            /*Container(
-              padding: EdgeInsets.only(top: 15,bottom: 15),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
+            CarouselSlider.builder(
+              itemCount: imageList.length,
+              options: CarouselOptions(
+                enlargeCenterPage: false,
+                height: 247,
+                autoPlay: false,
+                reverse: false,
+                aspectRatio: 5.0,
+                viewportFraction: 10,
+
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15,right: 15),
-                    child: Text('Choose your preferred service',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontSize: 20,fontWeight: FontWeight.w600,
-                    ),),
-                  ),
+              itemBuilder: (context, i, id){
+                //for onTap to redirect to another screen
+                return GestureDetector(
+                  child: ClipRRect(
 
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15,right: 15,top: 20),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Column(
-                              children: [
-                                GestureDetector(
+                    child: Image.asset(
+                      imageList[i],
+                      width: width,
 
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookingPage()));
-                                  },
-
-                                  child: Container(
-                                    padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-                                    decoration: BoxDecoration(
-                                      color: Appcolors.green1,
-                                      border: Border.all(color: Appcolors.greenlight),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Image.asset('assest/Image/barbershop.png',scale: 4,),
-                                        Column(
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            Text('Barber',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600,
-                                            ),),
-                                            Text('Shop',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w600,
-                                            ),),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                            Expanded(child: SizedBox()),
-
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/hairsaloon.png',scale: 4,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text('Hair',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                          Text('Saloon',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                            Expanded(child: SizedBox()),
-
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 10,right: 20,top: 2,bottom: 2),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/carwash.png',scale: 4,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text('Car',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                          Text('Wash',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                          ],
-                        ),
-
-                        SizedBox(height: 10,),
-
-                        Row(
-                          children: [
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 10,right: 10,top: 10,bottom: 10),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/messageimage.png',scale: 4,),
-                                      Text('Message',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 15,fontWeight: FontWeight.w600,
-                                      ),),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                            Expanded(child: SizedBox()),
-
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 9,right: 9,top: 2,bottom: 2),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/clean.png',scale: 4,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text('Cleaning',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                          Text('Service',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                            Expanded(child: SizedBox()),
-
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 5,right: 5,top: 2,bottom: 2),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/plumbing.png',scale: 4,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text('Plumbing',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                          Text('Service',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                          ],
-                        ),
-
-                        SizedBox(height: 15),
-
-                        Row(
-                          children: [
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/aircondrepair.png',scale: 4,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text('Aircond',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                          Text('Repair',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                            Expanded(child: SizedBox()),
-
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/electricalrepair.png',scale: 4,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text('Electrical',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                          Text('Repair',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                            Expanded(child: SizedBox()),
-
-                            Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    border: Border.all(color: Appcolors.greenlight),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset('assest/Image/moreservices.png',scale: 4,),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          Text('More',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                          Text('Services',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                            fontSize: 15,fontWeight: FontWeight.w600,
-                                          ),),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Text('(500 Partners available)',style: Textstyle1Light18.appbartextstyle.copyWith(
-                                  fontSize: 10,fontWeight: FontWeight.w400,
-                                ),),
-                              ],
-                            ),
-
-                          ],
-                        ),
-
-
-                      ],
                     ),
                   ),
-                ],
-              ),
-            ),*/
+                  onTap: (){
+
+                    var url = imageList[i];
+                    print(url.toString());
+                  },
+                );
+              },
+            ),
+
+            SizedBox(height: 10,),
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),

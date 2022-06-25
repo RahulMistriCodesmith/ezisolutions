@@ -36,30 +36,27 @@ class Inputdec1 {
 
 
     hintStyle: Textstyle2Light18.appbartextstyle.copyWith(
-        fontSize: 20,color: Colors.grey),
+        fontSize: 16,color: Colors.grey),
     /* prefixIcon: Padding(
       padding: EdgeInsets.all(14.0),
       child: Image.asset("assets/Image/Search Icon.png", width: 10, height: 10,color: Colors.grey,),
     ),*/
 
     errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
         borderSide: BorderSide(color: Colors.redAccent)
     ),
 
     border: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
-borderSide: BorderSide(color: Appcolors.greenlight, width: 2),
+      borderSide: BorderSide(color: Appcolors.greenlight),
     ),
 
-    filled: false,
+    filled: true,
 
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(10)),
-      borderSide: BorderSide(width: 2,color: Appcolors.greenlight),
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
-      borderSide: BorderSide(width: 2,color: Appcolors.greenlight),
+      borderSide: BorderSide(color: Appcolors.greenlight),
     ),
 
   );

@@ -234,19 +234,17 @@ bool cl=false;
                   ),
                 ),*/
 
-          Padding(
-              padding: EdgeInsets.only(left: 51, right: 50),
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 76,
-                   child: Expanded(
-                     child: Container(
+                Padding(
+                  padding: EdgeInsets.only(left: 51, right: 50),
+                  child: Row(
+                    children: [
+                      Container(
+                        // width: 76,
                         height: height*0.075,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(color: Appcolors.greenlight),
-                          color: Colors.white
+                            color: Colors.white
                         ),
                         child: CountryCodePicker(
                           onChanged: _onCountryChange,
@@ -266,40 +264,39 @@ bool cl=false;
                           alignLeft: false,
                         ),
                       ),
-                   ),
-                  ),
-                  SizedBox(width: 5),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white
+                      SizedBox(width: 5),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.white
 
-                      ),
-                      child: TextFormField(
+                          ),
+                          child: TextFormField(
 
-                        controller: contact,
+                            controller: contact,
 
-                        keyboardType: TextInputType.phone,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "";
+                            keyboardType: TextInputType.phone,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return "";
 
-                          }
-                        },
-                        // cursorHeight: 18,
+                              }
+                            },
+                            // cursorHeight: 18,
 
-                        decoration: Inputdec3.inputDecoration.copyWith(
-                          errorStyle: TextStyle(height: 0),
-                          hintText: 'Contact no',
+                            decoration: Inputdec3.inputDecoration.copyWith(
+                              errorStyle: TextStyle(height: 0),
+                              hintText: 'Contact no',
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
-              ),
-            ),
+                ),
+
 
                 SizedBox(height: 20,),
 
@@ -342,30 +339,25 @@ bool cl=false;
                   padding: const EdgeInsets.symmetric(horizontal: 56),
                   child: Row(
                     children: [
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Appcolors.blue),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: FlutterSwitch(
-                            width: width*0.13,
-                            height: height*0.028,
-                            toggleBorder: Border.all(color: Appcolors.blue),
-                            toggleColor: Appcolors.blue1,
-                            activeColor: Appcolors.blue.withOpacity(0.2),
-                            inactiveColor: Appcolors.blue.withOpacity(0.2),
-                            toggleSize: 20.0,
-                            value: status,
-                            borderRadius: 20.0,
-                            showOnOff: false,
-                            onToggle: (val) {
-                              setState(() {
-                                status = val;
-                              });
-                            },
-                          ),
-                        ),
+                      FlutterSwitch(
+                        width: width*0.1,
+                        height: 20,
+                        toggleBorder: Border.all(color: Appcolors.blue,),
+                        toggleColor: Appcolors.blue1.withOpacity(0.6),
+                        padding: 0,
+                        activeColor: Colors.white,
+                        inactiveColor: Colors.white,
+                        activeSwitchBorder: Border.all(color: Appcolors.blue),
+                        inactiveSwitchBorder: Border.all(color: Appcolors.blue),
+                        toggleSize: 20.0,
+                        value: status,
+                        borderRadius: 20.0,
+                        showOnOff: false,
+                        onToggle: (val) {
+                          setState(() {
+                            status = val;
+                          });
+                        },
                       ),
 
                       Text('Remember me',style: Textstyle2Light18.appbartextstyle.copyWith(
@@ -567,27 +559,31 @@ bool cl=false;
                                                                   ),
                                                                 ),
 
-                                                                SizedBox(height: 20,),
+                                                                SizedBox(height: 30,),
 
                                                                 Container(
-                                                                  padding: EdgeInsets.only(left: 20,right: 20),
+                                                                  padding: EdgeInsets.only(left: 20,right: 20,),
                                                                   width: width,
-                                                                  height: 60,
                                                                   child: PinCodeTextField(
+
                                                                     length: 4,
                                                                     obscureText: true,
                                                                     animationType: AnimationType.none,
                                                                     pinTheme: PinTheme(
-                                                                      errorBorderColor: Appcolors.greenlight,
-                                                                      shape: PinCodeFieldShape.box,
-                                                                      borderRadius: BorderRadius.circular(10),
-                                                                      fieldOuterPadding: EdgeInsets.only(top: 10),
-                                                                      inactiveFillColor: Colors.orangeAccent,
-                                                                      inactiveColor: Colors.orangeAccent,
-                                                                      activeFillColor: Colors.orangeAccent,
-                                                                      borderWidth: 10,
-                                                                      fieldHeight: 50,
-                                                                      fieldWidth: 40,
+
+                                                                        shape: PinCodeFieldShape.box,
+                                                                        borderRadius: BorderRadius.circular(20),
+                                                                        fieldHeight: 60,
+                                                                        // fieldOuterPadding: EdgeInsets.only(left: 20,right: 20),
+                                                                        fieldWidth: 70,
+                                                                        activeFillColor: Appcolors.greenlight,
+                                                                        inactiveColor: Appcolors.greenlight,
+                                                                        inactiveFillColor: Colors.white,
+                                                                        // selectedFillColor: Colors.deepPurple,
+                                                                        // selectedColor: Colors.greenAccent,
+                                                                        // activeColor: Colors.blue
+
+
                                                                     ),
                                                                     animationDuration: Duration(milliseconds: 300),
 
@@ -597,12 +593,16 @@ bool cl=false;
                                                                     onCompleted: (v) {
                                                                       print("Completed");
                                                                     },
+
+
+
                                                                     onChanged: (value) {
                                                                       print(value);
                                                                       setState(() {
                                                                         currentText = value;
                                                                       });
                                                                     },
+
                                                                     beforeTextPaste: (text) {
                                                                       print("Allowing to paste $text");
                                                                       //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
@@ -610,10 +610,11 @@ bool cl=false;
                                                                       return true;
 
                                                                     },
+
                                                                   ),
                                                                 ),
 
-                                                                SizedBox(height: 60,),
+                                                                SizedBox(height: 20),
 
                                                                 Row(
                                                                   children: [
@@ -999,9 +1000,11 @@ bool cl=false;
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: SliderButton(
+
                       backgroundColor: Colors.white,
                       radius: 15,
                       shimmer: false,
+
                       action: () {
                         if(_forMKey.currentState.validate()) {
                           if (contact.text == "1234567890" &&
@@ -1037,33 +1040,39 @@ bool cl=false;
 
                                         Text(
                                           'The mobile number or password is incorrect.',
-                                          style: Textstyle2Light18
-                                              .appbartextstyle.copyWith(
+                                          style: Textstyle2Light18.appbartextstyle.copyWith(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 15,
                                           ),),
 
                                         Expanded(child: SizedBox()),
 
-                                        Container(
-                                          width: width,
-                                          padding: EdgeInsets.symmetric(vertical: 6),
-                                          decoration: BoxDecoration(
-                                            color: Appcolors.green1,
-                                            border: Border.all(
-                                                color: Appcolors.greenlight),
-                                            borderRadius: BorderRadius.circular(
-                                                15),
-                                          ),
-                                          child: Expanded(
-                                            child: Center(
-                                              child: Text('Try agin',
-                                                style: Textstyle2Light18
-                                                    .appbartextstyle.copyWith(
-                                                  fontWeight: FontWeight.w600,
-                                                  fontSize: 25,
+                                        GestureDetector(
+
+                                          onTap: (){
+                                            Navigator.pop(context);
+                                          },
+
+                                          child: Container(
+                                            width: width,
+                                            padding: EdgeInsets.symmetric(vertical: 6),
+                                            decoration: BoxDecoration(
+                                              color: Appcolors.green1,
+                                              border: Border.all(
+                                                  color: Appcolors.greenlight),
+                                              borderRadius: BorderRadius.circular(
+                                                  15),
+                                            ),
+                                            child: Expanded(
+                                              child: Center(
+                                                child: Text('Try agin',
+                                                  style: Textstyle2Light18
+                                                      .appbartextstyle.copyWith(
+                                                    fontWeight: FontWeight.w600,
+                                                    fontSize: 25,
+                                                  ),
+                                                textAlign: TextAlign.justify,
                                                 ),
-                                              textAlign: TextAlign.justify,
                                               ),
                                             ),
                                           ),
@@ -1078,8 +1087,7 @@ bool cl=false;
                         };
 
                         }
-
-                      },
+                        },
                       label: Text('Slide To Login',style: Textstyle2Light18.appbartextstyle.copyWith(
                         fontSize: 20,fontWeight: FontWeight.w600,
                       ),),
@@ -1405,8 +1413,8 @@ bool cl=false;
             BorderRadius.circular(100),
             child: Container(
 
-              width: 100,
-              height: 100,
+              width: 130,
+              height: 130,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(100),
@@ -1428,21 +1436,24 @@ bool cl=false;
             ),
           ),
 
+
+
           InkWell(
               onTap: (){
                 _getFromGallery();
               },
               child: Text('Tap to insert image')),
 
+          SizedBox(height: 15),
+
           Container(
-            padding: EdgeInsets.only(left: 10),
             decoration: BoxDecoration(
-              border: Border.all(color: Appcolors.greenlight),
               borderRadius: BorderRadius.circular(10),
+                color: Colors.white
             ),
             child: TextFormField(
 
-              decoration: Inputdec2.inputDecoration.copyWith(
+              decoration: Inputdec1.inputDecoration.copyWith(
                 hintText: 'Your Name (As per NRIC)*',
 
               ),
@@ -1452,14 +1463,14 @@ bool cl=false;
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.only(left: 10),
+
             decoration: BoxDecoration(
-              border: Border.all(color: Appcolors.greenlight),
               borderRadius: BorderRadius.circular(10),
+              color: Colors.white
             ),
             child: TextFormField(
 
-              decoration: Inputdec2.inputDecoration.copyWith(
+              decoration: Inputdec1.inputDecoration.copyWith(
                 hintText: 'Email Address*',
 
               ),
@@ -1468,77 +1479,68 @@ bool cl=false;
           const SizedBox(
             height: 20,
           ),
+
           Row(
             children: [
-              GestureDetector(
-                child: Container(
+              SizedBox(
+                width: 76,
+                child: Expanded(
+                  child: Container(
 
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Appcolors.greenlight),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(child: Text('61+',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontSize: 26,color: Colors.grey),)),
-                ),
-                onTap: (){
-                  showCountryPicker(
-                    context: context,
-                    //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
-                    exclude: <String>['KN', 'MF'],
-                    favorite: <String>['IN'],
-                    //Optional. Shows phone code before the country name.
-                    showPhoneCode: true,
-                    onSelect: (Country country) {
-                      print('Select country: ${country.displayName}');
-                    },
-                    // Optional. Sets the theme for the country list picker.
-                    countryListTheme: CountryListThemeData(
-                      // Optional. Sets the border radius for the bottomsheet.
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40.0),
-                        topRight: Radius.circular(40.0),
-                      ),
-                      // Optional. Styles the search field.
-                      inputDecoration: InputDecoration(
-                        labelText: 'Search',
-                        hintText: 'Start typing to search',
-                        prefixIcon: const Icon(Icons.search),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: const Color(0xFF8C98A8).withOpacity(0.2),
-                          ),
-                        ),
-                      ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Appcolors.greenlight),
+                        color: Colors.white
                     ),
-                  );
-                },
+                    child: CountryCodePicker(
+                      onChanged: _onCountryChange,
+                      // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                      initialSelection: 'IN',
+                      favorite: ['+91'],
+                      textStyle: Textstyle2Light18.appbartextstyle.copyWith(
+                          color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
+                      ),
+                      // optional. Shows only country name and flag
+
+                      showFlag: false,
+                      // optional. Shows only country name and flag when popup is closed.
+                      showOnlyCountryWhenClosed: false,
+                      showFlagDialog: true,
+                      // optional. aligns the flag and the Text left
+                      alignLeft: false,
+                    ),
+                  ),
+                ),
               ),
-
-              SizedBox(width: 10,),
-
+              SizedBox(width: 5),
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.only(left: 5,top: 10),
-                  height: 40,
+                  margin: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Appcolors.greenlight),
-                    borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white
+
                   ),
                   child: TextFormField(
+
+                    controller: contact,
+
+                    keyboardType: TextInputType.phone,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
+                        return "";
 
                       }
-                      return null;
                     },
-                    textAlign: TextAlign.start,
-                    decoration: Inputdec2.inputDecoration.copyWith(
+                    // cursorHeight: 18,
+
+                    decoration: Inputdec1.inputDecoration.copyWith(
+                      errorStyle: TextStyle(height: 0),
                       hintText: 'Contact no',
                     ),
                   ),
                 ),
               ),
-
             ],
           ),
 
@@ -1547,9 +1549,9 @@ bool cl=false;
           ),
 
           Container(
-            padding: EdgeInsets.only(left: 10),
+
             decoration: BoxDecoration(
-              border: Border.all(color: Appcolors.greenlight),
+             color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
             child: TextFormField(
@@ -1563,7 +1565,7 @@ bool cl=false;
                 return null;
               },
               obscureText: _isObscure,
-              decoration: Inputdec2.inputDecoration.copyWith(
+              decoration: Inputdec1.inputDecoration.copyWith(
                 hintText: 'Password*',
                 suffixIcon: IconButton(
                   icon: Icon(
@@ -1584,9 +1586,8 @@ bool cl=false;
           ),
 
           Container(
-            padding: EdgeInsets.only(left: 10),
             decoration: BoxDecoration(
-              border: Border.all(color: Appcolors.greenlight),
+              color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
             child: TextFormField(
@@ -1600,7 +1601,7 @@ bool cl=false;
                 return null;
               },
               obscureText: _isObscure,
-              decoration: Inputdec2.inputDecoration.copyWith(
+              decoration: Inputdec1.inputDecoration.copyWith(
                 hintText: 'Re-type password*',
                 suffixIcon: IconButton(
                   icon: Icon(
@@ -1687,29 +1688,33 @@ bool cl=false;
 
                   ],
                 ),
+                textAlign: TextAlign.justify,
               ),
 
               SizedBox(height: 20,),
 
               Container(
                 padding: EdgeInsets.only(left: 20,right: 20,),
-
-                height: 60,
                 child: PinCodeTextField(
+
                   length: 4,
                   obscureText: true,
                   animationType: AnimationType.none,
                   pinTheme: PinTheme(
-                    errorBorderColor: Appcolors.greenlight,
+
                     shape: PinCodeFieldShape.box,
-                    borderRadius: BorderRadius.circular(10),
-                    fieldOuterPadding: EdgeInsets.only(top: 10),
+                    borderRadius: BorderRadius.circular(20),
+                    fieldHeight: 55,
+                    // fieldOuterPadding: EdgeInsets.only(left: 20,right: 20),
+                    fieldWidth: 55,
+                    activeFillColor: Appcolors.green2,
+                    inactiveColor: Appcolors.greenlight,
                     inactiveFillColor: Colors.white,
-                    inactiveColor: Colors.white,
-                    activeFillColor: Colors.white,
-                    borderWidth: 10,
-                    fieldHeight: 50,
-                    fieldWidth: 40,
+                    // selectedFillColor: Colors.deepPurple,
+                    // selectedColor: Colors.greenAccent,
+                    // activeColor: Colors.blue
+
+
                   ),
                   animationDuration: Duration(milliseconds: 300),
 
@@ -1719,12 +1724,16 @@ bool cl=false;
                   onCompleted: (v) {
                     print("Completed");
                   },
+
+
+
                   onChanged: (value) {
                     print(value);
                     setState(() {
                       currentText = value;
                     });
                   },
+
                   beforeTextPaste: (text) {
                     print("Allowing to paste $text");
                     //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
@@ -1732,6 +1741,7 @@ bool cl=false;
                     return true;
 
                   },
+
                 ),
               ),
 
