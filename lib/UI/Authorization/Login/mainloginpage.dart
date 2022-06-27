@@ -1631,7 +1631,7 @@ bool cl=false;
                 padding: EdgeInsets.only(left: 20,right: 20,),
 
                 child: PinCodeTextField(
-
+                  keyboardType: TextInputType.number,
                   length: 4,
                   obscureText: true,
                   animationType: AnimationType.none,
@@ -1646,8 +1646,6 @@ bool cl=false;
                     // selectedFillColor: Colors.deepPurple,
                     // selectedColor: Colors.greenAccent,
                     // activeColor: Colors.blue
-
-
                   ),
                   animationDuration: Duration(milliseconds: 300),
 

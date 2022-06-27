@@ -102,12 +102,11 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         width: width*0.7,
                         height: 50,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Appcolors.greenlight),
                           borderRadius: BorderRadius.circular(10),
                           color: Appcolors.green1,
                         ),
                         child: TextFormField(
-                          decoration: Inputdec3.inputDecoration.copyWith(
+                          decoration: Inputdec1.inputDecoration.copyWith(
                             hintText: 'Search for service/ezians',
                           ),
                         ),
@@ -177,7 +176,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         ),
 
                         Container(
-                          padding: EdgeInsets.only(left: 28,right: 28,top: 10,bottom: 10),
+                          padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
                           decoration: BoxDecoration(
                             border: Border.all(color: Appcolors.greenlight,width: 2),
                             borderRadius: BorderRadius.only(
@@ -636,22 +635,28 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 15,right: 15,bottom: 20),
+                                  padding: const EdgeInsets.symmetric(horizontal: 15),
                                   child: Row(
                                     children: [
                                       Text('Custom Package ',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 20,fontWeight: FontWeight.w600,
+                                        fontSize: 18,fontWeight: FontWeight.w600,
                                       ),),
-                                      Text('(Best Seller - Special Discount)',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 12,fontWeight: FontWeight.w400,
-                                      ),),
+                                      Expanded(
+                                        child: Text('(Best Seller - Special Discount)',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                          fontSize: 10,fontWeight: FontWeight.w400,
+                                        ),
+                                        textAlign: TextAlign.justify,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
 
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 20,right: 20),
+                                  padding: const EdgeInsets.symmetric(horizontal: 20),
                                   child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(10),
@@ -659,33 +664,30 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                     ),
                                     child: Row(
                                       children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(top: 10,left: 10,bottom: 10),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Text('Readymade Package',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 18,fontWeight: FontWeight.w600,
-                                              ),),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text('Readymade Package',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 16,fontWeight: FontWeight.w600,
+                                            ),),
 
-                                              Text('* Home cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
+                                            Text('* Home cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 13,fontWeight: FontWeight.w400,
+                                            ),),
 
-                                              Text('* Men short hair cut',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
+                                            Text('* Men short hair cut',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 13,fontWeight: FontWeight.w400,
+                                            ),),
 
-                                              Text('* Clean shave',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
+                                            Text('* Clean shave',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 13,fontWeight: FontWeight.w400,
+                                            ),),
 
-                                              Text('* 10 min head massage',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                fontSize: 15,fontWeight: FontWeight.w400,
-                                              ),),
+                                            Text('* 10 min head massage',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                              fontSize: 13,fontWeight: FontWeight.w400,
+                                            ),),
 
-                                            ],
-                                          ),
+                                          ],
                                         ),
 
                                         Expanded(child: SizedBox()),
@@ -694,11 +696,11 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text('RM25 RM20',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 18,fontWeight: FontWeight.w600,
+                                              fontSize: 16,fontWeight: FontWeight.w600,
                                             ),),
 
                                             Text('Estimate 60 min',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                              fontSize: 15,fontWeight: FontWeight.w400,
+                                              fontSize: 13,fontWeight: FontWeight.w400,
                                             ),),
 
                                             SizedBox(height: height*0.025,),
@@ -743,7 +745,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               ),
 
                               Padding(
-                                padding: const EdgeInsets.only(left: 20,top: 10),
+                                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -831,7 +833,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                 ],
                                               ),
 
-                                              SizedBox(width: width*0.15,),
+                                              SizedBox(width: width*0.14,),
 
                                               Image.asset('assest/Iocns/addicon.png',scale: 4,),
 
@@ -850,7 +852,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               ),
 
                               Padding(
-                                padding: const EdgeInsets.only(left: 20,top: 10),
+                                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -870,6 +872,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                           SizedBox(height: 10),
 
                                           Image.asset('assest/Image/tolderimage.png',scale: 4),
+
                                           SizedBox(height: 15),
 
                                           Row(
@@ -888,7 +891,13 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                                               SizedBox(width: width*0.15,),
 
-                                              Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                              GestureDetector(
+
+                                                  onTap: (){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (context) => BookingAppoinment()));
+                                                  },
+
+                                                  child: Image.asset('assest/Iocns/addicon.png',scale: 4,)),
 
                                             ],
                                           ),
@@ -931,7 +940,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                 ],
                                               ),
 
-                                              SizedBox(width: width*0.15,),
+                                              SizedBox(width: width*0.14,),
 
                                               Image.asset('assest/Iocns/addicon.png',scale: 4,),
 

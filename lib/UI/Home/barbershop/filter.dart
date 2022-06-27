@@ -112,7 +112,7 @@ class _FilterPageState extends State<FilterPage> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 30,right: 20,top: 20),
+              padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
               child: Row(
                 children: [
                   InkWell(
@@ -131,7 +131,7 @@ class _FilterPageState extends State<FilterPage> {
                         color: selectedval1 == "All" ? Appcolors.green1 : Colors.white,
                       ),
                       child: Text('All',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 15,fontWeight: FontWeight.w600
+                          fontSize: 13,fontWeight: FontWeight.w600
                       ),),
                     ),
                   ),
@@ -153,7 +153,7 @@ class _FilterPageState extends State<FilterPage> {
                         borderRadius: BorderRadius.circular(10),
                         color: selectedval1 == "1" ? Appcolors.green1 : Colors.white,
                       ),
-                      child: Image.asset('assest/Iocns/staricon.png',scale: 2.5,),
+                      child: Image.asset('assest/Iocns/staricon.png',scale: 3,),
                     ),
                   ),
 
@@ -174,7 +174,7 @@ class _FilterPageState extends State<FilterPage> {
                         borderRadius: BorderRadius.circular(10),
                         color: selectedval1 == "2" ? Appcolors.green1 : Colors.white,
                       ),
-                      child: Image.asset('assest/Image/2star.png',scale: 5,),
+                      child: Image.asset('assest/Image/2star.png',scale: 6,),
                     ),
                   ),
                 ],
@@ -182,7 +182,7 @@ class _FilterPageState extends State<FilterPage> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 30,right: 20,top: 20),
+              padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
               child: Row(
                 children: [
                   InkWell(
@@ -200,7 +200,7 @@ class _FilterPageState extends State<FilterPage> {
                         borderRadius: BorderRadius.circular(10),
                         color: selectedval1 == "3" ? Appcolors.green1 : Colors.white,
                       ),
-                      child: Image.asset('assest/Image/3star.png',scale: 5,),
+                      child: Image.asset('assest/Image/3star.png',scale: 6,),
                     ),
                   ),
 
@@ -221,7 +221,7 @@ class _FilterPageState extends State<FilterPage> {
                         borderRadius: BorderRadius.circular(10),
                         color: selectedval1 == "4" ? Appcolors.green1 : Colors.white,
                       ),
-                      child: Image.asset('assest/Image/4star.png',scale: 4,),
+                      child: Image.asset('assest/Image/4star.png',scale: 4.5,),
                     ),
                   ),
 
@@ -236,13 +236,13 @@ class _FilterPageState extends State<FilterPage> {
                     },
 
                     child: Container(
-                      padding: EdgeInsets.only(top: 13,bottom: 13,left: 26,right: 26),
+                      padding: EdgeInsets.symmetric(horizontal: 25,vertical: 13),
                       decoration: BoxDecoration(
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
                         color: selectedval1 == "5" ? Appcolors.green1 : Colors.white,
                       ),
-                      child: Image.asset('assest/Image/5star.png',scale: 5,),
+                      child: Image.asset('assest/Image/5star.png',scale: 5.5,),
                     ),
                   ),
                 ],

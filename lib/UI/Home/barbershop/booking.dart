@@ -65,11 +65,10 @@ class _BookingPageState extends State<BookingPage> {
                     height: 50,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      border: Border.all(color: Appcolors.greenlight),
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(13),
                     ),
                     child: TextFormField(
-                      decoration: Inputdec3.inputDecoration.copyWith(
+                      decoration: Inputdec1.inputDecoration.copyWith(
                         hintText: 'Search for partners & services',
                       ),
                     ),
@@ -83,7 +82,7 @@ class _BookingPageState extends State<BookingPage> {
                       border: Border.all(color: Appcolors.greenlight),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Icon(Icons.search,size: 50,color: Appcolors.greenlight,),
+                    child: Icon(Icons.search,size: 45,color: Appcolors.greenlight,),
                   ),
 
                   Expanded(child: SizedBox()),
@@ -100,7 +99,7 @@ class _BookingPageState extends State<BookingPage> {
                         border: Border.all(color: Appcolors.greenlight),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(Icons.filter_alt_outlined,size: 50,color: Appcolors.greenlight,),
+                      child: Icon(Icons.filter_alt_outlined,size: 45,color: Appcolors.greenlight,),
                     ),
                   ),
                 ],
@@ -122,16 +121,12 @@ class _BookingPageState extends State<BookingPage> {
                     
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 10),
-                      width: width,
+                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
-                          border: Border.all(
-                              color:
-                              Appcolors.greenlight,
-                              width: 2)),
+                          border: Border.all(color: Appcolors.greenlight,width: 2)),
                       child: Row(
                         children: [
                           Padding(
@@ -170,8 +165,8 @@ class _BookingPageState extends State<BookingPage> {
                                         Expanded(child: SizedBox()),
 
                                         Container(
-                                          width: 20,
-                                          height: 20,
+                                          width: width*0.04,
+                                          height: width*0.04,
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(30),
                                             color: Appcolors.greenlight,
@@ -241,6 +236,9 @@ class _BookingPageState extends State<BookingPage> {
                                           style:Textstyle2Light18.appbartextstyle.copyWith(
                                               fontSize: 15,fontWeight: FontWeight.w600
                                           ),
+                                          textAlign: TextAlign.justify,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
                                         ),
 
                                       ],
