@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use, prefer_const_constructors, unused_element, prefer_typing_uninitialized_variables, avoid_print, missing_required_param, sized_box_for_whitespace, avoid_unnecessary_containers, curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use, prefer_const_constructors, unused_element, prefer_typing_uninitialized_variables, avoid_print, missing_required_param, sized_box_for_whitespace, avoid_unnecessary_containers, curly_braces_in_flow_control_structures, missing_return, unused_field
 
 import 'dart:async';
 import 'dart:io';
@@ -8,14 +8,15 @@ import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/Authorization/Login/languagepage.dart';
 import 'package:ezisolutions/UI/Home/location/mylocation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:slider_button/slider_button.dart';
 class MainLoginPage extends StatefulWidget {
-  const MainLoginPage({Key key}) : super(key: key);
+  const MainLoginPage({Key key, this.title, }) : super(key: key);
+
+  final String title;
 
   @override
   State<MainLoginPage> createState() => _MainLoginPageState();
@@ -23,57 +24,70 @@ class MainLoginPage extends StatefulWidget {
 
 class _MainLoginPageState extends State<MainLoginPage> {
 
-  TextEditingController phoneController = new TextEditingController();
-  String phoneNumber = "";
+  final _formKey = GlobalKey<FormState>();
+  final _textController = TextEditingController();
+  final _textController1 = TextEditingController();
+  final _pinCodeController = TextEditingController();
+  final _pinCodeController1 = TextEditingController();
+  final _errorController = StreamController<ErrorAnimationType>();
+  final _errorController1 = StreamController<ErrorAnimationType>();
+  final _validPinCode = '1234';
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    _errorController.close();
+    super.dispose();
+  }
+
+  String _validateText(String text) {
+    if (text != _validPinCode) {
+      _textController.clear(); // This works just fine.
+      return 'Mismatch';
+    }
+    return null;
+  }
+
+  String _validatePinCode(String pinCode) {
+    if (pinCode.isNotEmpty && pinCode.length == 6) {
+      if (pinCode != _validPinCode) {
+        _pinCodeController.clear(); //! This is not working and causes error.
+        _errorController.add(ErrorAnimationType.shake);
+        return 'Mismatch';
+      }
+    }
+    return null;
+  }
+
+  // TextEditingController phoneController = TextEditingController();
+  // String phoneNumber = "";
 
   void _onCountryChange(CountryCode countryCode) {
-    this.phoneNumber =  countryCode.toString();
+    // phoneNumber =  countryCode.toString();
     print("New Country selected: " + countryCode.toString());
   }
 
   void check(){
-    print("Full Text: "+ this.phoneNumber + phoneController.text);
+    // print("Full Text: "+ this.phoneNumber + phoneController.text);
   }
 
   final GlobalKey<FormState> _forMKey = GlobalKey<FormState>();
-
-
-
-  var onTapRecognizer;
+  final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
 
   /// this [StreamController] will take input of which function should be called
 
   bool hasError = false;
-  String currentText = "";
+
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   var errorController;
 
-  var textEditingController;
-  bool status = false;
-
-
-  @override
-  void initState() {
-    onTapRecognizer = TapGestureRecognizer()
-      ..onTap = () {
-        Navigator.pop(context);
-      };
-
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
+  bool status = true;
 
   bool isSwitched = false;
   bool _isObscure = true;
   var selectedval = 'slide1';
 
-
-bool cl=false;
   File imageFile;
 
   TextEditingController email = TextEditingController();
@@ -84,10 +98,9 @@ bool cl=false;
   TextEditingController pincode = TextEditingController();
   TextEditingController contact = TextEditingController();
   TextEditingController contact1 = TextEditingController();
+  TextEditingController contact2 = TextEditingController();
 
   int _activeCurrentStep = 0;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -95,6 +108,9 @@ bool cl=false;
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
+
+      key: _scaffoldkey,
+
       backgroundColor: Appcolors.background,
       appBar: AppBar(
         backgroundColor: Appcolors.greenlight,
@@ -172,15 +188,12 @@ bool cl=false;
 
                 SizedBox(height: 10,),
 
-
-
                 Padding(
                   padding: EdgeInsets.only(left: 51, right: 50),
                   child: Row(
                     children: [
                       Container(
-                        // width: 76,
-                        height: height*0.075,
+                        padding: EdgeInsets.symmetric(vertical: 3),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(color: Appcolors.greenlight),
@@ -319,7 +332,6 @@ bool cl=false;
                                   topRight: Radius.circular(20),
                                 ),
                               ),
-                              barrierColor: Appcolors.grey,
                               context: context,
                               isScrollControlled: true,
                               builder: (BuildContext context) {
@@ -372,8 +384,7 @@ bool cl=false;
                                               child: Row(
                                                 children: [
                                                   Container(
-                                                    // width: 76,
-                                                    height: height*0.079,
+                                                    padding: EdgeInsets.symmetric(vertical: 3),
                                                     decoration: BoxDecoration(
                                                         borderRadius: BorderRadius.circular(20),
                                                         border: Border.all(color: Appcolors.greenlight),
@@ -401,14 +412,14 @@ bool cl=false;
                                                   Expanded(
                                                     child: TextFormField(
 
-                                                      controller: contact,
+                                                      controller: contact1,
 
                                                       keyboardType: TextInputType.phone,
                                                       validator: (value) {
-                                                        if (value == null || value.isEmpty) {
-                                                          return "";
-
-                                                        }
+                                                        return _validateText(value);
+                                                      },
+                                                      onFieldSubmitted: (value) {
+                                                        _formKey.currentState.validate();
                                                       },
                                                       // cursorHeight: 18,
 
@@ -433,7 +444,6 @@ bool cl=false;
                                                       topRight: Radius.circular(20),
                                                     ),
                                                   ),
-                                                  barrierColor: Appcolors.grey,
                                                   context: context,
                                                   isScrollControlled: true,
                                                   builder: (BuildContext context) {
@@ -497,54 +507,36 @@ bool cl=false;
                                                                 SizedBox(height: 30,),
 
                                                                 Container(
-                                                                  margin: EdgeInsets.symmetric(horizontal: 10),
+                                                                  height: height*0.35,
+                                                                  margin: EdgeInsets.symmetric(horizontal: 5),
                                                                   padding: EdgeInsets.only(left: 20,right: 20,),
-
                                                                   child: PinCodeTextField(
-
+                                                                    appContext: context,
                                                                     length: 4,
                                                                     obscureText: true,
-                                                                    animationType: AnimationType.none,
+                                                                    keyboardType: TextInputType.number,
+                                                                    animationType: AnimationType.scale,
+                                                                    errorAnimationController: _errorController,
+                                                                    controller: _pinCodeController,
                                                                     pinTheme: PinTheme(
-
-                                                                        shape: PinCodeFieldShape.box,
-                                                                        borderRadius: BorderRadius.circular(15),
-
-                                                                        activeFillColor: Appcolors.greenlight,
-                                                                        inactiveColor: Appcolors.greenlight,
-                                                                        inactiveFillColor: Colors.white,
-                                                                        // selectedFillColor: Colors.deepPurple,
-                                                                        // selectedColor: Colors.greenAccent,
-                                                                        // activeColor: Colors.blue
-
-
+                                                                      shape: PinCodeFieldShape.box,
+                                                                      borderRadius: BorderRadius.circular(15),
+                                                                      activeFillColor: Appcolors.greenlight,
+                                                                      inactiveColor: Appcolors.greenlight,
+                                                                      inactiveFillColor: Colors.white,
+                                                                      fieldHeight: 50,
+                                                                      fieldWidth: 50,
                                                                     ),
-                                                                    animationDuration: Duration(milliseconds: 300),
-
-                                                                    enableActiveFill: true,
-                                                                    errorAnimationController: errorController,
-                                                                    controller: textEditingController,
-                                                                    onCompleted: (v) {
-                                                                      print("Completed");
+                                                                    validator: (value) {
+                                                                      print('Validated PIN code input { value: $value }');
+                                                                      return _validatePinCode(value);
                                                                     },
-
-
-
                                                                     onChanged: (value) {
-                                                                      print(value);
-                                                                      setState(() {
-                                                                        currentText = value;
-                                                                      });
+                                                                      print('Changed PIN code input { value: $value }');
                                                                     },
-
-                                                                    beforeTextPaste: (text) {
-                                                                      print("Allowing to paste $text");
-                                                                      //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
-                                                                      //but you can show anything you want here, like your pop up saying wrong paste format or etc
-                                                                      return true;
-
+                                                                    onCompleted: (value) {
+                                                                      print('Completed PIN code input { value: $value }');
                                                                     },
-
                                                                   ),
                                                                 ),
 
@@ -596,7 +588,6 @@ bool cl=false;
                                                                                 topRight: Radius.circular(20),
                                                                               ),
                                                                             ),
-                                                                            barrierColor: Appcolors.grey,
                                                                             context: context,
                                                                             isScrollControlled: true,
                                                                             builder: (BuildContext context) {
@@ -744,7 +735,6 @@ bool cl=false;
                                                                                                           topRight: Radius.circular(20),
                                                                                                         ),
                                                                                                       ),
-                                                                                                      barrierColor: Appcolors.grey,
                                                                                                       context: context,
                                                                                                       isScrollControlled: true,
                                                                                                       builder: (BuildContext context) {
@@ -1058,6 +1048,16 @@ bool cl=false;
                       height: 2,
                       decoration: BoxDecoration(
                         color: Appcolors.greenlight,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: const Offset(
+                              0.0,
+                              0.5,),
+                            blurRadius: 10.0,
+                            spreadRadius: 0.5,
+                          ),
+                        ]
                       ),
                     ),
 
@@ -1072,6 +1072,16 @@ bool cl=false;
                       width: width*0.2,
                       height: 2,
                       decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: const Offset(
+                              0.0,
+                              0.5,),
+                            blurRadius: 10.0,
+                            spreadRadius: 0.5,
+                          ),
+                        ],
                         color: Appcolors.greenlight,
                       ),
                     ),
@@ -1106,7 +1116,7 @@ bool cl=false;
                                 topRight: Radius.circular(20),
                               ),
                             ),
-                            barrierColor: Appcolors.grey,
+
                             context: context,
                             isScrollControlled: true,
                             builder: (BuildContext context) {
@@ -1361,7 +1371,14 @@ bool cl=false;
 
               imageFile == null
 
-                  ? Image.asset('assest/Image/profileimage.png',scale: 4,)
+                  ? Container(
+                width: 130,
+                height: 130,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(100),
+                ),
+              )
 
                   : Image.file(
 
@@ -1456,7 +1473,7 @@ bool cl=false;
                   ),
                   child: TextFormField(
 
-                    controller: contact,
+                    controller: contact2,
 
                     keyboardType: TextInputType.phone,
                     validator: (value) {
@@ -1627,52 +1644,37 @@ bool cl=false;
               SizedBox(height: 20,),
 
               Container(
+
                 margin: EdgeInsets.symmetric(horizontal: 5),
                 padding: EdgeInsets.only(left: 20,right: 20,),
 
                 child: PinCodeTextField(
-                  keyboardType: TextInputType.number,
+                  appContext: context,
                   length: 4,
                   obscureText: true,
-                  animationType: AnimationType.none,
+                  keyboardType: TextInputType.number,
+                  animationType: AnimationType.scale,
+                  errorAnimationController: _errorController1,
+                  controller: _pinCodeController1,
                   pinTheme: PinTheme(
-
                     shape: PinCodeFieldShape.box,
                     borderRadius: BorderRadius.circular(15),
-
                     activeFillColor: Appcolors.greenlight,
                     inactiveColor: Appcolors.greenlight,
                     inactiveFillColor: Colors.white,
-                    // selectedFillColor: Colors.deepPurple,
-                    // selectedColor: Colors.greenAccent,
-                    // activeColor: Colors.blue
+                    fieldHeight: 50,
+                    fieldWidth: 50,
                   ),
-                  animationDuration: Duration(milliseconds: 300),
-
-                  enableActiveFill: true,
-                  errorAnimationController: errorController,
-                  controller: textEditingController,
-                  onCompleted: (v) {
-                    print("Completed");
+                  validator: (value) {
+                    print('Validated PIN code input { value: $value }');
+                    return _validatePinCode(value);
                   },
-
-
-
                   onChanged: (value) {
-                    print(value);
-                    setState(() {
-                      currentText = value;
-                    });
+                    print('Changed PIN code input { value: $value }');
                   },
-
-                  beforeTextPaste: (text) {
-                    print("Allowing to paste $text");
-                    //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
-                    //but you can show anything you want here, like your pop up saying wrong paste format or etc
-                    return true;
-
+                  onCompleted: (value) {
+                    print('Completed PIN code input { value: $value }');
                   },
-
                 ),
               ),
 

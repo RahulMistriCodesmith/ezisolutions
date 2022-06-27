@@ -100,6 +100,7 @@ class _HomePageState extends State<HomePage> {
                                       SizedBox(height: 10),
 
                                       Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 5),
                                         padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
                                         decoration: BoxDecoration(
                                           color: Colors.white,
@@ -137,6 +138,7 @@ class _HomePageState extends State<HomePage> {
                                       SizedBox(height: 10),
 
                                       Container(
+                                        margin: EdgeInsets.symmetric(horizontal: 5),
                                         padding: EdgeInsets.only(left: 15,right: 15,top: 8,bottom: 8),
                                         decoration: BoxDecoration(
                                             color: Colors.white,
@@ -147,13 +149,13 @@ class _HomePageState extends State<HomePage> {
                                           children: [
                                             Icon(Icons.location_on_outlined,size: 35,color: Appcolors.greenlight,),
 
-                                            SizedBox(width: 10,),
+                                            SizedBox(),
 
                                             Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
 
-                                                Text('Home',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                                Text('Office',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                   fontSize: 18,fontWeight: FontWeight.w600,
                                                 ),),
 
@@ -176,11 +178,11 @@ class _HomePageState extends State<HomePage> {
                                       Row(
                                         children: [
 
-                                          SizedBox(),
+                                          SizedBox(width: width*0.05),
 
                                           Image.asset('assest/Iocns/addicon1.png',scale: 3,),
 
-                                          SizedBox(width: 5,),
+                                          SizedBox(width: width*0.02),
 
                                           Text('Add new Address',style: Textstyle2Light18.appbartextstyle.copyWith(
                                             fontSize: 18,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
@@ -351,6 +353,9 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       }),
+
+                  SizedBox(height: 10,),
+
                 ],
               ),
               decoration: BoxDecoration(

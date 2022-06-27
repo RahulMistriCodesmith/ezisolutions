@@ -31,7 +31,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
 
   var errorController;
 
-  var textEditingController;
+  // var textEditingController;
 
 
   @override
@@ -408,7 +408,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
 
                 enableActiveFill: true,
                 errorAnimationController: errorController,
-                controller: textEditingController,
+                // controller: textEditingController,
                 onCompleted: (v) {
                   print("Completed");
                 },
@@ -967,7 +967,7 @@ class _MainLoginPage2State extends State<MainLoginPage2> {
 
                                                                   enableActiveFill: true,
                                                                   errorAnimationController: errorController,
-                                                                  controller: textEditingController,
+                                                                  // controller: textEditingController,
                                                                   onCompleted: (v) {
                                                                     print("Completed");
                                                                   },
