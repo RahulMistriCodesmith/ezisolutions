@@ -50,7 +50,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
   String _validatePinCode(String pinCode) {
     if (pinCode.isNotEmpty && pinCode.length == 6) {
       if (pinCode != _validPinCode) {
-        _pinCodeController.clear(); //! This is not working and causes error.
+        // _pinCodeController.clear(); //! This is not working and causes error.
         _errorController.add(ErrorAnimationType.shake);
         return 'Mismatch';
       }
@@ -184,7 +184,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                 Center(
                   child: Text('Welcome back!',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontSize: 38,fontWeight: FontWeight.w600
+                      fontSize: 33,fontWeight: FontWeight.w600
                   ),),
                 ),
 
@@ -193,7 +193,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: Text('Login To Your Account',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontSize: 20,fontWeight: FontWeight.w600
+                      fontSize: 17,fontWeight: FontWeight.w600
                   ),),
                 ),
 
@@ -204,6 +204,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                   child: Row(
                     children: [
                       Container(
+
                         padding: EdgeInsets.symmetric(vertical: 3),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
@@ -591,7 +592,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                                                                       child: PinCodeTextField(
                                                                         appContext: context,
-                                                                        autoDisposeControllers: true,
+                                                                        autoDisposeControllers: false,
                                                                         length: 4,
                                                                         obscureText: true,
                                                                         keyboardType: TextInputType.number,
