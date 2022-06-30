@@ -11,10 +11,8 @@ import 'package:ezisolutions/UI/Home/location/mylocation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:slider_button/slider_button.dart';
-import 'package:swipeable_button_view/swipeable_button_view.dart';
 class MainLoginPage extends StatefulWidget {
   const MainLoginPage({Key key, this.title, this.viewInsets, }) : super(key: key);
 
@@ -105,7 +103,6 @@ class _MainLoginPageState extends State<MainLoginPage> {
   TextEditingController contact2 = TextEditingController();
   File imageFile;
 
-  int _activeCurrentStep = 0;
   var width;
   var height;
 
@@ -203,8 +200,13 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
+                                  height: 58,
+                                  width: 58,
+                                  decoration: BoxDecoration(
+                                    color: Appcolors.green1,
+                                    borderRadius: BorderRadius.circular(60),
+                                    border: Border.all(color: Appcolors.greenlight, width: 2),
+                                  ),
                                   child: Center(
                                     child: Text('1',style: Textstyle2Light18.appbartextstyle.copyWith(
                                         color: Appcolors.greenlight
@@ -212,15 +214,10 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                       textAlign: TextAlign.center,
                                     ),
                                   ),
-                                  decoration: BoxDecoration(
-                                    color: Appcolors.green1,
-                                    borderRadius: BorderRadius.circular(60),
-                                    border: Border.all(color: Appcolors.greenlight, width: 2),
-                                  ),
                                 ),
                                 Text("Users \n Details",
                                     style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 10,fontWeight: FontWeight.w300
+                                        fontSize: 11,fontWeight: FontWeight.w300
                                     ),textAlign: TextAlign.center),
                               ],
                             ),
@@ -239,8 +236,14 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                               children: [
                                 Container(
-                                  height: 40,
-                                  width: 40,
+                                  height: 58,
+                                  width: 58,
+                                  decoration:
+                                  BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(60),
+                                    border: Border.all(color: Appcolors.greenlight, width: 2),
+                                  ),
                                   child: Center(
                                     child: Text('2', style: Textstyle2Light18.appbartextstyle.copyWith(
                                         color: Colors.black
@@ -248,15 +251,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                       textAlign: TextAlign.center,
                                     ),
                                   ),
-                                  decoration:
-                                  BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(60),
-                                    border: Border.all(color: Appcolors.greenlight, width: 2),
-                                  ),
                                 ),
                                 Text("Mobile No\n Verification",style: Textstyle2Light18.appbartextstyle.copyWith(
-                                    fontSize: 10,fontWeight: FontWeight.w300
+                                    fontSize: 11,fontWeight: FontWeight.w300
                                 ),
                                     textAlign: TextAlign.center),
                               ],
@@ -572,8 +569,13 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                                                           children: [
                                                             Container(
-                                                              height: 40,
-                                                              width: 40,
+                                                              height: 55,
+                                                              width: 55,
+                                                              decoration: BoxDecoration(
+                                                                color: Appcolors.green1,
+                                                                borderRadius: BorderRadius.circular(60),
+                                                                border: Border.all(color: Appcolors.greenlight, width: 2),
+                                                              ),
                                                               child: Center(
                                                                 child: Text('1',style: Textstyle2Light18.appbartextstyle.copyWith(
                                                                     color: Appcolors.greenlight
@@ -581,15 +583,10 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                   textAlign: TextAlign.center,
                                                                 ),
                                                               ),
-                                                              decoration: BoxDecoration(
-                                                                color: Appcolors.green1,
-                                                                borderRadius: BorderRadius.circular(60),
-                                                                border: Border.all(color: Appcolors.greenlight, width: 2),
-                                                              ),
                                                             ),
                                                             Text("Users \n Details",
                                                                 style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                    fontSize: 10,fontWeight: FontWeight.w300
+                                                                    fontSize: 11,fontWeight: FontWeight.w300
                                                                 ),textAlign: TextAlign.center),
                                                           ],
                                                         ),
@@ -608,8 +605,14 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                                                           children: [
                                                             Container(
-                                                              height: 40,
-                                                              width: 40,
+                                                              height: 55,
+                                                              width: 55,
+                                                              decoration:
+                                                              BoxDecoration(
+                                                                color: Appcolors.green1,
+                                                                borderRadius: BorderRadius.circular(60),
+                                                                border: Border.all(color: Appcolors.greenlight, width: 2),
+                                                              ),
                                                               child: Center(
                                                                 child: Text('2', style: Textstyle2Light18.appbartextstyle.copyWith(
                                                                     color: Appcolors.greenlight
@@ -617,15 +620,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                   textAlign: TextAlign.center,
                                                                 ),
                                                               ),
-                                                              decoration:
-                                                              BoxDecoration(
-                                                                color: Appcolors.green1,
-                                                                borderRadius: BorderRadius.circular(60),
-                                                                border: Border.all(color: Appcolors.greenlight, width: 2),
-                                                              ),
                                                             ),
                                                             Text("Mobile No\n Verification",style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                fontSize: 10,fontWeight: FontWeight.w300
+                                                                fontSize: 11,fontWeight: FontWeight.w300
                                                             ),
                                                                 textAlign: TextAlign.center),
                                                           ],
@@ -954,7 +951,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                             ),
                                                                           ),
                                                                     );
-                                                                  };
+                                                                  }
 
 
                                                                 },
@@ -1003,7 +1000,6 @@ class _MainLoginPageState extends State<MainLoginPage> {
       },
     );
   }
-
 
   registrationsheeet(){
     showModalBottomSheet(
@@ -2228,8 +2224,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                       action: () {
                         if(_forMKey.currentState.validate()) {
-                          if (contact.text == "1234567890" &&
-                              password.text == "1234") {
+                          if (contact.text == "1234567890" && password.text == "1234") {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => MyLocation()));
                           }
                           else {
@@ -2486,7 +2481,8 @@ class _MainLoginPageState extends State<MainLoginPage> {
                             color: Colors.grey,
                             offset: const Offset(
                               0.0,
-                              0.5,),
+                              2.0,
+                            ),
                             blurRadius: 10.0,
                             spreadRadius: 0.5,
                           ),
@@ -2498,7 +2494,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                   ],
                 ),
 
-                SizedBox(height: 30,),
+                SizedBox(height: 30),
 
                 Center(
                   child: Container(
