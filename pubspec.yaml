@@ -49,6 +49,7 @@ dependencies:
   flutter_switch: ^0.3.2
   country_code_picker: ^2.0.2
   carousel_slider: ^4.0.0
+  slidable_button: ^2.0.0
 
 dev_dependencies:
   flutter_test:
