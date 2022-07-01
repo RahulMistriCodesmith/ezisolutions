@@ -69,7 +69,7 @@ class Inputdec3 {
       // focusColor: Colors.white,
 
 
-    hintStyle: Textstyle2Light18.appbartextstyle.copyWith(
+    labelStyle: Textstyle2Light18.appbartextstyle.copyWith(
         fontSize: 18,color: Colors.grey,fontWeight: FontWeight.w600),
     /* prefixIcon: Padding(
       padding: EdgeInsets.all(14.0),

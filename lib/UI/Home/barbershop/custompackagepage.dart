@@ -59,7 +59,7 @@ class _CustomPackagePageState extends State<CustomPackagePage> {
     }
 
     return Scaffold(
-      backgroundColor: Appcolors.background,
+      // backgroundColor: Appcolors.background,
       appBar: AppBar(
         backgroundColor: Appcolors.greenlight,
         elevation: 0,

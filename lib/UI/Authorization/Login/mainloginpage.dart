@@ -86,7 +86,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
   bool status = true;
 
   bool isSwitched = false;
-  bool _isObscure = true;
+  bool _isObscure = false;
+  bool _isObscure1 = false;
+  bool _isObscure2 = false;
   bool isFinished = false;
   var selectedval = 'slide1';
 
@@ -94,6 +96,8 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
+  TextEditingController password1 = TextEditingController();
+  TextEditingController password2 = TextEditingController();
   TextEditingController name = TextEditingController();
   TextEditingController pass = TextEditingController();
   TextEditingController address = TextEditingController();
@@ -105,6 +109,114 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
   var width;
   var height;
+
+  verificationdilog(){
+    return showDialog(
+
+      context: context,
+
+      builder: (ctx) =>
+
+          Dialog(
+
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+              height: height * 0.4,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Verification Fail!',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontSize: 20,fontWeight: FontWeight.w600
+                      ),),
+
+                      Expanded(child: SizedBox()),
+
+                      Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                          color: Appcolors.red,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Icon(Icons.clear,color: Colors.white,size: 12,),
+                      ),
+
+                      // SizedBox(width: width*0.01,),
+
+                      InkWell(
+
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+
+                        child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
+                            fontSize: 12,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
+                        ),),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: height*0.04,),
+
+                  Image.asset('assest/Image/failicon.png',
+                    scale: 5,),
+
+                  SizedBox(height: height*0.03,),
+
+                  Text(
+                    'Your OTP  Code have expired/Invalid!',
+                    style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15,
+                    ),),
+
+                  SizedBox(height: height*0.03,),
+
+                  GestureDetector(
+
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+
+                    child: Container(
+                      width: width,
+                      padding: EdgeInsets.symmetric(vertical: 6),
+                      decoration: BoxDecoration(
+                        color: Appcolors.green1,
+                        border: Border.all(
+                            color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(
+                            15),
+                      ),
+                      child: Center(
+                        child: FittedBox(
+                          fit: BoxFit.contain,
+                          child: Text('Try again',
+                            style: Textstyle2Light18
+                                .appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 25,
+                            ),
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.visible,
+                            maxLines: 1,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+
+                ],
+              ),
+            ),
+          ),
+    );
+  }
 
 
   getyouanaccount(){
@@ -416,7 +528,6 @@ class _MainLoginPageState extends State<MainLoginPage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: Container(
-
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
@@ -431,17 +542,18 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                 }
                                 return null;
                               },
-                              obscureText: _isObscure,
+                              obscureText: _isObscure1,
+                              controller: password1,
                               decoration: Inputdec1.inputDecoration.copyWith(
                                 fillColor: Colors.white,
                                 hintText: 'Password*',
                                 suffixIcon: IconButton(
                                   icon: Icon(
-                                    _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
+                                    _isObscure1 ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
                                   ),
                                   onPressed: () {
                                     setState(() {
-                                      _isObscure = !_isObscure;
+                                      _isObscure1 = !_isObscure1;
                                     });
                                   },
                                 ),
@@ -471,17 +583,18 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                 }
                                 return null;
                               },
-                              obscureText: _isObscure,
+                              obscureText: _isObscure2,
+                              controller: password2,
                               decoration: Inputdec1.inputDecoration.copyWith(
                                 fillColor: Colors.white,
                                 hintText: 'Re-type password*',
                                 suffixIcon: IconButton(
                                   icon: Icon(
-                                    _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
+                                    _isObscure2 ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Colors.black,
                                   ),
                                   onPressed: () {
                                     setState(() {
-                                      _isObscure = !_isObscure;
+                                      _isObscure2 = !_isObscure2;
                                     });
                                   },
                                 ),
@@ -856,101 +969,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                     );
                                                                   }
                                                                   else {
-                                                                    return showDialog(
-                                                                      context: context,
-                                                                      builder: (ctx) =>
-                                                                          Dialog(
-                                                                            child: Container(
-                                                                              margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                                                                              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                                                                              height: height * 0.4,
-                                                                              child: Column(
-                                                                                crossAxisAlignment: CrossAxisAlignment
-                                                                                    .center,
-                                                                                children: [
-                                                                                  Row(
-                                                                                    children: [
-                                                                                      Text('Verification Fail!',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                          fontSize: 20,fontWeight: FontWeight.w600
-                                                                                      ),),
-
-                                                                                      Expanded(child: SizedBox()),
-
-                                                                                      Container(
-                                                                                        width: 10,
-                                                                                        height: 10,
-                                                                                        decoration: BoxDecoration(
-                                                                                          color: Appcolors.red,
-                                                                                          borderRadius: BorderRadius.circular(50),
-                                                                                        ),
-                                                                                        child: Icon(Icons.clear,color: Colors.white,size: 10,),
-                                                                                      ),
-                                                                                      InkWell(
-
-                                                                                        onTap: (){
-                                                                                          Navigator.pop(context);
-                                                                                        },
-
-                                                                                        child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                            fontSize: 10,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                                                                        ),),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
-
-                                                                                  Expanded(child: SizedBox()),
-
-                                                                                  Image.asset('assest/Image/failicon.png',
-                                                                                    scale: 5,),
-
-                                                                                  Expanded(child: SizedBox()),
-
-                                                                                  Text(
-                                                                                    'Your OTP  Code have expired/Invalid!',
-                                                                                    style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                      fontWeight: FontWeight.w400,
-                                                                                      fontSize: 15,
-                                                                                    ),),
-
-                                                                                  Expanded(child: SizedBox()),
-
-                                                                                  GestureDetector(
-
-                                                                                    onTap: (){
-                                                                                      Navigator.pop(context);
-                                                                                    },
-
-                                                                                    child: Container(
-                                                                                      width: width,
-                                                                                      padding: EdgeInsets.symmetric(vertical: 6),
-                                                                                      decoration: BoxDecoration(
-                                                                                        color: Appcolors.green1,
-                                                                                        border: Border.all(
-                                                                                            color: Appcolors.greenlight),
-                                                                                        borderRadius: BorderRadius.circular(
-                                                                                            15),
-                                                                                      ),
-                                                                                      child: Expanded(
-                                                                                        child: Center(
-                                                                                          child: Text('Try again',
-                                                                                            style: Textstyle2Light18
-                                                                                                .appbartextstyle.copyWith(
-                                                                                              fontWeight: FontWeight.w600,
-                                                                                              fontSize: 25,
-                                                                                            ),
-                                                                                            textAlign: TextAlign.justify,
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-
-
-                                                                                ],
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                    );
+                                                                    return verificationdilog();
                                                                   }
 
 
@@ -1116,22 +1135,29 @@ class _MainLoginPageState extends State<MainLoginPage> {
 
                             Expanded(
 
-                              child: Column(
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(color: Appcolors.greenlight),
+                              child: GestureDetector(
+
+                                onTap: (){
+                                  getyouanaccount();
+                                },
+
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Appcolors.greenlight),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
+                                        child: Image.asset('assest/Iocns/partnericon.png',scale: 4,),
+                                      ),
                                     ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 5,bottom: 5,left: 10,right: 10),
-                                      child: Image.asset('assest/Iocns/partnericon.png',scale: 4,),
-                                    ),
-                                  ),
-                                  SizedBox(height: 10,),
-                                  Text('Partners',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                      fontSize: 20,fontWeight: FontWeight.w600
-                                  ),),
-                                ],
+                                    SizedBox(height: 10,),
+                                    Text('Partners',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontSize: 20,fontWeight: FontWeight.w600
+                                    ),),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -1169,7 +1195,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
      width = MediaQuery.of(context).size.width;
      height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       key: _scaffoldkey,
       appBar: AppBar(
         backgroundColor: Appcolors.greenlight,
@@ -1302,7 +1328,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                               fillColor: Colors.white,
                               errorStyle: TextStyle(height: 0),
                               contentPadding: EdgeInsets.all(18),
-                              hintText: 'Contact no',
+                              labelText: 'Contact no',
                             ),
                           ),
                         ),
@@ -1332,10 +1358,11 @@ class _MainLoginPageState extends State<MainLoginPage> {
                       controller: password,
                       cursorHeight: 18,
                       decoration: Inputdec3.inputDecoration.copyWith(
+
                         fillColor: Colors.white,
                         contentPadding: EdgeInsets.all(18),
                         errorStyle: TextStyle(height: 0),
-                        hintText: 'Password',
+                        labelText: 'Password',
                         suffixIcon: IconButton(
                           icon: Icon(
                             _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,color: Appcolors.greenlight,
@@ -2030,104 +2057,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                                                                   );
                                                                                 }
                                                                                 else {
-                                                                                  return showDialog(
-                                                                                    context: context,
-                                                                                    builder: (ctx) =>
-                                                                                        Dialog(
-                                                                                          child: Container(
-                                                                                            margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                                                                                            padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                                                                                            height: height * 0.4,
-                                                                                            child: Column(
-                                                                                              crossAxisAlignment: CrossAxisAlignment
-                                                                                                  .center,
-                                                                                              children: [
-                                                                                                Row(
-                                                                                                  children: [
-                                                                                                    Text('Verification Fail!',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                        fontSize: 20,fontWeight: FontWeight.w600
-                                                                                                    ),),
-
-                                                                                                    Expanded(child: SizedBox()),
-
-                                                                                                    Container(
-                                                                                                      width: 12,
-                                                                                                      height: 12,
-                                                                                                      decoration: BoxDecoration(
-                                                                                                        color: Appcolors.red,
-                                                                                                        borderRadius: BorderRadius.circular(50),
-                                                                                                      ),
-                                                                                                      child: Icon(Icons.clear,color: Colors.white,size: 12,),
-                                                                                                    ),
-
-                                                                                                    SizedBox(width: width*0.01,),
-
-                                                                                                    InkWell(
-
-                                                                                                      onTap: (){
-                                                                                                        Navigator.pop(context);
-                                                                                                      },
-
-                                                                                                      child: Text('Close',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                          fontSize: 12,fontWeight: FontWeight.w600,decoration: TextDecoration.underline,color: Appcolors.greenlight
-                                                                                                      ),),
-                                                                                                    ),
-                                                                                                  ],
-                                                                                                ),
-
-                                                                                                Expanded(child: SizedBox()),
-
-                                                                                                Image.asset('assest/Image/failicon.png',
-                                                                                                  scale: 5,),
-
-                                                                                                Expanded(child: SizedBox()),
-
-                                                                                                Text(
-                                                                                                  'Your OTP  Code have expired/Invalid!',
-                                                                                                  style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                                                                    fontWeight: FontWeight.w400,
-                                                                                                    fontSize: 15,
-                                                                                                  ),),
-
-                                                                                                Expanded(child: SizedBox()),
-
-                                                                                                GestureDetector(
-
-                                                                                                  onTap: (){
-                                                                                                    Navigator.pop(context);
-                                                                                                  },
-
-                                                                                                  child: Container(
-                                                                                                    width: width,
-                                                                                                    padding: EdgeInsets.symmetric(vertical: 6),
-                                                                                                    decoration: BoxDecoration(
-                                                                                                      color: Appcolors.green1,
-                                                                                                      border: Border.all(
-                                                                                                          color: Appcolors.greenlight),
-                                                                                                      borderRadius: BorderRadius.circular(
-                                                                                                          15),
-                                                                                                    ),
-                                                                                                    child: Expanded(
-                                                                                                      child: Center(
-                                                                                                        child: Text('Try again',
-                                                                                                          style: Textstyle2Light18
-                                                                                                              .appbartextstyle.copyWith(
-                                                                                                            fontWeight: FontWeight.w600,
-                                                                                                            fontSize: 25,
-                                                                                                          ),
-                                                                                                          textAlign: TextAlign.justify,
-                                                                                                        ),
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                  ),
-                                                                                                ),
-
-
-                                                                                              ],
-                                                                                            ),
-                                                                                          ),
-                                                                                        ),
-                                                                                  );
+                                                                                 verificationdilog();
                                                                                 }
 
 

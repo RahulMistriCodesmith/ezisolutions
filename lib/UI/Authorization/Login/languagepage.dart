@@ -15,7 +15,7 @@ class _LanguagePageState extends State<LanguagePage> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -43,7 +43,7 @@ class _LanguagePageState extends State<LanguagePage> {
               ),
 
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -62,7 +62,7 @@ class _LanguagePageState extends State<LanguagePage> {
                           color: Appcolors.green1.withOpacity(0.5),
                         ),
                         child: Text('ENG',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontSize: 55,fontWeight: FontWeight.w600
+                            fontSize: 45,fontWeight: FontWeight.w600
                         ),),
                       ),
                     ),
@@ -77,7 +77,7 @@ class _LanguagePageState extends State<LanguagePage> {
                         color: Colors.white,
                       ),
                       child: Text('BM',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 55,fontWeight: FontWeight.w600
+                          fontSize: 45,fontWeight: FontWeight.w600
                       ),),
                     ),
 

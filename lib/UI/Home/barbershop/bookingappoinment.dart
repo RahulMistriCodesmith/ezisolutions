@@ -1538,7 +1538,7 @@ class _BookingAppoinmentState extends State<BookingAppoinment> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Appcolors.background,
+      // backgroundColor: Appcolors.background,
       appBar: AppBar(
         backgroundColor: Appcolors.greenlight,
         elevation: 0,

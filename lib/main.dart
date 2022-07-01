@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       title: '1234567890',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        backgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,

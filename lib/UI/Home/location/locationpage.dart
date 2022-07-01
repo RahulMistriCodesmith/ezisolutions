@@ -52,90 +52,77 @@ class _LocationPageState extends State<LocationPage> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Appcolors.background,
+      // backgroundColor: Appcolors.background,
       appBar: AppBar(
         backgroundColor: Appcolors.greenlight,
         elevation: 0,
         toolbarHeight: 5,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          height: height,
-          width: width,
-          child: Stack(
-              children: [
+      body: Container(
+        height: height,
+        width: width,
+        child: Stack(
+            children: [
 
-                GoogleMap(
-                    onMapCreated: _onMapCreated,
-                    initialCameraPosition: CameraPosition(
-                      target: _center,
-                      zoom: 10.0,
-                    ),
-                    markers: _markers,
-                    onCameraMove: _onCameraMove
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.all(14.0),
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: FloatingActionButton(
-                      onPressed: _onAddMarkerButtonPressed,
-                      materialTapTargetSize: MaterialTapTargetSize.padded,
-                      backgroundColor: Colors.green,
-                      child: const Icon(Icons.map, size: 30.0),
-                    ),
+              GoogleMap(
+                  onMapCreated: _onMapCreated,
+                  initialCameraPosition: CameraPosition(
+                    target: _center,
+                    zoom: 10.0,
                   ),
+                  markers: _markers,
+                  onCameraMove: _onCameraMove
+              ),
+
+
+
+              Positioned(
+                top: 70,
+                left: 15,
+                right: 15,
+                child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    margin: EdgeInsets.symmetric(horizontal: 13),
+                    child: placesAutoCompleteTextField(),
+
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: Colors.white,
+                      border: Border.all(
+                          color: Appcolors.greenlight, width: 2),
+                    )
                 ),
+              ),
+              Positioned(
+                bottom: 40,
+                left: 20,
+                right: 20,
+                child: GestureDetector(
 
-                Positioned(
-                  top: 70,
-                  left: 15,
-                  right: 15,
-                  child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 12),
-                      margin: EdgeInsets.symmetric(horizontal: 13),
-                      child: placesAutoCompleteTextField(),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigationBarPage()));
+                  },
 
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 32,right: 32,bottom: 20),
+                    child: Container(
+                      width: width*0.8,
+                      height: 50,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: Colors.white,
-                        border: Border.all(
-                            color: Appcolors.greenlight, width: 2),
-                      )
-                  ),
-                ),
-                Positioned(
-                  bottom: 40,
-                  left: 20,
-                  right: 20,
-                  child: GestureDetector(
-
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigationBarPage()));
-                    },
-
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 32,right: 32),
-                      child: Container(
-                        width: width*0.8,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Appcolors.green1,
-                          border: Border.all(color: Appcolors.greenlight),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text('Select my location',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontSize: 20,fontWeight: FontWeight.w600,
-                          ),),
-                        ),
+                        color: Appcolors.green1,
+                        border: Border.all(color: Appcolors.greenlight),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text('Select my location',style: Textstyle2Light18.appbartextstyle.copyWith(
+                          fontSize: 20,fontWeight: FontWeight.w600,
+                        ),),
                       ),
                     ),
                   ),
-                )
-              ]
-          ),
+                ),
+              )
+            ]
         ),
       ),
     );
@@ -154,7 +141,7 @@ class _LocationPageState extends State<LocationPage> {
           ),
         ),
         debounceTime: 800,
-        isLatLngRequired: true,
+        isLatLngRequired: false,
         getPlaceDetailWithLatLng: (Prediction prediction) {
           print("placeDetails" + prediction.lng.toString());
         },

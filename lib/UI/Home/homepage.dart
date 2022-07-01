@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Appcolors.background,
+      // backgroundColor: Appcolors.background,
       appBar: AppBar(
         backgroundColor: Appcolors.greenlight,
         elevation: 0,
@@ -380,6 +380,7 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset('assest/Iocns/partericon1.png',scale: 3),
+                        SizedBox(width: 5,),
                         Text('Saved Partners',style: Textstyle2Light18.appbartextstyle.copyWith(
                           fontSize: 20,fontWeight: FontWeight.w600,
                         ),),
@@ -398,7 +399,7 @@ class _HomePageState extends State<HomePage> {
                  SingleChildScrollView(
                    scrollDirection: Axis.horizontal,
                    child: Padding(
-                     padding: const EdgeInsets.only(left: 20),
+                     padding: const EdgeInsets.only(left: 20,right: 20),
                      child: Row(
                        children: [
                          Container(
@@ -602,6 +603,7 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset('assest/Image/eziansimage.png',scale: 3),
+                        SizedBox(width: 5,),
                         Text('Saved EZians',style: Textstyle2Light18.appbartextstyle.copyWith(
                           fontSize: 20,fontWeight: FontWeight.w600,
                         ),),
@@ -620,7 +622,7 @@ class _HomePageState extends State<HomePage> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
+                      padding: const EdgeInsets.only(left: 20,right: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -824,6 +826,7 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           children: [
                             Image.asset('assest/Image/voiceimage.png',scale: 4),
+                            SizedBox(width: 5,),
                             Text('The People Voice Matters',style: Textstyle2Light18.appbartextstyle.copyWith(
                               fontSize: 20,fontWeight: FontWeight.w600,
                             ),),
@@ -831,7 +834,7 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 20,top: 2,bottom: 20),
+                          padding: const EdgeInsets.only(left: 20,top: 3,bottom: 20),
                           child: Text('At EZi we take every feedback into consideration so that we can enhance and improve our service for you! So don’t hold back, we are listening.',style: Textstyle2Light18.appbartextstyle.copyWith(
                             fontSize: 12,fontWeight: FontWeight.w400,
                           ),),
@@ -843,7 +846,7 @@ class _HomePageState extends State<HomePage> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
+                      padding: const EdgeInsets.only(left: 20,right: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

@@ -52,6 +52,8 @@ dependencies:
   slidable_button: ^2.0.0
   page_transition: ^2.0.5
   swipeable_button_view: ^0.0.2
+  timelines: ^0.1.0
+  flutter_custom_clippers: ^2.0.0
 
 dev_dependencies:
   flutter_test:

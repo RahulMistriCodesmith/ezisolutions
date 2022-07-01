@@ -5,6 +5,7 @@ import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:ezisolutions/UI/QRCodes/amountpay.dart';
 import 'package:ezisolutions/UI/QRCodes/qrcodes1.dart';
 import 'package:flutter/material.dart';
+import 'package:timelines/timelines.dart';
 class QRCodes extends StatefulWidget {
   const QRCodes({Key key}) : super(key: key);
 
@@ -21,7 +22,7 @@ class _QRCodesState extends State<QRCodes> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Appcolors.background,
+      // backgroundColor: Appcolors.background,
       appBar: AppBar(
         backgroundColor: Appcolors.greenlight,
         elevation: 0,
@@ -88,6 +89,7 @@ class _QRCodesState extends State<QRCodes> {
                 ),
               ),
             ),
+
 
             Stack(
               children: [
