@@ -7,7 +7,7 @@ import 'package:ezisolutions/UI/Home/barbershop/custompackagepage.dart';
 import 'package:ezisolutions/UI/Home/barbershop/tipping.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_share/flutter_share.dart';
+// import 'package:flutter_share/flutter_share.dart';
 class PartnerProfilePage extends StatefulWidget {
   const PartnerProfilePage({Key key}) : super(key: key);
 
@@ -20,7 +20,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
   var selectedval = "services";
   bool jobtype = false;
 
-  Future<void> share() async {
+ /* Future<void> share() async {
     await FlutterShare.share(
         title: 'Example share',
         text: 'Example share text',
@@ -37,7 +37,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
       text: 'Example share text',
       filePath: result.files[0] as String,
     );
-  }
+  }*/
 
 
   @override
@@ -1057,7 +1057,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                   InkWell(
 
                                                     onTap: (){
-                                                      share();
+                                                      // share();
                                                     },
 
                                                     child: Image.asset(
