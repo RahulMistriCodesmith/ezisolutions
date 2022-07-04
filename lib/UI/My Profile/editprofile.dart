@@ -506,48 +506,47 @@ class _EditProfileState extends State<EditProfile> {
                   builder: (ctx) => Dialog(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 15,top: 10,right: 15,bottom: 15),
-                      child: Container(
-                        width: width*0.2,
-                        height: height*0.5,
+                      child: Container(width: width*0.5,
+                        height: height*0.61,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Delete My Account!',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w600,fontSize: 20,
+                              fontWeight: FontWeight.w600,fontSize: 18,
                             ),),
 
-                            Expanded(child: SizedBox()),
+                            SizedBox(height: 25,),
 
                             Center(
                               child: Image.asset('assest/Image/deleteaccount.png',scale: 5,),
                             ),
 
-                            Expanded(child: SizedBox()),
+                            SizedBox(height: 25,),
 
                             Text('Are you sure you want to delete your account?',style: Textstyle2Light18.appbartextstyle.copyWith(
-                              fontWeight: FontWeight.w400,fontSize: 15,
+                              fontWeight: FontWeight.w400,fontSize: 13,
                             ),),
 
-                            Expanded(child: SizedBox()),
+                            SizedBox(height: 10,),
 
                             RichText(
                               text: TextSpan(
                                 text: 'Note: ',
                                 style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 15,fontWeight: FontWeight.w600,color: Colors.black
+                                        fontSize: 13,fontWeight: FontWeight.w600,color: Colors.black
                                 ),
                                 children: <TextSpan>[
                                   TextSpan(
                                     text: 'All your information will be deleted from our databases after 7 days only. During that period your login credentials will be suspended. There is no way to undo this action once you have done it.',
                                     style: Textstyle2Light18.appbartextstyle.copyWith(
-                                        fontSize: 15,fontWeight: FontWeight.w400,color: Colors.black
+                                        fontSize: 13,fontWeight: FontWeight.w400,color: Colors.black
                                     ),
                                   ),
                                 ],
                               ),
                             ),
 
-                            Expanded(child: SizedBox()),
+                            SizedBox(height: 25,),
 
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -776,6 +775,8 @@ class _EditProfileState extends State<EditProfile> {
                                 ),
                               ],
                             ),
+
+                            SizedBox(height: 15,),
 
                           ],
                         ),

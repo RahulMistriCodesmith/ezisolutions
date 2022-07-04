@@ -1,5 +1,6 @@
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
+import 'package:ezisolutions/UI/Authorization/Login/mainloginpage.dart';
 import 'package:ezisolutions/UI/My%20Profile/address.dart';
 import 'package:ezisolutions/UI/My%20Profile/contact_us.dart';
 import 'package:ezisolutions/UI/My%20Profile/editprofile.dart';
@@ -42,7 +43,7 @@ class _MyProfileState extends State<MyProfile> {
                         onTap: (){
                           Navigator.pop(context);
                         },
-                        child: Icon(Icons.arrow_back,size: 35,)),
+                        child: Icon(Icons.arrow_back,size: 30,)),
 
                     SizedBox(
                       width: width*0.3,
@@ -58,6 +59,7 @@ class _MyProfileState extends State<MyProfile> {
             ),
 
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 3),
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -82,17 +84,17 @@ class _MyProfileState extends State<MyProfile> {
                      crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
                        Text('Member Details',style: Textstyle2Light18.appbartextstyle.copyWith(
-                           fontWeight: FontWeight.w600,fontSize: 20
+                           fontWeight: FontWeight.w600,fontSize: 18
                        ),),
 
                        SizedBox(height: 10),
 
                        Text('John Smith',style: Textstyle2Light18.appbartextstyle.copyWith(
-                           fontWeight: FontWeight.w400,fontSize: 15
+                           fontWeight: FontWeight.w400,fontSize: 13
                        ),),
 
                        Text('+60 12-3334444',style: Textstyle2Light18.appbartextstyle.copyWith(
-                           fontWeight: FontWeight.w400,fontSize: 15
+                           fontWeight: FontWeight.w400,fontSize: 13
                        ),),
                      ],
                    ),
@@ -127,17 +129,17 @@ class _MyProfileState extends State<MyProfile> {
                 ),
                 child: Row(
                   children: [
-                    ImageIcon(AssetImage('assest/Iocns/locationicon.png'),size: 35,color: Appcolors.greenlight,),
+                    ImageIcon(AssetImage('assest/Iocns/locationicon.png'),size: 30,color: Appcolors.greenlight,),
 
                     SizedBox(width: width*0.02,),
 
                     Text('Saved Addresses',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w400,fontSize: 20
+                        fontWeight: FontWeight.w400,fontSize: 18
                     ),),
 
                     Expanded(child: SizedBox()),
 
-                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 18),
 
                   ],
                 ),
@@ -166,12 +168,12 @@ class _MyProfileState extends State<MyProfile> {
                     SizedBox(width: width*0.02,),
 
                     Text('Save Cards',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w400,fontSize: 20
+                        fontWeight: FontWeight.w400,fontSize: 18
                     ),),
 
                     Expanded(child: SizedBox()),
 
-                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 18),
 
                   ],
                 ),
@@ -195,17 +197,17 @@ class _MyProfileState extends State<MyProfile> {
                 ),
                 child: Row(
                   children: [
-                    ImageIcon(AssetImage('assest/Iocns/contacticon.png'),size: 35,color: Appcolors.greenlight,),
+                    ImageIcon(AssetImage('assest/Iocns/contacticon.png'),size: 30,color: Appcolors.greenlight,),
 
                     SizedBox(width: width*0.02,),
 
                     Text('Contact Us',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w400,fontSize: 20
+                        fontWeight: FontWeight.w400,fontSize: 18
                     ),),
 
                     Expanded(child: SizedBox()),
 
-                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 18),
 
                   ],
                 ),
@@ -229,17 +231,17 @@ class _MyProfileState extends State<MyProfile> {
                 ),
                 child: Row(
                   children: [
-                    ImageIcon(AssetImage('assest/Iocns/helpicon.png'),size: 35,color: Appcolors.greenlight,),
+                    ImageIcon(AssetImage('assest/Iocns/helpicon.png'),size: 30,color: Appcolors.greenlight,),
 
                     SizedBox(width: width*0.02,),
 
                     Text('Help Center',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w400,fontSize: 20
+                        fontWeight: FontWeight.w400,fontSize: 18
                     ),),
 
                     Expanded(child: SizedBox()),
 
-                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+                    Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 18),
 
                   ],
                 ),
@@ -257,17 +259,17 @@ class _MyProfileState extends State<MyProfile> {
               ),
               child: Row(
                 children: [
-                  ImageIcon(AssetImage('assest/Iocns/conditionicon.png'),size: 35,color: Appcolors.greenlight,),
+                  ImageIcon(AssetImage('assest/Iocns/conditionicon.png'),size: 30,color: Appcolors.greenlight,),
 
                   SizedBox(width: width*0.02,),
 
                   Text('Terms & Condition',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w400,fontSize: 20
+                      fontWeight: FontWeight.w400,fontSize: 18
                   ),),
 
                   Expanded(child: SizedBox()),
 
-                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 18),
 
                 ],
               ),
@@ -284,34 +286,39 @@ class _MyProfileState extends State<MyProfile> {
               ),
               child: Row(
                 children: [
-                  ImageIcon(AssetImage('assest/Iocns/privacyicon.png'),size: 35,color: Appcolors.greenlight,),
+                  ImageIcon(AssetImage('assest/Iocns/privacyicon.png'),size: 30,color: Appcolors.greenlight,),
 
                   SizedBox(width: width*0.02,),
 
                   Text('Privacy Policy',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w400,fontSize: 20
+                      fontWeight: FontWeight.w400,fontSize: 18
                   ),),
 
                   Expanded(child: SizedBox()),
 
-                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 20),
+                  Icon(Icons.arrow_forward_ios_outlined,color: Appcolors.greenlight.withOpacity(0.3),size: 18),
 
                 ],
               ),
             ),
 
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10,vertical: 30),
-              padding: EdgeInsets.symmetric(vertical: 10),
-              decoration: BoxDecoration(
-                border: Border.all(color: Appcolors.greenlight),
-                borderRadius: BorderRadius.circular(5),
-                color: Appcolors.green1
-              ),
-              child: Center(
-                child: Text('LOGOUT',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w600,fontSize: 20,color: Appcolors.greenlight
-                ),),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MainLoginPage()));
+              },
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 10,vertical: 30),
+                padding: EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Appcolors.greenlight),
+                  borderRadius: BorderRadius.circular(5),
+                  color: Appcolors.green1
+                ),
+                child: Center(
+                  child: Text('LOGOUT',style: Textstyle2Light18.appbartextstyle.copyWith(
+                      fontWeight: FontWeight.w600,fontSize: 18,color: Appcolors.greenlight
+                  ),),
+                ),
               ),
             ),
 

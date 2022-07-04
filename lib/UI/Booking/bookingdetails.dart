@@ -555,28 +555,22 @@ class _BookingDetailsState extends State<BookingDetails> {
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Text('Booking Cancellation',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontWeight: FontWeight.w600,fontSize: 20,
+                                                  fontWeight: FontWeight.w600,fontSize: 18,
                                                 ),),
 
                                                 Expanded(child: SizedBox()),
 
                                                 Text('We are sorry that you have to cancel this booking. Let us know why.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                  fontWeight: FontWeight.w400,fontSize: 15,
+                                                  fontWeight: FontWeight.w400,fontSize: 13,
                                                 ),),
 
                                                 Expanded(child: SizedBox()),
 
-                                                Container(
-                                                  decoration: BoxDecoration(
-                                                    border: Border.all(color: Appcolors.greenlight),
-                                                    borderRadius: BorderRadius.circular(10),
-                                                    color: Colors.white
-                                                  ),
-                                                  child: TextField(
-                                                    maxLines: 6,
-                                                    decoration: Inputdec1.inputDecoration.copyWith(
-                                                      hintText: 'Remarks*',
-                                                    ),
+                                                TextField(
+                                                  maxLines: 6,
+                                                  decoration: Inputdec1.inputDecoration.copyWith(
+                                                    hintText: 'Remarks*',
+                                                    fillColor: Colors.white,
                                                   ),
                                                 ),
 
@@ -592,8 +586,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                       },
 
                                                       child: Container(
-                                                        width: width*0.2,
-                                                        height: 50,
+                                                        padding: EdgeInsets.symmetric(horizontal: 25,vertical: 10),
                                                         decoration: BoxDecoration(
                                                           color: Appcolors.green1,
                                                           border: Border.all(color: Appcolors.greenlight),
@@ -601,7 +594,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                         ),
                                                         child: Center(
                                                           child: Text('Back',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                            fontSize: 20,fontWeight: FontWeight.w600,
+                                                            fontSize: 18,fontWeight: FontWeight.w600,
                                                           ),),
                                                         ),
                                                       ),
@@ -677,8 +670,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                       },
 
                                                       child: Container(
-                                                        width: width*0.2,
-                                                        height: 50,
+                                                        padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                                                         decoration: BoxDecoration(
                                                           color: Appcolors.green1,
                                                           border: Border.all(color: Appcolors.greenlight),
@@ -686,7 +678,7 @@ class _BookingDetailsState extends State<BookingDetails> {
                                                         ),
                                                         child: Center(
                                                           child: Text('Submit',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                                            fontSize: 20,fontWeight: FontWeight.w600,
+                                                            fontSize: 18,fontWeight: FontWeight.w600,
                                                           ),),
                                                         ),
                                                       ),

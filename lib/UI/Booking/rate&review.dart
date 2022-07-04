@@ -1,3 +1,5 @@
+// ignore_for_file: void_checks
+
 import 'package:ezisolutions/Commponets/Colors/Colors.dart';
 import 'package:ezisolutions/Commponets/Fonts/Fonts.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +117,7 @@ class _RateReviewState extends State<RateReview> {
                 children: [
                   Container(
                     width: width*0.4,
-                    height: 50,
+                    height: 45,
                     decoration: BoxDecoration(
                       color: Appcolors.green1,
                       border: Border.all(color: Appcolors.greenlight),
@@ -123,7 +125,7 @@ class _RateReviewState extends State<RateReview> {
                     ),
                     child: Center(
                       child: Text('Cancel',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontSize: 25,fontWeight: FontWeight.w600,
+                        fontSize: 20,fontWeight: FontWeight.w600,
                       ),),
                     ),
                   ),
@@ -166,8 +168,8 @@ class _RateReviewState extends State<RateReview> {
                     },
 
                     child: Container(
-                      width: width*0.4,
-                      height: 50,
+                      width: width*0.38,
+                      height: 45,
                       decoration: BoxDecoration(
                         color: Appcolors.green1,
                         border: Border.all(color: Appcolors.greenlight),
@@ -175,7 +177,7 @@ class _RateReviewState extends State<RateReview> {
                       ),
                       child: Center(
                         child: Text('Submit',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 25,fontWeight: FontWeight.w600,
+                          fontSize: 20,fontWeight: FontWeight.w600,
                         ),),
                       ),
                     ),

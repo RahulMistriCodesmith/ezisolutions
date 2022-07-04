@@ -77,8 +77,11 @@ class _ContactUsState extends State<ContactUs> {
                   SizedBox(width: width*0.08,),
 
                   Text('Check us out at Facebook',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
-                  ),),
+                      fontWeight: FontWeight.w600,fontSize: 16
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.justify,
+                  ),
                 ],
               ),
             ),
@@ -100,8 +103,11 @@ class _ContactUsState extends State<ContactUs> {
                   SizedBox(width: width*0.08,),
 
                   Text('Follow our Instagram',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
-                  ),),
+                      fontWeight: FontWeight.w600,fontSize: 16
+                  ),
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.justify,
+                  ),
                 ],
               ),
             ),
@@ -123,7 +129,7 @@ class _ContactUsState extends State<ContactUs> {
 
                   Expanded(
                     child: Text('Be apart of EZi community on Telegram',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w600,fontSize: 18
+                        fontWeight: FontWeight.w600,fontSize: 16
                     ),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
@@ -151,7 +157,7 @@ class _ContactUsState extends State<ContactUs> {
 
                   Expanded(
                     child: Text('Connect with us personally on Whatsapp',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w600,fontSize: 18
+                        fontWeight: FontWeight.w600,fontSize: 16
                     ),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
@@ -174,12 +180,12 @@ class _ContactUsState extends State<ContactUs> {
                 children: [
                   Center(
                     child: Text('Reach out to us  through',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w600,fontSize: 18
+                        fontWeight: FontWeight.w600,fontSize: 16
                     ),),
                   ),
                   Center(
                     child: Text('Contact Us form',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w600,fontSize: 18
+                        fontWeight: FontWeight.w600,fontSize: 16
                     ),),
                   ),
 

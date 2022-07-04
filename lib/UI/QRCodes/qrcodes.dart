@@ -237,19 +237,20 @@ class _QRCodesState extends State<QRCodes> {
 
                         SizedBox(height: 10,),
 
-                        Container(
-                          width: width*0.75,
-                          height: 50,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: Appcolors.greenlight)
-                          ),
-
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: DropdownButtonFormField(
                             decoration: InputDecoration(
-                              border: InputBorder.none,
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(18),
+                                borderSide: BorderSide(width: 5.0,color: Appcolors.greenlight),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(18),
+                                borderSide: BorderSide(color: Appcolors.greenlight),
+                              ),
+                              fillColor: Colors.white,
+                              contentPadding: EdgeInsets.all(15),
                               filled: true,
                             ),
                             value: dropdownValue,

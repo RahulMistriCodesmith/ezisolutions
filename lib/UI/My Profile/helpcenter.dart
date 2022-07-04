@@ -76,7 +76,7 @@ class _HelpCenterState extends State<HelpCenter> {
               child: Row(
                 children: [
                   Text('Your Account',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
+                      fontWeight: FontWeight.w600,fontSize: 16
                   ),),
 
                   Expanded(child: SizedBox()),
@@ -100,7 +100,7 @@ class _HelpCenterState extends State<HelpCenter> {
               child: Row(
                 children: [
                   Text('Your Bookings',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
+                      fontWeight: FontWeight.w600,fontSize: 16
                   ),),
 
                   Expanded(child: SizedBox()),
@@ -123,7 +123,7 @@ class _HelpCenterState extends State<HelpCenter> {
               child: Row(
                 children: [
                   Text('EZi Safety',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
+                      fontWeight: FontWeight.w600,fontSize: 16
                   ),),
 
                   Expanded(child: SizedBox()),
@@ -146,7 +146,7 @@ class _HelpCenterState extends State<HelpCenter> {
               child: Row(
                 children: [
                   Text('Payment',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
+                      fontWeight: FontWeight.w600,fontSize: 16
                   ),),
 
                   Expanded(child: SizedBox()),
@@ -169,7 +169,7 @@ class _HelpCenterState extends State<HelpCenter> {
               child: Row(
                 children: [
                   Text('Pricing',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
+                      fontWeight: FontWeight.w600,fontSize: 16
                   ),),
 
                   Expanded(child: SizedBox()),
@@ -184,7 +184,7 @@ class _HelpCenterState extends State<HelpCenter> {
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Text('Basic Tutorials',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+                  fontWeight: FontWeight.w600,fontSize: 18,decoration: TextDecoration.underline
               ),),
             ),
 
@@ -264,7 +264,7 @@ class _HelpCenterState extends State<HelpCenter> {
             Padding(
               padding: const EdgeInsets.only(left: 15,top: 20,bottom: 20),
               child: Text('Bugs/Future Suggestion',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+                  fontWeight: FontWeight.w600,fontSize: 18,decoration: TextDecoration.underline
               ),),
             ),
 
@@ -279,7 +279,7 @@ class _HelpCenterState extends State<HelpCenter> {
               child: Row(
                 children: [
                   Text('Report a Bug',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
+                      fontWeight: FontWeight.w600,fontSize: 16
                   ),),
 
                   Expanded(child: SizedBox()),
@@ -302,7 +302,7 @@ class _HelpCenterState extends State<HelpCenter> {
               child: Row(
                 children: [
                   Text('Future Suggestion',style: Textstyle2Light18.appbartextstyle.copyWith(
-                      fontWeight: FontWeight.w600,fontSize: 18
+                      fontWeight: FontWeight.w600,fontSize: 16
                   ),),
 
                   Expanded(child: SizedBox()),

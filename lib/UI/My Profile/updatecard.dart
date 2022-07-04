@@ -63,7 +63,7 @@ class _UpdateCardState extends State<UpdateCard> {
             Padding(
               padding: const EdgeInsets.only(left: 20,top: 20),
               child: Text('Card Holder Name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+                  fontWeight: FontWeight.w600,fontSize: 18,decoration: TextDecoration.underline
               ),),
             ),
 
@@ -78,7 +78,7 @@ class _UpdateCardState extends State<UpdateCard> {
               child: Row(
                 children: [
                   Text('John Doe',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w400,fontSize: 15,
+                    fontWeight: FontWeight.w400,fontSize: 13,
                   ),
                   ),
                 ],
@@ -88,7 +88,7 @@ class _UpdateCardState extends State<UpdateCard> {
             Padding(
               padding: const EdgeInsets.only(left: 20,top: 20),
               child: Text('Card Name',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+                  fontWeight: FontWeight.w600,fontSize: 18,decoration: TextDecoration.underline
               ),),
             ),
 
@@ -103,7 +103,7 @@ class _UpdateCardState extends State<UpdateCard> {
               child: Row(
                 children: [
                   Text('Maybank',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w400,fontSize: 15,
+                    fontWeight: FontWeight.w400,fontSize: 13,
                   ),
                   ),
                 ],
@@ -113,7 +113,7 @@ class _UpdateCardState extends State<UpdateCard> {
             Padding(
               padding: const EdgeInsets.only(left: 20,top: 20),
               child: Text('Card Number',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+                  fontWeight: FontWeight.w600,fontSize: 18,decoration: TextDecoration.underline
               ),),
             ),
 
@@ -121,14 +121,14 @@ class _UpdateCardState extends State<UpdateCard> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 20,top: 20,bottom: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 23,vertical: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 18,vertical: 10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: Appcolors.greenlight,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text('1234',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w400,fontSize: 15,
+                    fontWeight: FontWeight.w400,fontSize: 13,
                   ),),
                 ),
 
@@ -136,14 +136,14 @@ class _UpdateCardState extends State<UpdateCard> {
 
                 Container(
                   margin: EdgeInsets.only(bottom: 20,top: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 23,vertical: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 18,vertical: 10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: Appcolors.greenlight,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text('1234',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w400,fontSize: 15,
+                    fontWeight: FontWeight.w400,fontSize: 13,
                   ),),
                 ),
 
@@ -151,14 +151,14 @@ class _UpdateCardState extends State<UpdateCard> {
 
                 Container(
                   margin: EdgeInsets.only(top: 20,bottom: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 23,vertical: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 18,vertical: 10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: Appcolors.greenlight,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text('1234',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w400,fontSize: 15,
+                    fontWeight: FontWeight.w400,fontSize: 13,
                   ),),
                 ),
 
@@ -166,14 +166,14 @@ class _UpdateCardState extends State<UpdateCard> {
 
                 Container(
                   margin: EdgeInsets.only(right: 20,top: 20,bottom: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 23,vertical: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 18,vertical: 10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: Appcolors.greenlight,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text('1234',style: Textstyle2Light18.appbartextstyle.copyWith(
-                    fontWeight: FontWeight.w400,fontSize: 15,
+                    fontWeight: FontWeight.w400,fontSize: 13,
                   ),),
                 ),
 
@@ -190,7 +190,7 @@ class _UpdateCardState extends State<UpdateCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Expiry Date',style: Textstyle2Light18.appbartextstyle.copyWith(
-                        fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+                        fontWeight: FontWeight.w600,fontSize: 18,decoration: TextDecoration.underline
                       ),),
 
                       Container(
@@ -202,7 +202,7 @@ class _UpdateCardState extends State<UpdateCard> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text('10/20',style: Textstyle2Light18.appbartextstyle.copyWith(
-                            fontWeight: FontWeight.w400,fontSize: 15,
+                            fontWeight: FontWeight.w400,fontSize: 13,
                         ),),
                       ),
                     ],
@@ -214,19 +214,19 @@ class _UpdateCardState extends State<UpdateCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('CVV No',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w600,fontSize: 20,decoration: TextDecoration.underline
+                          fontWeight: FontWeight.w600,fontSize: 18,decoration: TextDecoration.underline
                       ),),
 
                       Container(
                         margin: EdgeInsets.only(top: 10),
-                        padding: EdgeInsets.symmetric(horizontal: 45,vertical: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 50,vertical: 10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: Appcolors.greenlight,width: 2),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text('571',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontWeight: FontWeight.w400,fontSize: 15,
+                          fontWeight: FontWeight.w400,fontSize: 13,
                         ),),
                       ),
                     ],
@@ -246,7 +246,7 @@ class _UpdateCardState extends State<UpdateCard> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text('Update Details',style: Textstyle2Light18.appbartextstyle.copyWith(
-                  fontWeight: FontWeight.w600,fontSize: 20,
+                  fontWeight: FontWeight.w600,fontSize: 18,
                 ),),
               ),
             ),

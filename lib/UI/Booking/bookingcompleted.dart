@@ -416,7 +416,7 @@ class _BookingCompletedState extends State<BookingCompleted> {
             SizedBox(height: 20),
 
             Padding(
-              padding: const EdgeInsets.only(left: 32,right: 32),
+              padding: const EdgeInsets.only(left: 27,right: 27),
               child: Row(
                 children: [
                   InkWell(
@@ -426,7 +426,7 @@ class _BookingCompletedState extends State<BookingCompleted> {
                     },
 
                     child: Container(
-                      width: width*0.4,
+                      padding: EdgeInsets.symmetric(horizontal: 10),
                       height: 50,
                       decoration: BoxDecoration(
                         color: Appcolors.green1,
@@ -435,7 +435,7 @@ class _BookingCompletedState extends State<BookingCompleted> {
                       ),
                       child: Center(
                         child: Text('Rate & Review',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 20,fontWeight: FontWeight.w600,
+                          fontSize: 18,fontWeight: FontWeight.w600,
                         ),),
                       ),
                     ),
@@ -450,7 +450,7 @@ class _BookingCompletedState extends State<BookingCompleted> {
                     },
 
                     child: Container(
-                      width: width*0.4,
+                      padding: EdgeInsets.symmetric(horizontal: 15),
                       height: 50,
                       decoration: BoxDecoration(
                         color: Appcolors.green1,
@@ -459,7 +459,7 @@ class _BookingCompletedState extends State<BookingCompleted> {
                       ),
                       child: Center(
                         child: Text('Tip Partner',style: Textstyle2Light18.appbartextstyle.copyWith(
-                          fontSize: 20,fontWeight: FontWeight.w600,
+                          fontSize: 18,fontWeight: FontWeight.w600,
                         ),),
                       ),
                     ),

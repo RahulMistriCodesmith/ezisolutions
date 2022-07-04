@@ -122,79 +122,90 @@ class _AlertsState extends State<Alerts> {
                   SizedBox(height: 10,),
 
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
 
                       Container(
                         width: width*0.42,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Appcolors.greenlight,width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Expanded(
-
-                          child: DropdownButtonFormField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              filled: true,
+                        // decoration: BoxDecoration(
+                        //   color: Colors.white,
+                        //   border: Border.all(color: Appcolors.greenlight,width: 2),
+                        //   borderRadius: BorderRadius.circular(10),
+                        // ),
+                        child: DropdownButtonFormField(
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 2.0,color: Appcolors.greenlight),
                             ),
-                            value: dropdownValue,
-                            icon: Icon(Icons.keyboard_arrow_down_outlined,color: Appcolors.greenlight,),
-                            elevation: 16,
-                            style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontWeight: FontWeight.w400,fontSize: 13,color: Colors.black
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 2.0,color: Appcolors.greenlight),
                             ),
-                            onChanged: (String newValue) {
-                              dropdownValue = newValue;
-                            },
-
-                            items: <String>['Personal Alerts']
-                                .map<DropdownMenuItem<String>>((String value) {
-                              return DropdownMenuItem<String>(
-                                value: value,
-                                child: Text(value),
-                              );
-                            }).toList(),
-
+                            fillColor: Colors.white,
+                            contentPadding: EdgeInsets.all(10),
+                            filled: true,
                           ),
+                          value: dropdownValue,
+                          icon: Icon(Icons.keyboard_arrow_down_outlined,color: Appcolors.greenlight,),
+                          elevation: 16,
+                          style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 13,color: Colors.black
+                          ),
+                          onChanged: (String newValue) {
+                            dropdownValue = newValue;
+                          },
+
+                          items: <String>['Personal Alerts']
+                              .map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+
                         ),
                       ),
 
-                      Expanded(child: SizedBox()),
-
-
                       Container(
                         width: width*0.42,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Appcolors.greenlight,width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Expanded(
-                          child: DropdownButtonFormField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              filled: true,
+                        // decoration: BoxDecoration(
+                        //   color: Colors.white,
+                        //   border: Border.all(color: Appcolors.greenlight,width: 2),
+                        //   borderRadius: BorderRadius.circular(10),
+                        // ),
+                        child: DropdownButtonFormField(
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 2.0,color: Appcolors.greenlight),
                             ),
-                            value: dropdownValue2,
-                            icon: Icon(Icons.keyboard_arrow_down_outlined,color: Appcolors.greenlight,),
-                            elevation: 16,
-                            style: Textstyle2Light18.appbartextstyle.copyWith(
-                                fontWeight: FontWeight.w400,fontSize: 13,color: Colors.black
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(width: 2.0,color: Appcolors.greenlight),
                             ),
-                            onChanged: (String newValue) {
-                              dropdownValue2 = newValue;
-                            },
-
-                            items: <String>['General Alerts']
-                                .map<DropdownMenuItem<String>>((String value) {
-                              return DropdownMenuItem<String>(
-                                value: value,
-                                child: Text(value),
-                              );
-                            }).toList(),
-
+                            fillColor: Colors.white,
+                            contentPadding: EdgeInsets.all(10),
+                            filled: true,
                           ),
+                          value: dropdownValue2,
+                          icon: Icon(Icons.keyboard_arrow_down_outlined,color: Appcolors.greenlight,),
+                          elevation: 16,
+                          style: Textstyle2Light18.appbartextstyle.copyWith(
+                              fontWeight: FontWeight.w400,fontSize: 13,color: Colors.black
+                          ),
+                          onChanged: (String newValue) {
+                            dropdownValue2 = newValue;
+                          },
+
+                          items: <String>['General Alerts']
+                              .map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+
                         ),
                       ),
                     ],
@@ -207,41 +218,41 @@ class _AlertsState extends State<Alerts> {
 
                       Container(
                         padding: EdgeInsets.only(left: 10),
+                        height: height*0.065,
                         width: width*0.42,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: Appcolors.greenlight,width: 2),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Expanded(
+                        child: Theme(
 
-                            child: Theme(
+                          data: ThemeData(
+                              inputDecorationTheme: InputDecorationTheme(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.all(10)
+                              )
+                          ),
 
-                              data: ThemeData(
-                                  inputDecorationTheme: InputDecorationTheme(
-                                    border: InputBorder.none,
-                                  )
-                              ),
+                          child: DateTimePicker(
 
-                              child: DateTimePicker(
+                            initialValue: '',
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(2100),
+                            dateLabelText: 'Start Date',
+                            style: TextStyle(fontSize: 12),
+                            /* decoration: InputDecoration(
+                              border: InputBorder.none
+                            ),*/
 
-                                initialValue: '',
-                                firstDate: DateTime(2000),
-                                lastDate: DateTime(2100),
-                                dateLabelText: 'Start Date',
-                                /* decoration: InputDecoration(
-                                  border: InputBorder.none
-                                ),*/
-
-                                icon: Icon(Icons.calendar_month_outlined,color: Appcolors.greenlight,size: 30,),
-                                onChanged: (val) => print(val),
-                                validator: (val) {
-                                  print(val);
-                                  return null;
-                                },
-                                onSaved: (val) => print(val),
-                              ),
-                            )
+                            icon: Icon(Icons.calendar_month_outlined,color: Appcolors.greenlight,size: 25,),
+                            onChanged: (val) => print(val),
+                            validator: (val) {
+                              print(val);
+                              return null;
+                            },
+                            onSaved: (val) => print(val),
+                          ),
                         ),
                       ),
 
@@ -249,40 +260,40 @@ class _AlertsState extends State<Alerts> {
 
                       Container(
                         padding: EdgeInsets.only(left: 10),
+                        height: height*0.065,
                         width: width*0.42,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: Appcolors.greenlight,width: 2),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Expanded(
-                            child: Theme(
+                        child: Theme(
 
-                              data: ThemeData(
-                                  inputDecorationTheme: InputDecorationTheme(
-                                    border: InputBorder.none,
-                                  )
-                              ),
+                          data: ThemeData(
+                              inputDecorationTheme: InputDecorationTheme(
+                                border: InputBorder.none,
+                              )
+                          ),
 
-                              child: DateTimePicker(
+                          child: DateTimePicker(
 
-                                initialValue: '',
-                                firstDate: DateTime(2000),
-                                lastDate: DateTime(2100),
-                                dateLabelText: 'Start Date',
-                                /* decoration: InputDecoration(
-                                  border: InputBorder.none
-                                ),*/
+                            initialValue: '',
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(2100),
+                            dateLabelText: 'Start Date',
+                            style: TextStyle(fontSize: 12),
+                            /* decoration: InputDecoration(
+                              border: InputBorder.none
+                            ),*/
 
-                                icon: Icon(Icons.calendar_month_outlined,color: Appcolors.greenlight,size: 30,),
-                                onChanged: (val) => print(val),
-                                validator: (val) {
-                                  print(val);
-                                  return null;
-                                },
-                                onSaved: (val) => print(val),
-                              ),
-                            )
+                            icon: Icon(Icons.calendar_month_outlined,color: Appcolors.greenlight,size: 25,),
+                            onChanged: (val) => print(val),
+                            validator: (val) {
+                              print(val);
+                              return null;
+                            },
+                            onSaved: (val) => print(val),
+                          ),
                         ),
                       ),
                     ],
