@@ -96,12 +96,12 @@ class _QRCodesState extends State<QRCodes> {
 
                 Container(
                   width: width,
-                  height: height*0.33,
+                  height: height*0.35,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black,width: 1.6),
                     borderRadius: BorderRadius.only(
-                      bottomRight: Radius.elliptical(80, 60),
-                      bottomLeft: Radius.elliptical(80, 60),
+                      bottomRight: Radius.elliptical(75, 60),
+                      bottomLeft: Radius.elliptical(75, 60),
                     ),
                   ),
                 ),
@@ -162,7 +162,11 @@ class _QRCodesState extends State<QRCodes> {
                               Expanded(child: SizedBox()),
                               Text('Thank You For Using EZi Check-in',style: Textstyle2Light18.appbartextstyle.copyWith(
                                   fontWeight: FontWeight.w600,fontSize: 13
-                              ),),
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.justify,
+                                maxLines: 1,
+                              ),
                             ],
                           ),
                         ),
@@ -279,7 +283,6 @@ class _QRCodesState extends State<QRCodes> {
                     ),
                   ),
                 ),
-
 
               ],
             ),

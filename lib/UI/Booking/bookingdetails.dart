@@ -505,13 +505,33 @@ class _BookingDetailsState extends State<BookingDetails> {
                             Expanded(child: SizedBox()),
 
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text('Note: ',style: Textstyle2Light18.appbartextstyle.copyWith(
                                   fontWeight: FontWeight.w600,fontSize: 10,color: Appcolors.greenlight
                                 ),),
-                                Text('There is no way to undo this action once you have done it.',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                  fontWeight: FontWeight.w400,fontSize: 8,
-                                ),),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('There is no way to undo this action once',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontWeight: FontWeight.w400,fontSize: 9,
+                                      ),
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.justify,
+                                        maxLines: 2,
+                                      ),
+                                      Text('you have done it.',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                        fontWeight: FontWeight.w400,fontSize: 9,
+                                      ),
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.justify,
+                                        maxLines: 2,
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
 

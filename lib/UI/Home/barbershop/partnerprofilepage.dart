@@ -729,7 +729,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                         SizedBox(height: 20),
 
                         Container(
-                          padding: EdgeInsets.only(top: 15,bottom: 15),
+                          padding: EdgeInsets.only(top: 15,bottom: 15,left: 25,right: 25),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15),
@@ -737,15 +737,12 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15,right: 15),
-                                child: Text('All Services',style: Textstyle2Light18.appbartextstyle.copyWith(
-                                  fontSize: 20,fontWeight: FontWeight.w600,
-                                ),),
-                              ),
+                              Text('All Services',style: Textstyle2Light18.appbartextstyle.copyWith(
+                                fontSize: 20,fontWeight: FontWeight.w600,
+                              ),),
 
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                                padding: const EdgeInsets.symmetric(vertical: 10),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -764,7 +761,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                                           SizedBox(height: 10),
 
-                                          Image.asset('assest/Image/tolderimage.png',scale: 4),
+                                          Image.asset('assest/Image/tolderimage.png',scale: 5),
 
                                           SizedBox(height: 15),
 
@@ -782,7 +779,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                 ],
                                               ),
 
-                                              SizedBox(width: width*0.15,),
+                                              SizedBox(width: width*0.12),
 
                                               GestureDetector(
 
@@ -790,7 +787,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                     Navigator.push(context, MaterialPageRoute(builder: (context) => BookingAppoinment()));
                                                   },
 
-                                                  child: Image.asset('assest/Iocns/addicon.png',scale: 4,)),
+                                                  child: Image.asset('assest/Iocns/addicon.png',scale: 5,)),
 
                                             ],
                                           ),
@@ -816,7 +813,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                                           SizedBox(height: 10),
 
-                                          Image.asset('assest/Image/tipimage.png',scale: 4),
+                                          Image.asset('assest/Image/tipimage.png',scale: 4.9),
                                           SizedBox(height: 15),
 
                                           Row(
@@ -833,9 +830,9 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                 ],
                                               ),
 
-                                              SizedBox(width: width*0.14,),
+                                              SizedBox(width: width*0.11,),
 
-                                              Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                              Image.asset('assest/Iocns/addicon.png',scale: 5),
 
                                             ],
                                           ),
@@ -844,7 +841,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                       ),
                                     ),
 
-                                    Expanded(child: SizedBox()),
+
 
 
                                   ],
@@ -852,7 +849,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                               ),
 
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                                padding: const EdgeInsets.symmetric(vertical: 10),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -871,7 +868,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                                           SizedBox(height: 10),
 
-                                          Image.asset('assest/Image/tolderimage.png',scale: 4),
+                                          Image.asset('assest/Image/tolderimage.png',scale: 5),
 
                                           SizedBox(height: 15),
 
@@ -889,7 +886,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                 ],
                                               ),
 
-                                              SizedBox(width: width*0.15,),
+                                              SizedBox(width: width*0.12),
 
                                               GestureDetector(
 
@@ -897,7 +894,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                     Navigator.push(context, MaterialPageRoute(builder: (context) => BookingAppoinment()));
                                                   },
 
-                                                  child: Image.asset('assest/Iocns/addicon.png',scale: 4,)),
+                                                  child: Image.asset('assest/Iocns/addicon.png',scale: 5,)),
 
                                             ],
                                           ),
@@ -923,7 +920,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
 
                                           SizedBox(height: 10),
 
-                                          Image.asset('assest/Image/tipimage.png',scale: 4),
+                                          Image.asset('assest/Image/tipimage.png',scale: 4.9),
                                           SizedBox(height: 15),
 
                                           Row(
@@ -940,9 +937,9 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                                 ],
                                               ),
 
-                                              SizedBox(width: width*0.14,),
+                                              SizedBox(width: width*0.11,),
 
-                                              Image.asset('assest/Iocns/addicon.png',scale: 4,),
+                                              Image.asset('assest/Iocns/addicon.png',scale: 5),
 
                                             ],
                                           ),
@@ -951,7 +948,7 @@ class _PartnerProfilePageState extends State<PartnerProfilePage> {
                                       ),
                                     ),
 
-                                    Expanded(child: SizedBox()),
+
 
 
                                   ],

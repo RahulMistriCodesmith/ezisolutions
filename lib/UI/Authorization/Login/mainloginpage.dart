@@ -122,7 +122,9 @@ class _MainLoginPageState extends State<MainLoginPage> {
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+
               height: height * 0.4,
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -133,7 +135,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                           fontSize: 20,fontWeight: FontWeight.w600
                       ),),
 
-                      Expanded(child: SizedBox()),
+                      // Expanded(child: SizedBox()),
 
                       Container(
                         width: 12,
@@ -160,12 +162,11 @@ class _MainLoginPageState extends State<MainLoginPage> {
                     ],
                   ),
 
-                  SizedBox(height: height*0.04,),
+                  // SizedBox(height: height*0.04,),
 
-                  Image.asset('assest/Image/failicon.png',
-                    scale: 5,),
+                  Image.asset('assest/Image/failicon.png',scale: 5,),
 
-                  SizedBox(height: height*0.03,),
+                  // SizedBox(height: height*0.03,),
 
                   Text(
                     'Your OTP  Code have expired/Invalid!',
@@ -174,7 +175,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                       fontSize: 15,
                     ),),
 
-                  SizedBox(height: height*0.03,),
+                  Expanded(child: SizedBox()),
 
                   GestureDetector(
 
@@ -424,8 +425,8 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                 color: Colors.white
                             ),
                             child: TextFormField(
-
                               decoration: Inputdec1.inputDecoration.copyWith(
+                                contentPadding: EdgeInsets.all(10),
                                 fillColor: Colors.white,
                                 hintText: 'Your Name (As per NRIC)*',
 
@@ -447,6 +448,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                             child: TextFormField(
 
                               decoration: Inputdec1.inputDecoration.copyWith(
+                                contentPadding: EdgeInsets.all(10),
                                 fillColor: Colors.white,
                                 hintText: 'Email Address*',
 
@@ -463,19 +465,20 @@ class _MainLoginPageState extends State<MainLoginPage> {
                           child: Row(
                             children: [
                               Container(
-
+                                height: 47,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(color: Appcolors.greenlight),
                                     color: Colors.white
                                 ),
                                 child: CountryCodePicker(
+
                                   onChanged: _onCountryChange,
                                   // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
                                   initialSelection: 'IN',
                                   favorite: ['+91'],
                                   textStyle: Textstyle2Light18.appbartextstyle.copyWith(
-                                      color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w600
+                                      color: Colors.grey,fontSize: 12,fontWeight: FontWeight.w600
                                   ),
                                   // optional. Shows only country name and flag
 
@@ -510,6 +513,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                                     // cursorHeight: 18,
 
                                     decoration: Inputdec1.inputDecoration.copyWith(
+                                      contentPadding: EdgeInsets.all(10),
                                       fillColor: Colors.white,
                                       errorStyle: TextStyle(height: 0),
                                       hintText: 'Contact no',
@@ -545,6 +549,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                               obscureText: _isObscure1,
                               controller: password1,
                               decoration: Inputdec1.inputDecoration.copyWith(
+                                contentPadding: EdgeInsets.all(10),
                                 fillColor: Colors.white,
                                 hintText: 'Password*',
                                 suffixIcon: IconButton(
@@ -586,6 +591,7 @@ class _MainLoginPageState extends State<MainLoginPage> {
                               obscureText: _isObscure2,
                               controller: password2,
                               decoration: Inputdec1.inputDecoration.copyWith(
+                                contentPadding: EdgeInsets.all(10),
                                 fillColor: Colors.white,
                                 hintText: 'Re-type password*',
                                 suffixIcon: IconButton(
