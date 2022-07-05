@@ -136,3 +136,35 @@ class Inputdec2 {
   );
 }
 
+class Inputdec4 {
+  static InputDecoration inputDecoration = InputDecoration(
+
+    fillColor: Colors.white,
+
+    hintStyle: Textstyle2Light18.appbartextstyle.copyWith(
+        fontSize: 16,color: Colors.grey),
+    /* prefixIcon: Padding(
+      padding: EdgeInsets.all(14.0),
+      child: Image.asset("assets/Image/Search Icon.png", width: 10, height: 10,color: Colors.grey,),
+    ),*/
+
+    errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderSide: BorderSide(color: Colors.redAccent)
+    ),
+
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderSide: BorderSide(color: Appcolors.blue),
+    ),
+
+    filled: true,
+
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderSide: BorderSide(color: Appcolors.blue),
+    ),
+
+  );
+}
+

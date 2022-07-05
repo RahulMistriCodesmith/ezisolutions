@@ -1,6 +1,5 @@
-import 'package:ezisolutions/UI/Authorization/Login/languagepage.dart';
-import 'package:ezisolutions/UI/Authorization/Login/mainloginpage.dart';
-import 'package:ezisolutions/pincodexample.dart';
+
+import 'package:ezisolutions/UI/Members/Authorization/Login/mainloginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
